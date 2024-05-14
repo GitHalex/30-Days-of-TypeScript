@@ -25,3 +25,10 @@ let cadena: string = "JavaScript";
 let tam: number = cadena.length;
 let indice: number = Math.floor(Math.random() * tam);
 console.log(cadena[indice]);
+
+let fraseDos: string =
+  "No puedes terminar una oración con porque porque porque es una conjunción";
+console.log(fraseDos);
+
+let resultado: string = fraseDos.substring(35, 56);
+console.log(resultado);
