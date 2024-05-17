@@ -100,7 +100,7 @@ console.log(
   pendiente
 ); */
 
-// Definir la función para calcular y
+/* // Definir la función para calcular y
 function calcularY(x: number): number {
   return x * x + 6 * x + 9;
 }
@@ -128,4 +128,14 @@ function encontrarXParaY0(): number {
 }
 
 const xParaY0 = encontrarXParaY0();
-console.log(`El valor de x para el cual y es 0 es: ${xParaY0}`);
+console.log(`El valor de x para el cual y es 0 es: ${xParaY0}`); */
+
+/* 
+let horaInput = prompt("Ingrese Horas: ");
+let tarifaInput = prompt("Introduce la tarifa por hora: ");
+if (horaInput !== null && tarifaInput !== null) {
+  const hora: number = parseInt(horaInput);
+  const tarifa: number = parseInt(tarifaInput);
+  let ganancia: number = hora * tarifa;
+  console.log(`Su ganancia semanal es ${ganancia}`);
+} */
