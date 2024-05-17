@@ -94,3 +94,27 @@ console.log(
   `La pendiente entre los puntos (${x1}, ${y1}) y (${x2}, ${y2}) es:`,
   pendiente
 ); */
+// Definir la función para calcular y
+function calcularY(x) {
+    return x * x + 6 * x + 9;
+}
+// Probar diferentes valores de x
+var valoresX = [-10, -5, -3, 0, 3, 5, 10];
+console.log("Calculando y para diferentes valores de x:");
+valoresX.forEach(function (x) {
+    var y = calcularY(x);
+    console.log("Para x = ".concat(x, ", y = ").concat(y));
+});
+// Encontrar el valor de x para el cual y = 0
+// Sabemos que la solución exacta es x = -3, pero vamos a encontrarlo programáticamente también
+function encontrarXParaY0() {
+    for (var x = -100; x <= 100; x++) {
+        // Buscamos en un rango de -100 a 100
+        if (calcularY(x) === 0) {
+            return x;
+        }
+    }
+    return NaN; // Si no encontramos un valor en el rango
+}
+var xParaY0 = encontrarXParaY0();
+console.log("El valor de x para el cual y es 0 es: ".concat(xParaY0));
