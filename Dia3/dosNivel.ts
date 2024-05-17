@@ -139,3 +139,13 @@ if (horaInput !== null && tarifaInput !== null) {
   let ganancia: number = hora * tarifa;
   console.log(`Su ganancia semanal es ${ganancia}`);
 } */
+
+let nameInput = prompt("Ingrese su nombre: ");
+if (nameInput !== null) {
+  const name: number = nameInput.length;
+  if (name >= 7) {
+    console.log(`${nameInput} tiene mas de 7 caracteres`);
+  } else {
+    console.log("Su nombre tiene menos de 7 caracteres");
+  }
+}
