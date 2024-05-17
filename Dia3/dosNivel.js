@@ -132,13 +132,27 @@ if (horaInput !== null && tarifaInput !== null) {
   let ganancia: number = hora * tarifa;
   console.log(`Su ganancia semanal es ${ganancia}`);
 } */
-var nameInput = prompt("Ingrese su nombre: ");
+/* let nameInput = prompt("Ingrese su nombre: ");
 if (nameInput !== null) {
-    var name_1 = nameInput.length;
-    if (name_1 >= 7) {
-        console.log("".concat(nameInput, " tiene mas de 7 caracteres"));
-    }
-    else {
-        console.log("Su nombre tiene menos de 7 caracteres");
-    }
+  const name: number = nameInput.length;
+  if (name >= 7) {
+    console.log(`${nameInput} tiene mas de 7 caracteres`);
+  } else {
+    console.log("Su nombre tiene menos de 7 caracteres");
+  }
+} */
+var firstNa = "Asabeneh";
+var lastNa = "Yetayeh";
+if (firstNa.length > lastNa.length) {
+    console.log("tu primer nombre: ".concat(firstNa, " es mas grande que tu apellido: ").concat(lastNa));
 }
+else if (lastNa.length > firstNa.length) {
+    console.log("Tu apellido: ".concat(lastNa, " es mas grande que tu primer nombre: ").concat(lastNa));
+}
+else {
+    console.log("".concat(firstNa, " su tama\u00F1o es igual ").concat(lastNa));
+}
+var myAge = 250;
+var yourAge = 25;
+var diferencia = myAge - yourAge;
+console.log("Soy ".concat(diferencia, " a\u00F1os mayor que tu"));

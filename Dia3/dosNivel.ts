@@ -140,7 +140,7 @@ if (horaInput !== null && tarifaInput !== null) {
   console.log(`Su ganancia semanal es ${ganancia}`);
 } */
 
-let nameInput = prompt("Ingrese su nombre: ");
+/* let nameInput = prompt("Ingrese su nombre: ");
 if (nameInput !== null) {
   const name: number = nameInput.length;
   if (name >= 7) {
@@ -148,4 +148,25 @@ if (nameInput !== null) {
   } else {
     console.log("Su nombre tiene menos de 7 caracteres");
   }
+} */
+
+let firstNa: string = "Asabeneh";
+let lastNa: string = "Yetayeh";
+
+if (firstNa.length > lastNa.length) {
+  console.log(
+    `tu primer nombre: ${firstNa} es mas grande que tu apellido: ${lastNa}`
+  );
+} else if (lastNa.length > firstNa.length) {
+  console.log(
+    `Tu apellido: ${lastNa} es mas grande que tu primer nombre: ${lastNa}`
+  );
+} else {
+  console.log(`${firstNa} su tamaño es igual ${lastNa}`);
 }
+
+let myAge: number = 250;
+let yourAge: number = 25;
+
+const diferencia: number = myAge - yourAge;
+console.log(`Soy ${diferencia} años mayor que tu`);
