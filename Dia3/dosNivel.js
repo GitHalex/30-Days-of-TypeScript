@@ -69,17 +69,28 @@ const interseccionY: number = calcularInterseccionY(b);
 console.log("Pendiente (m):", m);
 console.log("Intersección en X:", interseccionX);
 console.log("Intersección en Y:", interseccionY); */
-// Definimos los puntos
-var x1 = 2;
-var y1 = 2;
-var x2 = 6;
-var y2 = 10;
+/* // Definimos los puntos
+const x1: number = 2;
+const y1: number = 2;
+const x2: number = 6;
+const y2: number = 10;
+
 // Función para calcular la pendiente
-function calcularPendiente(x1, y1, x2, y2) {
-    // Utilizamos la fórmula de la pendiente: m = (y2 - y1) / (x2 - x1)
-    return (y2 - y1) / (x2 - x1);
+function calcularPendiente(
+  x1: number,
+  y1: number,
+  x2: number,
+  y2: number
+): number {
+  // Utilizamos la fórmula de la pendiente: m = (y2 - y1) / (x2 - x1)
+  return (y2 - y1) / (x2 - x1);
 }
+
 // Calculamos la pendiente
-var pendiente = calcularPendiente(x1, y1, x2, y2);
+const pendiente: number = calcularPendiente(x1, y1, x2, y2);
+
 // Mostramos el resultado
-console.log("La pendiente entre los puntos (".concat(x1, ", ").concat(y1, ") y (").concat(x2, ", ").concat(y2, ") es:"), pendiente);
+console.log(
+  `La pendiente entre los puntos (${x1}, ${y1}) y (${x2}, ${y2}) es:`,
+  pendiente
+); */

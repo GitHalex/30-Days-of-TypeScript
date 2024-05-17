@@ -74,7 +74,7 @@ console.log("Pendiente (m):", m);
 console.log("Intersección en X:", interseccionX);
 console.log("Intersección en Y:", interseccionY); */
 
-// Definimos los puntos
+/* // Definimos los puntos
 const x1: number = 2;
 const y1: number = 2;
 const x2: number = 6;
@@ -98,4 +98,4 @@ const pendiente: number = calcularPendiente(x1, y1, x2, y2);
 console.log(
   `La pendiente entre los puntos (${x1}, ${y1}) y (${x2}, ${y2}) es:`,
   pendiente
-);
+); */
