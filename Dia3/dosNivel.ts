@@ -150,7 +150,7 @@ if (nameInput !== null) {
   }
 } */
 
-let firstNa: string = "Asabeneh";
+/* let firstNa: string = "Asabeneh";
 let lastNa: string = "Yetayeh";
 
 if (firstNa.length > lastNa.length) {
@@ -163,10 +163,29 @@ if (firstNa.length > lastNa.length) {
   );
 } else {
   console.log(`${firstNa} su tamaño es igual ${lastNa}`);
-}
+} */
 
-let myAge: number = 250;
+/* let myAge: number = 250;
 let yourAge: number = 25;
 
 const diferencia: number = myAge - yourAge;
-console.log(`Soy ${diferencia} años mayor que tu`);
+console.log(`Soy ${diferencia} años mayor que tu`); */
+
+let userInput = prompt("Ingrese el año que nacio: ");
+if (userInput !== null) {
+  const userYear: number = parseInt(userInput);
+  let now: Date = new Date();
+  let year: number = now.getFullYear();
+  let resultadoYear = year - userYear;
+  if (resultadoYear >= 18) {
+    console.log(
+      `Tienes ${resultadoYear} años.Tienes la edad suficiente para conducir.`
+    );
+  } else {
+    console.log(
+      `Tienes ${resultadoYear} años.Podras conducir despues de ${
+        18 - resultadoYear
+      } años`
+    );
+  }
+}

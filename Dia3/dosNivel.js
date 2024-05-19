@@ -141,18 +141,35 @@ if (nameInput !== null) {
     console.log("Su nombre tiene menos de 7 caracteres");
   }
 } */
-var firstNa = "Asabeneh";
-var lastNa = "Yetayeh";
+/* let firstNa: string = "Asabeneh";
+let lastNa: string = "Yetayeh";
+
 if (firstNa.length > lastNa.length) {
-    console.log("tu primer nombre: ".concat(firstNa, " es mas grande que tu apellido: ").concat(lastNa));
+  console.log(
+    `tu primer nombre: ${firstNa} es mas grande que tu apellido: ${lastNa}`
+  );
+} else if (lastNa.length > firstNa.length) {
+  console.log(
+    `Tu apellido: ${lastNa} es mas grande que tu primer nombre: ${lastNa}`
+  );
+} else {
+  console.log(`${firstNa} su tamaño es igual ${lastNa}`);
+} */
+/* let myAge: number = 250;
+let yourAge: number = 25;
+
+const diferencia: number = myAge - yourAge;
+console.log(`Soy ${diferencia} años mayor que tu`); */
+var userInput = prompt("Ingrese el año que nacio: ");
+if (userInput !== null) {
+    var userYear = parseInt(userInput);
+    var now = new Date();
+    var year = now.getFullYear();
+    var resultadoYear = year - userYear;
+    if (resultadoYear >= 18) {
+        console.log("Tienes ".concat(resultadoYear, " a\u00F1os.Tienes la edad suficiente para conducir."));
+    }
+    else {
+        console.log("Tienes ".concat(resultadoYear, " a\u00F1os.Podras conducir despues de ").concat(18 - resultadoYear, " a\u00F1os"));
+    }
 }
-else if (lastNa.length > firstNa.length) {
-    console.log("Tu apellido: ".concat(lastNa, " es mas grande que tu primer nombre: ").concat(lastNa));
-}
-else {
-    console.log("".concat(firstNa, " su tama\u00F1o es igual ").concat(lastNa));
-}
-var myAge = 250;
-var yourAge = 25;
-var diferencia = myAge - yourAge;
-console.log("Soy ".concat(diferencia, " a\u00F1os mayor que tu"));
