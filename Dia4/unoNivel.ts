@@ -8,7 +8,7 @@ if (edadInput !== null) {
   console.log("entrada cancelada por el usuario");
 } */
 
-let myAge = prompt("Ingrese su edad: ");
+/* let myAge = prompt("Ingrese su edad: ");
 let tuEdad: number = 30;
 if (myAge !== null) {
   let miEdad: number = parseInt(myAge);
@@ -19,4 +19,20 @@ if (myAge !== null) {
     : console.log(`tu edad: ${tuEdad} es igual a mi edad ${miEdad}`);
 } else {
   console.log("Entrada cancelada por el usuario");
+} */
+
+let a: number = 4;
+let b: number = 4;
+if (a > b) {
+  console.log(`${a} es mayor que ${b}`);
+} else if (b > a) {
+  console.log(`b: ${b} es mayor que a: ${a}`);
+} else {
+  console.log(`${a} es igual ${b}`);
 }
+
+a > b
+  ? console.log(`${a} es mayor que ${b}`)
+  : b > a
+  ? console.log(`b: ${b} es mayor que a: ${a}`)
+  : console.log(`${a} es igual ${b}`);
