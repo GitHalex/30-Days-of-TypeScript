@@ -1,4 +1,4 @@
-let puntajeInput = prompt("Ingrese una nota: ");
+/* let puntajeInput = prompt("Ingrese una nota: ");
 if (puntajeInput !== null) {
   let puntaje: number = parseInt(puntajeInput);
   if (!isNaN(puntaje)) {
@@ -17,6 +17,26 @@ if (puntajeInput !== null) {
     }
   } else {
     console.log("Por favor, ingrese un número válido.");
+  }
+} else {
+  console.log("Entrada cancelada por el usuario.");
+} */
+
+let mesInput = prompt("Ingrese un mes: ");
+
+if (mesInput !== null) {
+  let mes: string = mesInput;
+
+  if (mes === "Septiembre" || mes === "Octubre" || mes === "Noviembre") {
+    console.log(`La temporada es Otoño`);
+  } else if (mes === "Diciembre" || mes === "Enero" || mes === "Febrero") {
+    console.log(`La temporada es Invierno`);
+  } else if (mes === "Marzo" || mes === "Abril" || mes === "Mayo") {
+    console.log("La temporada es Primavera");
+  } else if (mes === "Junio" || mes === "Julio" || mes === "Agosto") {
+    console.log("La temporada es Verano");
+  } else {
+    console.log(`${mes} no es un mes HDP`);
   }
 } else {
   console.log("Entrada cancelada por el usuario.");
