@@ -171,7 +171,7 @@ let yourAge: number = 25;
 const diferencia: number = myAge - yourAge;
 console.log(`Soy ${diferencia} años mayor que tu`); */
 
-let userInput = prompt("Ingrese el año que nacio: ");
+/* let userInput = prompt("Ingrese el año que nacio: ");
 if (userInput !== null) {
   const userYear: number = parseInt(userInput);
   let now: Date = new Date();
@@ -188,4 +188,18 @@ if (userInput !== null) {
       } años`
     );
   }
+} */
+
+let yearLife = prompt("Ingrese el numero de años de vida: ");
+if (yearLife !== null) {
+  let year: number = parseInt(yearLife);
+  if (!isNaN(year) && year >= 0) {
+    // Corrección: 365 días en un año
+    let vidaSegundos: number = year * 365 * 24 * 60 * 60;
+    console.log(`Viviste aproximadamente ${vidaSegundos} segundos`);
+  } else {
+    console.log("Por favor, ingrese un número válido de años.");
+  }
+} else {
+  console.log("Entrada cancelada por el usuario");
 }

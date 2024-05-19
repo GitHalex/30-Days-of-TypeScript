@@ -160,16 +160,36 @@ let yourAge: number = 25;
 
 const diferencia: number = myAge - yourAge;
 console.log(`Soy ${diferencia} años mayor que tu`); */
-var userInput = prompt("Ingrese el año que nacio: ");
+/* let userInput = prompt("Ingrese el año que nacio: ");
 if (userInput !== null) {
-    var userYear = parseInt(userInput);
-    var now = new Date();
-    var year = now.getFullYear();
-    var resultadoYear = year - userYear;
-    if (resultadoYear >= 18) {
-        console.log("Tienes ".concat(resultadoYear, " a\u00F1os.Tienes la edad suficiente para conducir."));
+  const userYear: number = parseInt(userInput);
+  let now: Date = new Date();
+  let year: number = now.getFullYear();
+  let resultadoYear = year - userYear;
+  if (resultadoYear >= 18) {
+    console.log(
+      `Tienes ${resultadoYear} años.Tienes la edad suficiente para conducir.`
+    );
+  } else {
+    console.log(
+      `Tienes ${resultadoYear} años.Podras conducir despues de ${
+        18 - resultadoYear
+      } años`
+    );
+  }
+} */
+var yearLife = prompt("Ingrese el numero de años de vida: ");
+if (yearLife !== null) {
+    var year = parseInt(yearLife);
+    if (!isNaN(year) && year >= 0) {
+        // Corrección: 365 días en un año
+        var vidaSegundos = year * 365 * 24 * 60 * 60;
+        console.log("Viviste aproximadamente ".concat(vidaSegundos, " segundos"));
     }
     else {
-        console.log("Tienes ".concat(resultadoYear, " a\u00F1os.Podras conducir despues de ").concat(18 - resultadoYear, " a\u00F1os"));
+        console.log("Por favor, ingrese un número válido de años.");
     }
+}
+else {
+    console.log("Entrada cancelada por el usuario");
 }
