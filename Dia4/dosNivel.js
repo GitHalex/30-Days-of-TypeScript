@@ -21,25 +21,42 @@ if (puntajeInput !== null) {
 } else {
   console.log("Entrada cancelada por el usuario.");
 } */
-var mesInput = prompt("Ingrese un mes: ");
+/* let mesInput = prompt("Ingrese un mes: ");
+
 if (mesInput !== null) {
-    var mes = mesInput;
-    if (mes === "Septiembre" || mes === "Octubre" || mes === "Noviembre") {
-        console.log("La temporada es Oto\u00F1o");
+  let mes: string = mesInput;
+
+  if (mes === "Septiembre" || mes === "Octubre" || mes === "Noviembre") {
+    console.log(`La temporada es Otoño`);
+  } else if (mes === "Diciembre" || mes === "Enero" || mes === "Febrero") {
+    console.log(`La temporada es Invierno`);
+  } else if (mes === "Marzo" || mes === "Abril" || mes === "Mayo") {
+    console.log("La temporada es Primavera");
+  } else if (mes === "Junio" || mes === "Julio" || mes === "Agosto") {
+    console.log("La temporada es Verano");
+  } else {
+    console.log(`${mes} no es un mes HDP`);
+  }
+} else {
+  console.log("Entrada cancelada por el usuario.");
+} */
+var diaInput = prompt("¿Qué dia es hoy? ");
+if (diaInput !== null) {
+    var dia = diaInput.toLowerCase();
+    if (dia === "lunes" ||
+        dia === "martes" ||
+        dia === "miercoles" ||
+        dia === "jueves" ||
+        dia === "viernes") {
+        console.log("El ".concat(dia, " es un dia laborable"));
     }
-    else if (mes === "Diciembre" || mes === "Enero" || mes === "Febrero") {
-        console.log("La temporada es Invierno");
-    }
-    else if (mes === "Marzo" || mes === "Abril" || mes === "Mayo") {
-        console.log("La temporada es Primavera");
-    }
-    else if (mes === "Junio" || mes === "Julio" || mes === "Agosto") {
-        console.log("La temporada es Verano");
+    else if (dia === "sabado" || dia === "domingo") {
+        console.log("El ".concat(dia, " es fin de semana"));
     }
     else {
-        console.log("".concat(mes, " no es un mes HDP"));
+        console.log("El ".concat(dia, " no es valido"));
     }
 }
 else {
-    console.log("Entrada cancelada por el usuario.");
+    console.log("Entrada cancelada por el usuario");
 }

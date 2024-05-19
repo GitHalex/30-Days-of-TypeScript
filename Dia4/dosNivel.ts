@@ -22,7 +22,7 @@ if (puntajeInput !== null) {
   console.log("Entrada cancelada por el usuario.");
 } */
 
-let mesInput = prompt("Ingrese un mes: ");
+/* let mesInput = prompt("Ingrese un mes: ");
 
 if (mesInput !== null) {
   let mes: string = mesInput;
@@ -40,4 +40,24 @@ if (mesInput !== null) {
   }
 } else {
   console.log("Entrada cancelada por el usuario.");
+} */
+
+let diaInput = prompt("¿Qué dia es hoy? ");
+if (diaInput !== null) {
+  let dia: string = diaInput.toLowerCase();
+  if (
+    dia === "lunes" ||
+    dia === "martes" ||
+    dia === "miercoles" ||
+    dia === "jueves" ||
+    dia === "viernes"
+  ) {
+    console.log(`El ${dia} es un dia laborable`);
+  } else if (dia === "sabado" || dia === "domingo") {
+    console.log(`El ${dia} es fin de semana`);
+  } else {
+    console.log(`El ${dia} no es valido`);
+  }
+} else {
+  console.log("Entrada cancelada por el usuario");
 }
