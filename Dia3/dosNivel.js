@@ -178,18 +178,53 @@ if (userInput !== null) {
     );
   }
 } */
-var yearLife = prompt("Ingrese el numero de años de vida: ");
+/* let yearLife = prompt("Ingrese el numero de años de vida: ");
 if (yearLife !== null) {
-    var year = parseInt(yearLife);
-    if (!isNaN(year) && year >= 0) {
-        // Corrección: 365 días en un año
-        var vidaSegundos = year * 365 * 24 * 60 * 60;
-        console.log("Viviste aproximadamente ".concat(vidaSegundos, " segundos"));
-    }
-    else {
-        console.log("Por favor, ingrese un número válido de años.");
-    }
+  let year: number = parseInt(yearLife);
+  if (!isNaN(year) && year >= 0) {
+    // Corrección: 365 días en un año
+    let vidaSegundos: number = year * 365 * 24 * 60 * 60;
+    console.log(`Viviste aproximadamente ${vidaSegundos} segundos`);
+  } else {
+    console.log("Por favor, ingrese un número válido de años.");
+  }
+} else {
+  console.log("Entrada cancelada por el usuario");
+} */
+/* // Función para agregar un cero inicial si el número es menor de 10
+function pad(num: number): string {
+  return num < 10 ? "0" + num : num.toString();
 }
-else {
-    console.log("Entrada cancelada por el usuario");
+
+// Función para formatear la fecha
+function formatDate(date: Date, format: string): string {
+  const year = date.getFullYear();
+  const month = pad(date.getMonth() + 1); // Los meses comienzan en 0
+  const day = pad(date.getDate());
+  const hours = pad(date.getHours());
+  const minutes = pad(date.getMinutes());
+
+  switch (format) {
+    case "YYYY-MM-DD HH:mm":
+      return `${year}-${month}-${day} ${hours}:${minutes}`;
+    case "DD-MM-YYYY HH:mm":
+      return `${day}-${month}-${year} ${hours}:${minutes}`;
+    case "DD/MM/YYYY HH:mm":
+      return `${day}/${month}/${year} ${hours}:${minutes}`;
+    default:
+      throw new Error("Formato no soportado");
+  }
 }
+
+// Crear una nueva fecha
+const nowDate = new Date();
+
+// Formatear la fecha en diferentes formatos
+const format1 = formatDate(nowDate, "YYYY-MM-DD HH:mm");
+const format2 = formatDate(nowDate, "DD-MM-YYYY HH:mm");
+const format3 = formatDate(nowDate, "DD/MM/YYYY HH:mm");
+
+// Imprimir los formatos
+console.log(format1); // Formato: YYYY-MM-DD HH:mm
+console.log(format2); // Formato: DD-MM-YYYY HH:mm
+console.log(format3); // Formato: DD/MM/YYYY HH:mm */
