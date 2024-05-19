@@ -19,19 +19,28 @@ if (myAge !== null) {
 } else {
   console.log("Entrada cancelada por el usuario");
 } */
-var a = 4;
-var b = 4;
+/* let a: number = 4;
+let b: number = 4;
 if (a > b) {
-    console.log("".concat(a, " es mayor que ").concat(b));
+  console.log(`${a} es mayor que ${b}`);
+} else if (b > a) {
+  console.log(`b: ${b} es mayor que a: ${a}`);
+} else {
+  console.log(`${a} es igual ${b}`);
 }
-else if (b > a) {
-    console.log("b: ".concat(b, " es mayor que a: ").concat(a));
+
+a > b
+  ? console.log(`${a} es mayor que ${b}`)
+  : b > a
+  ? console.log(`b: ${b} es mayor que a: ${a}`)
+  : console.log(`${a} es igual ${b}`); */
+var numeroInput = prompt("Ingrese un numero: ");
+if (numeroInput !== null) {
+    var numberEntrada = parseInt(numeroInput);
+    numberEntrada % 2 == 0
+        ? console.log("".concat(numberEntrada, " es par"))
+        : console.log("".concat(numberEntrada, " es impar"));
 }
 else {
-    console.log("".concat(a, " es igual ").concat(b));
+    console.log("entrada cancelada por el usuario");
 }
-a > b
-    ? console.log("".concat(a, " es mayor que ").concat(b))
-    : b > a
-        ? console.log("b: ".concat(b, " es mayor que a: ").concat(a))
-        : console.log("".concat(a, " es igual ").concat(b));

@@ -21,7 +21,7 @@ if (myAge !== null) {
   console.log("Entrada cancelada por el usuario");
 } */
 
-let a: number = 4;
+/* let a: number = 4;
 let b: number = 4;
 if (a > b) {
   console.log(`${a} es mayor que ${b}`);
@@ -35,4 +35,14 @@ a > b
   ? console.log(`${a} es mayor que ${b}`)
   : b > a
   ? console.log(`b: ${b} es mayor que a: ${a}`)
-  : console.log(`${a} es igual ${b}`);
+  : console.log(`${a} es igual ${b}`); */
+
+let numeroInput = prompt("Ingrese un numero: ");
+if (numeroInput !== null) {
+  let numberEntrada: number = parseInt(numeroInput);
+  numberEntrada % 2 == 0
+    ? console.log(`${numberEntrada} es par`)
+    : console.log(`${numberEntrada} es impar`);
+} else {
+  console.log("entrada cancelada por el usuario");
+}
