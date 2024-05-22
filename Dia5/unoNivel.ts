@@ -97,6 +97,16 @@ console.log(segundoElemento);
 const ultimoElemento: string = itCompanies[itCompanies.length - 1];
 console.log(ultimoElemento);
 
+for (const compani of itCompanies) {
+  console.log(`companies: ${compani}`);
+}
+
+for (const compani of itCompanies) {
+  console.log(`companies: ${compani.toUpperCase()}`);
+}
+
+console.log(itCompanies.toString());
+
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
 type MixedArray = (string | number | boolean | CountryCity | Skills)[];

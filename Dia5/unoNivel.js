@@ -54,6 +54,15 @@ console.log(primerElemento);
 console.log(segundoElemento);
 var ultimoElemento = itCompanies[itCompanies.length - 1];
 console.log(ultimoElemento);
+for (var _i = 0, itCompanies_1 = itCompanies; _i < itCompanies_1.length; _i++) {
+    var compani = itCompanies_1[_i];
+    console.log("companies: ".concat(compani));
+}
+for (var _a = 0, itCompanies_2 = itCompanies; _a < itCompanies_2.length; _a++) {
+    var compani = itCompanies_2[_a];
+    console.log("companies: ".concat(compani.toUpperCase()));
+}
+console.log(itCompanies.toString());
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
 type MixedArray = (string | number | boolean | CountryCity | Skills)[];
