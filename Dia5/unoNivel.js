@@ -20,31 +20,14 @@ var webTechs = [
     "Node",
     "MongoDB",
 ];
-var arrayVacio = [];
-console.log(arrayVacio, "array vacio");
-var cincoElementos = [
+var mixedDataTypes = [
     "Alex",
-    "Calcina",
-    "Satuko",
-    "Lopez",
-    "Peres",
+    2024,
+    true,
+    { country: "Bolivia", city: "Potosi" },
+    { skills: ["Html", "CSS", "JS", "React", "Python"] },
 ];
-console.log(cincoElementos);
-console.log(cincoElementos.length);
-var primerElemento = cincoElementos[0];
-var medio = Math.floor(cincoElementos.length / 2); // Redondea hacia abajo para asegurar un índice entero
-var segundoElemento; // Declaración fuera del condicional para mantener el alcance
-if (cincoElementos.length % 2 === 0) {
-    // Si la longitud del array es par, toma el elemento a la izquierda del medio
-    segundoElemento = cincoElementos[medio - 1];
-}
-else {
-    // Si la longitud del array es impar, toma el elemento del medio
-    segundoElemento = cincoElementos[medio];
-}
-console.log(segundoElemento);
-var ultimoElemento = cincoElementos[cincoElementos.length - 1];
-console.log(ultimoElemento);
+console.log("El tama\u00F1o del arreglo mixedDataTypes es ".concat(mixedDataTypes.length));
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
 type MixedArray = (string | number | boolean | CountryCity | Skills)[];

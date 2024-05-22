@@ -22,7 +22,7 @@ const webTechs = [
   "MongoDB",
 ];
 
-let arrayVacio: number[] = [];
+/* let arrayVacio: number[] = [];
 console.log(arrayVacio, "array vacio");
 
 const cincoElementos: string[] = [
@@ -50,7 +50,21 @@ if (cincoElementos.length % 2 === 0) {
 
 console.log(segundoElemento);
 const ultimoElemento: string = cincoElementos[cincoElementos.length - 1];
-console.log(ultimoElemento);
+console.log(ultimoElemento); */
+
+type CountryCity = { country: string; city: string };
+type Skills = { skills: string[] };
+type MixedArray = (string | number | boolean | CountryCity | Skills)[];
+
+const mixedDataTypes: MixedArray = [
+  "Alex",
+  2024,
+  true,
+  { country: "Bolivia", city: "Potosi" },
+  { skills: ["Html", "CSS", "JS", "React", "Python"] },
+];
+
+console.log(`El tamaño del arreglo mixedDataTypes es ${mixedDataTypes.length}`);
 
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
