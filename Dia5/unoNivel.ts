@@ -25,9 +25,32 @@ const webTechs = [
 let arrayVacio: number[] = [];
 console.log(arrayVacio, "array vacio");
 
-const cincoElementos: string[] = ["Alex", "Calcina"];
+const cincoElementos: string[] = [
+  "Alex",
+  "Calcina",
+  "Satuko",
+  "Lopez",
+  "Peres",
+];
 console.log(cincoElementos);
-console.log();
+console.log(cincoElementos.length);
+
+const primerElemento: string = cincoElementos[0];
+const medio: number = Math.floor(cincoElementos.length / 2); // Redondea hacia abajo para asegurar un índice entero
+
+let segundoElemento: string; // Declaración fuera del condicional para mantener el alcance
+
+if (cincoElementos.length % 2 === 0) {
+  // Si la longitud del array es par, toma el elemento a la izquierda del medio
+  segundoElemento = cincoElementos[medio - 1];
+} else {
+  // Si la longitud del array es impar, toma el elemento del medio
+  segundoElemento = cincoElementos[medio];
+}
+
+console.log(segundoElemento);
+const ultimoElemento: string = cincoElementos[cincoElementos.length - 1];
+console.log(ultimoElemento);
 
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
