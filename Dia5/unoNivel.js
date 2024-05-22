@@ -28,6 +28,17 @@ var mixedDataTypes = [
     { skills: ["Html", "CSS", "JS", "React", "Python"] },
 ];
 console.log("El tama\u00F1o del arreglo mixedDataTypes es ".concat(mixedDataTypes.length));
+var itCompanies = [
+    "Facebook",
+    "Google",
+    "Microsoft",
+    "Apple",
+    "IBM",
+    "Oracle",
+    "Amazon",
+];
+console.log(itCompanies);
+console.log("cantidad de empresas ".concat(itCompanies.length));
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
 type MixedArray = (string | number | boolean | CountryCity | Skills)[];

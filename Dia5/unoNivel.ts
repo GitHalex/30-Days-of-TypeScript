@@ -66,6 +66,19 @@ const mixedDataTypes: MixedArray = [
 
 console.log(`El tamaño del arreglo mixedDataTypes es ${mixedDataTypes.length}`);
 
+const itCompanies: string[] = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon",
+];
+console.log(itCompanies);
+
+console.log(`cantidad de empresas ${itCompanies.length}`);
+
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
 type MixedArray = (string | number | boolean | CountryCity | Skills)[];
