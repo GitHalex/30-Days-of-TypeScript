@@ -39,6 +39,21 @@ var itCompanies = [
 ];
 console.log(itCompanies);
 console.log("cantidad de empresas ".concat(itCompanies.length));
+var primerElemento = itCompanies[0];
+var medio = Math.floor(itCompanies.length / 2); // Redondea hacia abajo para asegurar un índice entero
+var segundoElemento; // Declaración fuera del condicional para mantener el alcance
+if (itCompanies.length % 2 === 0) {
+    // Si la longitud del array es par, toma el elemento a la izquierda del medio
+    segundoElemento = itCompanies[medio - 1];
+}
+else {
+    // Si la longitud del array es impar, toma el elemento del medio
+    segundoElemento = itCompanies[medio];
+}
+console.log(primerElemento);
+console.log(segundoElemento);
+var ultimoElemento = itCompanies[itCompanies.length - 1];
+console.log(ultimoElemento);
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
 type MixedArray = (string | number | boolean | CountryCity | Skills)[];
