@@ -147,6 +147,16 @@ console.log(cortarPrimerosTres);
 const cortarUltimosTres: string[] = itCompanies.slice(-3);
 console.log(cortarUltimosTres);
 
+const medio: number = Math.floor(itCompanies.length / 2); // Redondea hacia abajo para asegurar un índice entero
+let empresasIntermedias: string[];
+if (itCompanies.length % 2 == 0) {
+  empresasIntermedias = itCompanies.slice(medio - 1, medio + 1);
+} else {
+  empresasIntermedias = itCompanies.slice(medio, medio + 1);
+}
+
+console.log(`Empresas intermedias: ${empresasIntermedias}`);
+
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
 type MixedArray = (string | number | boolean | CountryCity | Skills)[];

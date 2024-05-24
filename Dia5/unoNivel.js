@@ -99,6 +99,15 @@ var cortarPrimerosTres = itCompanies.slice(0, 3);
 console.log(cortarPrimerosTres);
 var cortarUltimosTres = itCompanies.slice(-3);
 console.log(cortarUltimosTres);
+var medio = Math.floor(itCompanies.length / 2); // Redondea hacia abajo para asegurar un índice entero
+var empresasIntermedias;
+if (itCompanies.length % 2 == 0) {
+    empresasIntermedias = itCompanies.slice(medio - 1, medio + 1);
+}
+else {
+    empresasIntermedias = itCompanies.slice(medio, medio + 1);
+}
+console.log("Empresas intermedias: ".concat(empresasIntermedias));
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
 type MixedArray = (string | number | boolean | CountryCity | Skills)[];
