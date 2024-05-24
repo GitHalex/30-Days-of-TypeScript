@@ -63,6 +63,16 @@ for (var _a = 0, itCompanies_2 = itCompanies; _a < itCompanies_2.length; _a++) {
     console.log("companies: ".concat(compani.toUpperCase()));
 }
 console.log(itCompanies.toString() + " Son grandes empresas de TI");
+var existeEmpresa = "Apple";
+for (var _b = 0, itCompanies_3 = itCompanies; _b < itCompanies_3.length; _b++) {
+    var companiASit = itCompanies_3[_b];
+    if (existeEmpresa === companiASit) {
+        console.log("EXISTE: ".concat(existeEmpresa, " en el array de ").concat(itCompanies));
+    }
+    else {
+        console.log("NO EXISTE: ".concat(existeEmpresa, " en el array de ").concat(itCompanies));
+    }
+}
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
 type MixedArray = (string | number | boolean | CountryCity | Skills)[];

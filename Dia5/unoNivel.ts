@@ -107,6 +107,14 @@ for (const compani of itCompanies) {
 
 console.log(itCompanies.toString() + " Son grandes empresas de TI");
 
+let existeEmpresa: string = "Apple";
+for (const companiASit of itCompanies) {
+  if (existeEmpresa === companiASit) {
+    console.log(`EXISTE: ${existeEmpresa} en el array de ${itCompanies}`);
+  } else {
+    console.log(`NO EXISTE: ${existeEmpresa} en el array de ${itCompanies}`);
+  }
+}
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
 type MixedArray = (string | number | boolean | CountryCity | Skills)[];
