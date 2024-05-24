@@ -79,7 +79,7 @@ console.log(itCompanies);
 
 console.log(`cantidad de empresas ${itCompanies.length}`);
 
-const primerElemento: string = itCompanies[0];
+/* const primerElemento: string = itCompanies[0];
 const medio: number = Math.floor(itCompanies.length / 2); // Redondea hacia abajo para asegurar un índice entero
 
 let segundoElemento: string; // Declaración fuera del condicional para mantener el alcance
@@ -90,9 +90,9 @@ if (itCompanies.length % 2 === 0) {
 } else {
   // Si la longitud del array es impar, toma el elemento del medio
   segundoElemento = itCompanies[medio];
-}
+} */
 
-console.log(primerElemento);
+/* console.log(primerElemento);
 console.log(segundoElemento);
 const ultimoElemento: string = itCompanies[itCompanies.length - 1];
 console.log(ultimoElemento);
@@ -105,16 +105,36 @@ for (const compani of itCompanies) {
   console.log(`companies: ${compani.toUpperCase()}`);
 }
 
-console.log(itCompanies.toString() + " Son grandes empresas de TI");
+console.log(itCompanies.toString() + " Son grandes empresas de TI"); */
 
-let existeEmpresa: string = "Apple";
+/* let existeEmpresa: string = "Apple";
 for (const companiASit of itCompanies) {
   if (existeEmpresa === companiASit) {
     console.log(`EXISTE: ${existeEmpresa} en el array de ${itCompanies}`);
   } else {
     console.log(`NO EXISTE: ${existeEmpresa} en el array de ${itCompanies}`);
   }
+} */
+
+const companiesWithMultipleOs: string[] = [];
+
+for (let i = 0; i < itCompanies.length; i++) {
+  const company = itCompanies[i];
+  let count = 0;
+
+  for (let j = 0; j < company.length; j++) {
+    if (company[j].toLowerCase() === "o") {
+      count++;
+    }
+  }
+
+  if (count > 1) {
+    companiesWithMultipleOs.push(company);
+  }
 }
+
+console.log(companiesWithMultipleOs);
+
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
 type MixedArray = (string | number | boolean | CountryCity | Skills)[];
@@ -126,38 +146,7 @@ const arr: MixedArray = [
   { country: "Finland", city: "Helsinki" },
   { skills: ["HTML", "CSS", "JS", "React", "Python"] },
 ];
-
-let js = "JavaScript";
-const charsInJavaScript: string[] = js.split("");
-console.log(charsInJavaScript);
-
-// Creando un array usando split
-let companiesString: string =
-  "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon";
-const companiesCadena: string[] = companiesString.split(",");
-console.log(companiesCadena);
-
-// Acceder a los elementos de un array usando el index
-const fruits: string[] = ["banana", "orange", "mango", "lemon"];
-let primero: string = fruits[0];
-let segundo: string = fruits[1];
-let ultimo: number = fruits.length - 1;
-console.log(primero);
-console.log(segundo);
-console.log(fruits[ultimo]);
-
-// Modificar elementos de array
-const numbers: number[] = [1, 2, 3, 4, 5, 2];
-numbers[0] = 10;
-numbers[1] = 20;
-console.log(numbers); */
-
-// Métodos para manipular arrays
-// constructor de arrays
-/* const arrCreado: string[] = Array(8).fill("X");
-console.log(arrCreado);
-const nameArray: string[] = Array("Alex", "Cristiano");
-console.log(nameArray); */
+*/
 
 /* // Concatenación de arrays usando concat
 const firstList: number[] = [1, 2, 3];
