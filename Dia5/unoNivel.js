@@ -91,8 +91,10 @@ for (let i = 0; i < itCompanies.length; i++) {
 }
 
 console.log(companiesWithMultipleOs); */
-var ordenadosIt = itCompanies.sort();
-console.log(ordenadosIt);
+/* const ordenadosIt: string[] = itCompanies.sort();
+console.log(ordenadosIt); */
+var revertidoIt = itCompanies.reverse();
+console.log(revertidoIt);
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
 type MixedArray = (string | number | boolean | CountryCity | Skills)[];

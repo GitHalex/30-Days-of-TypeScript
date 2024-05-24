@@ -135,8 +135,11 @@ for (let i = 0; i < itCompanies.length; i++) {
 
 console.log(companiesWithMultipleOs); */
 
-const ordenadosIt: string[] = itCompanies.sort();
-console.log(ordenadosIt);
+/* const ordenadosIt: string[] = itCompanies.sort();
+console.log(ordenadosIt); */
+
+const revertidoIt: string[] = itCompanies.reverse();
+console.log(revertidoIt);
 
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
