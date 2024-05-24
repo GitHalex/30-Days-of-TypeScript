@@ -108,6 +108,22 @@ else {
     empresasIntermedias = itCompanies.slice(medio, medio + 1);
 }
 console.log("Empresas intermedias: ".concat(empresasIntermedias));
+console.log(itCompanies);
+/* itCompanies.shift();
+console.log(itCompanies); */
+if (itCompanies.length % 2 === 0) {
+    // Si la longitud del array es par, elimina los dos elementos del medio
+    itCompanies.splice(medio - 1, 2);
+}
+else {
+    // Si la longitud del array es impar, elimina el único elemento del medio
+    itCompanies.splice(medio, 1);
+}
+console.log(itCompanies);
+itCompanies.pop();
+console.log(itCompanies);
+itCompanies.splice(0, itCompanies.length);
+console.log(itCompanies); // []
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
 type MixedArray = (string | number | boolean | CountryCity | Skills)[];

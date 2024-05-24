@@ -156,6 +156,25 @@ if (itCompanies.length % 2 == 0) {
 }
 
 console.log(`Empresas intermedias: ${empresasIntermedias}`);
+console.log(itCompanies);
+
+/* itCompanies.shift();
+console.log(itCompanies); */
+
+if (itCompanies.length % 2 === 0) {
+  // Si la longitud del array es par, elimina los dos elementos del medio
+  itCompanies.splice(medio - 1, 2);
+} else {
+  // Si la longitud del array es impar, elimina el único elemento del medio
+  itCompanies.splice(medio, 1);
+}
+
+console.log(itCompanies);
+itCompanies.pop();
+console.log(itCompanies);
+
+itCompanies.splice(0, itCompanies.length);
+console.log(itCompanies); // []
 
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
