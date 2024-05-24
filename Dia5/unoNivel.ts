@@ -116,7 +116,7 @@ for (const companiASit of itCompanies) {
   }
 } */
 
-const companiesWithMultipleOs: string[] = [];
+/* const companiesWithMultipleOs: string[] = [];
 
 for (let i = 0; i < itCompanies.length; i++) {
   const company = itCompanies[i];
@@ -133,7 +133,10 @@ for (let i = 0; i < itCompanies.length; i++) {
   }
 }
 
-console.log(companiesWithMultipleOs);
+console.log(companiesWithMultipleOs); */
+
+const ordenadosIt: string[] = itCompanies.sort();
+console.log(ordenadosIt);
 
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };

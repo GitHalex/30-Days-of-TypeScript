@@ -73,20 +73,26 @@ for (const companiASit of itCompanies) {
     console.log(`NO EXISTE: ${existeEmpresa} en el array de ${itCompanies}`);
   }
 } */
-var companiesWithMultipleOs = [];
-for (var i = 0; i < itCompanies.length; i++) {
-    var company = itCompanies[i];
-    var count = 0;
-    for (var j = 0; j < company.length; j++) {
-        if (company[j].toLowerCase() === "o") {
-            count++;
-        }
+/* const companiesWithMultipleOs: string[] = [];
+
+for (let i = 0; i < itCompanies.length; i++) {
+  const company = itCompanies[i];
+  let count = 0;
+
+  for (let j = 0; j < company.length; j++) {
+    if (company[j].toLowerCase() === "o") {
+      count++;
     }
-    if (count > 1) {
-        companiesWithMultipleOs.push(company);
-    }
+  }
+
+  if (count > 1) {
+    companiesWithMultipleOs.push(company);
+  }
 }
-console.log(companiesWithMultipleOs);
+
+console.log(companiesWithMultipleOs); */
+var ordenadosIt = itCompanies.sort();
+console.log(ordenadosIt);
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
 type MixedArray = (string | number | boolean | CountryCity | Skills)[];
