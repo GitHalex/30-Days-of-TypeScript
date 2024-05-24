@@ -105,7 +105,7 @@ for (const compani of itCompanies) {
   console.log(`companies: ${compani.toUpperCase()}`);
 }
 
-console.log(itCompanies.toString());
+console.log(itCompanies.toString() + " Son grandes empresas de TI");
 
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };

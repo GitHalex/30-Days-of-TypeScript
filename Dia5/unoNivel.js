@@ -62,7 +62,7 @@ for (var _a = 0, itCompanies_2 = itCompanies; _a < itCompanies_2.length; _a++) {
     var compani = itCompanies_2[_a];
     console.log("companies: ".concat(compani.toUpperCase()));
 }
-console.log(itCompanies.toString());
+console.log(itCompanies.toString() + " Son grandes empresas de TI");
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
 type MixedArray = (string | number | boolean | CountryCity | Skills)[];
