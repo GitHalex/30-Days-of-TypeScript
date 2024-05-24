@@ -141,6 +141,12 @@ console.log(ordenadosIt); */
 const revertidoIt: string[] = itCompanies.reverse();
 console.log(revertidoIt);
 
+const cortarPrimerosTres: string[] = itCompanies.slice(0, 3);
+console.log(cortarPrimerosTres);
+
+const cortarUltimosTres: string[] = itCompanies.slice(-3);
+console.log(cortarUltimosTres);
+
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
 type MixedArray = (string | number | boolean | CountryCity | Skills)[];

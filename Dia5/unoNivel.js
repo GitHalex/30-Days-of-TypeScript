@@ -95,6 +95,10 @@ console.log(companiesWithMultipleOs); */
 console.log(ordenadosIt); */
 var revertidoIt = itCompanies.reverse();
 console.log(revertidoIt);
+var cortarPrimerosTres = itCompanies.slice(0, 3);
+console.log(cortarPrimerosTres);
+var cortarUltimosTres = itCompanies.slice(-3);
+console.log(cortarUltimosTres);
 /* type CountryCity = { country: string; city: string };
 type Skills = { skills: string[] };
 type MixedArray = (string | number | boolean | CountryCity | Skills)[];
