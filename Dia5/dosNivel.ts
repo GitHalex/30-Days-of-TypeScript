@@ -33,3 +33,19 @@ console.log(text.length);
 const textArr: string[] = text.split(" ");
 console.log(textArr);
 console.log(textArr.length);
+
+const shoppingCart: string[] = ["Milk", "Coffee", "Tea", "Honey"];
+shoppingCart.unshift("Meat");
+shoppingCart.push("Sugar");
+console.log(shoppingCart);
+// Find the index of "Honey"
+const honeyIndex = shoppingCart.indexOf("Honey");
+
+// Check if "Honey" is in the array and remove it
+if (honeyIndex !== -1) {
+  shoppingCart.splice(honeyIndex, 1);
+}
+console.log(shoppingCart);
+
+shoppingCart[3] = "Green Tea";
+console.log(shoppingCart);
