@@ -51,9 +51,18 @@ shoppingCart[3] = "Green Tea";
 console.log(shoppingCart); */
 
 // check if "ETHIOPIS" is in the array countriesArr
-const indexEthiopia = countriesArr.indexOf("Ethiopia");
+const indexEthiopia: number = countriesArr.indexOf("Ethiopia");
 if (indexEthiopia !== -1) {
   console.log(`${countriesArr[indexEthiopia]} Si existe`);
 } else {
   console.log(`${countriesArr[indexEthiopia]} No existe`);
+}
+
+// Check if "Sass" exists in the webTechsArr array
+const indexSass: number = webTechsArr.indexOf("Sass");
+if (indexSass !== -1) {
+  console.log("Sass es un preproceso de CSS");
+} else {
+  webTechsArr.push("Sass");
+  console.log(webTechsArr);
 }

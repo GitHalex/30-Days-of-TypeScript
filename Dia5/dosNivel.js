@@ -54,3 +54,12 @@ if (indexEthiopia !== -1) {
 else {
     console.log("".concat(countriesArr[indexEthiopia], " No existe"));
 }
+// Check if "Sass" exists in the webTechsArr array
+var indexSass = webTechsArr.indexOf("Sass");
+if (indexSass !== -1) {
+    console.log("Sass es un preproceso de CSS");
+}
+else {
+    webTechsArr.push("Sass");
+    console.log(webTechsArr);
+}
