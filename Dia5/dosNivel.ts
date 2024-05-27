@@ -66,3 +66,9 @@ if (indexSass !== -1) {
   webTechsArr.push("Sass");
   console.log(webTechsArr);
 }
+
+const frontEnd: string[] = ["HTML", "CSS", "JS", "React", "Redux"];
+const backEnd: string[] = ["Node", "Express", "MongoDB"];
+
+const fullstack: string[] = frontEnd.concat(backEnd);
+console.log(fullstack);

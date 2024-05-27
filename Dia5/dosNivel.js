@@ -63,3 +63,7 @@ else {
     webTechsArr.push("Sass");
     console.log(webTechsArr);
 }
+var frontEnd = ["HTML", "CSS", "JS", "React", "Redux"];
+var backEnd = ["Node", "Express", "MongoDB"];
+var fullstack = frontEnd.concat(backEnd);
+console.log(fullstack);
