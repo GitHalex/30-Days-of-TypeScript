@@ -25,7 +25,7 @@ const webTechsArr: string[] = [
 console.log(countriesArr);
 console.log(webTechsArr);
 
-let text: string =
+/* let text: string =
   "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
 console.log(text);
 console.log(text.length);
@@ -48,4 +48,12 @@ if (honeyIndex !== -1) {
 console.log(shoppingCart);
 
 shoppingCart[3] = "Green Tea";
-console.log(shoppingCart);
+console.log(shoppingCart); */
+
+// check if "ETHIOPIS" is in the array countriesArr
+const indexEthiopia = countriesArr.indexOf("Ethiopia");
+if (indexEthiopia !== -1) {
+  console.log(`${countriesArr[indexEthiopia]} Si existe`);
+} else {
+  console.log(`${countriesArr[indexEthiopia]} No existe`);
+}
