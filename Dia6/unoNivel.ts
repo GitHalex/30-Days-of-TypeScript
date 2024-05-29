@@ -115,10 +115,31 @@ for (let i: number = 0; i <= 100; i++) {
     console.log(i);
   }
 }*/
-let suma: number = 0;
+
+/* let suma: number = 0;
 
 for (let i: number = 1; i <= 100; i++) {
   suma += i;
 }
 
-console.log(`La suma de todos los numeros de 0 a 100 es ${suma}`);
+console.log(`La suma de todos los numeros de 0 a 100 es ${suma}`); */
+
+/* let sumaPares: number = 0;
+let sumaImpares: number = 0;
+
+for (let i: number = 1; i <= 100; i++) {
+  if (i % 2 == 0) {
+    sumaPares += i;
+  } else {
+    sumaImpares += i;
+  }
+}
+
+console.log(
+  `La suma de todos los pares de 0 a 100 es ${sumaPares}\nY la suma de todos los impares de 0 a 100 es ${sumaImpares}`
+);
+
+let arregloParImpar: number[] = [];
+arregloParImpar.push(sumaPares);
+arregloParImpar.push(sumaImpares);
+console.log(arregloParImpar); */
