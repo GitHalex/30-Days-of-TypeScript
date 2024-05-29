@@ -96,7 +96,7 @@ for (let i: number = 0; i < 11; i++) {
 } */
 
 // Helper function to check if a number is prime
-function isPrime(num: number): boolean {
+/* function isPrime(num: number): boolean {
   if (num <= 1) return false;
   if (num <= 3) return true;
 
@@ -114,4 +114,11 @@ for (let i: number = 0; i <= 100; i++) {
   if (isPrime(i)) {
     console.log(i);
   }
+}*/
+let suma: number = 0;
+
+for (let i: number = 1; i <= 100; i++) {
+  suma += i;
 }
+
+console.log(`La suma de todos los numeros de 0 a 100 es ${suma}`);
