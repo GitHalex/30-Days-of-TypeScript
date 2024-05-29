@@ -66,7 +66,17 @@ for (let i: number = 1; i < 8; i++) {
 /* for (let i: number = 0; i < 11; i++) {
   console.log(`${i} X ${i} = ${i * i}`);
 }*/
-console.log("i\ti^2\ti`3");
-for (var i = 0; i < 11; i++) {
-    console.log("".concat(i, "\t").concat(Math.pow(i, 2), "\t").concat(Math.pow(i, 3)));
+/* console.log("i\ti^2\ti`3");
+for (let i: number = 0; i < 11; i++) {
+  console.log(`${i}\t${i ** 2}\t${i ** 3}`);
+} */
+/* for (let i: number = 0; i <= 100; i++) {
+  if (i % 2 == 0) {
+    console.log(i);
+  }
+} */
+for (var i = 0; i <= 100; i++) {
+    if (i % 2 !== 0) {
+        console.log(i);
+    }
 }
