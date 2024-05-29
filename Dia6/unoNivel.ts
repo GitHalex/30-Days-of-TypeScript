@@ -67,8 +67,13 @@ if (entradaInput !== null) {
 } else {
   console.log("Presionaste el prompt de cancelar");
 } */
-let cadenaAst: string = "";
+
+/* let cadenaAst: string = "";
 for (let i: number = 1; i < 8; i++) {
   cadenaAst = "#" + cadenaAst;
   console.log(cadenaAst);
+} */
+
+for (let i: number = 0; i < 11; i++) {
+  console.log(`${i} X ${i} = ${i * i}`);
 }

@@ -58,8 +58,11 @@ if (entradaInput !== null) {
 } else {
   console.log("Presionaste el prompt de cancelar");
 } */
-var cadenaAst = "";
-for (var i = 1; i < 8; i++) {
-    cadenaAst = "#" + cadenaAst;
-    console.log(cadenaAst);
+/* let cadenaAst: string = "";
+for (let i: number = 1; i < 8; i++) {
+  cadenaAst = "#" + cadenaAst;
+  console.log(cadenaAst);
+} */
+for (var i = 0; i < 11; i++) {
+    console.log("".concat(i, " X ").concat(i, " = ").concat(i * i));
 }
