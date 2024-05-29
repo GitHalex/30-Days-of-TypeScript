@@ -74,6 +74,11 @@ for (let i: number = 1; i < 8; i++) {
   console.log(cadenaAst);
 } */
 
-for (let i: number = 0; i < 11; i++) {
+/* for (let i: number = 0; i < 11; i++) {
   console.log(`${i} X ${i} = ${i * i}`);
+}*/
+console.log("i\ti^2\ti`3");
+
+for (let i: number = 0; i < 11; i++) {
+  console.log(`${i}\t${i ** 2}\t${i ** 3}`);
 }

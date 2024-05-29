@@ -63,6 +63,10 @@ for (let i: number = 1; i < 8; i++) {
   cadenaAst = "#" + cadenaAst;
   console.log(cadenaAst);
 } */
+/* for (let i: number = 0; i < 11; i++) {
+  console.log(`${i} X ${i} = ${i * i}`);
+}*/
+console.log("i\ti^2\ti`3");
 for (var i = 0; i < 11; i++) {
-    console.log("".concat(i, " X ").concat(i, " = ").concat(i * i));
+    console.log("".concat(i, "\t").concat(Math.pow(i, 2), "\t").concat(Math.pow(i, 3)));
 }
