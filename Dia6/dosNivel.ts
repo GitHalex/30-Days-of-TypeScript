@@ -44,3 +44,23 @@ for (const country of countriesUpper) {
 }
 console.log(paisesUpper);
 console.log(tamChar);
+
+const resultArray: Array<[string, string, string]> = [];
+
+for (const pais of countriesUpper) {
+  const countrySlice: string = pais.slice(0, 3).toUpperCase();
+  const paisLength: number = pais.length;
+  const tam: string = paisLength.toString();
+  resultArray.push([pais, countrySlice, tam]);
+}
+console.log(resultArray);
+
+/* const resultArray = [];
+for (const country of countries) {
+  const countryCode = country.slice(0, 3).toLocaleUpperCase();
+  //   console.log(countryCode);
+  const countryLength = country.length;
+  //   console.log(countryLength);
+  resultArray.push([country, countryCode, countryLength]);
+}
+console.log(resultArray); */
