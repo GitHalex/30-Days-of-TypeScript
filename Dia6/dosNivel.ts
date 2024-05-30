@@ -35,8 +35,12 @@ const countriesUpper: string[] = [
   "Japan",
   "Kenya",
 ];
+
 let paisesUpper: string[] = [];
+let tamChar: number[] = [];
 for (const country of countriesUpper) {
   paisesUpper.push(country.toUpperCase());
+  tamChar.push(country.length);
 }
 console.log(paisesUpper);
+console.log(tamChar);

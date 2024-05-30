@@ -34,8 +34,11 @@ var countriesUpper = [
     "Kenya",
 ];
 var paisesUpper = [];
+var tamChar = [];
 for (var _i = 0, countriesUpper_1 = countriesUpper; _i < countriesUpper_1.length; _i++) {
     var country = countriesUpper_1[_i];
     paisesUpper.push(country.toUpperCase());
+    tamChar.push(country.length);
 }
 console.log(paisesUpper);
+console.log(tamChar);
