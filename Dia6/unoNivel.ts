@@ -171,11 +171,11 @@ const uniqueRandomNumbers: number[] = generateUniqueRandomNumbers(5, 1, 100);
 // Print the result
 console.log(uniqueRandomNumbers); */
 
-let varriableArreglo: string = "abcdefghijklmnopqrstuvwxuz1234567890";
+/* let varriableArreglo: string = "abcdefghijklmnopqrstuvwxuz1234567890";
 let password: string = "";
 for (let index = 0; index < 6; index++) {
   let indice: number = Math.floor(Math.random() * varriableArreglo.length);
   password += varriableArreglo[indice];
 }
 
-console.log(password);
+console.log(password); */
