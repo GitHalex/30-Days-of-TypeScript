@@ -127,19 +127,35 @@ arregloParImpar.push(sumaPares);
 arregloParImpar.push(sumaImpares);
 console.log(arregloParImpar); */
 // Function to generate a random number between a given range
-function getRandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+/* function getRandomNumber(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
 // Function to generate an array of unique random numbers
-function generateUniqueRandomNumbers(size, min, max) {
-    var uniqueNumbers = new Set();
-    while (uniqueNumbers.size < size) {
-        var randomNumber = getRandomNumber(min, max);
-        uniqueNumbers.add(randomNumber);
-    }
-    return Array.from(uniqueNumbers);
+function generateUniqueRandomNumbers(
+  size: number,
+  min: number,
+  max: number
+): number[] {
+  const uniqueNumbers: Set<number> = new Set();
+
+  while (uniqueNumbers.size < size) {
+    const randomNumber: number = getRandomNumber(min, max);
+    uniqueNumbers.add(randomNumber);
+  }
+
+  return Array.from(uniqueNumbers);
 }
+
 // Generate an array of 5 unique random numbers between 1 and 100
-var uniqueRandomNumbers = generateUniqueRandomNumbers(5, 1, 100);
+const uniqueRandomNumbers: number[] = generateUniqueRandomNumbers(5, 1, 100);
+
 // Print the result
-console.log(uniqueRandomNumbers);
+console.log(uniqueRandomNumbers); */
+var varriableArreglo = "abcdefghijklmnopqrstuvwxuz1234567890";
+var password = "";
+for (var index = 0; index < 6; index++) {
+    var indice = Math.floor(Math.random() * varriableArreglo.length);
+    password += varriableArreglo[indice];
+}
+console.log(password);

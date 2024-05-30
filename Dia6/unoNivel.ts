@@ -145,7 +145,7 @@ arregloParImpar.push(sumaImpares);
 console.log(arregloParImpar); */
 
 // Function to generate a random number between a given range
-function getRandomNumber(min: number, max: number): number {
+/* function getRandomNumber(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -169,4 +169,13 @@ function generateUniqueRandomNumbers(
 const uniqueRandomNumbers: number[] = generateUniqueRandomNumbers(5, 1, 100);
 
 // Print the result
-console.log(uniqueRandomNumbers);
+console.log(uniqueRandomNumbers); */
+
+let varriableArreglo: string = "abcdefghijklmnopqrstuvwxuz1234567890";
+let password: string = "";
+for (let index = 0; index < 6; index++) {
+  let indice: number = Math.floor(Math.random() * varriableArreglo.length);
+  password += varriableArreglo[indice];
+}
+
+console.log(password);
