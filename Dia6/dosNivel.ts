@@ -1,4 +1,4 @@
-let varriableArreglo: string = "abcdefghijklmnopqrstuvwxuz1234567890";
+/* let varriableArreglo: string = "abcdefghijklmnopqrstuvwxuz1234567890";
 let tamanio: number = Math.floor(Math.random() * varriableArreglo.length);
 let password: string = "";
 for (let index = 0; index < tamanio; index++) {
@@ -13,4 +13,30 @@ for (let i: number = 0; i < 5; i++) {
   hexadecimal += varriableArreglo[char];
 }
 
-console.log(hexadecimal);
+console.log(hexadecimal); */
+let arregloNumber: number[] = [];
+for (let i: number = 0; i < 3; i++) {
+  let numeroRgb: number = Math.floor(Math.random() * 255);
+  arregloNumber.push(numeroRgb);
+}
+
+console.log(`rgb(${arregloNumber.toString()})`);
+
+const countriesUpper: string[] = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
+];
+let paisesUpper: string[] = [];
+for (const country of countriesUpper) {
+  paisesUpper.push(country.toUpperCase());
+}
+console.log(paisesUpper);
