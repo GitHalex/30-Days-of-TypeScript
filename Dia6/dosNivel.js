@@ -14,12 +14,13 @@ for (let i: number = 0; i < 5; i++) {
 }
 
 console.log(hexadecimal); */
-var arregloNumber = [];
-for (var i = 0; i < 3; i++) {
-    var numeroRgb = Math.floor(Math.random() * 255);
-    arregloNumber.push(numeroRgb);
+/* let arregloNumber: number[] = [];
+for (let i: number = 0; i < 3; i++) {
+  let numeroRgb: number = Math.floor(Math.random() * 255);
+  arregloNumber.push(numeroRgb);
 }
-console.log("rgb(".concat(arregloNumber.toString(), ")"));
+
+console.log(`rgb(${arregloNumber.toString()})`); */
 var countriesUpper = [
     "Albania",
     "Bolivia",
@@ -30,6 +31,7 @@ var countriesUpper = [
     "Germany",
     "Hungary",
     "Ireland",
+    "Iceland",
     "Japan",
     "Kenya",
 ];
@@ -43,20 +45,21 @@ for (var _i = 0, countriesUpper_1 = countriesUpper; _i < countriesUpper_1.length
 console.log(paisesUpper);
 console.log(tamChar);
 var resultArray = [];
+var arregloLand = [];
+var arregloIa = [];
 for (var _a = 0, countriesUpper_2 = countriesUpper; _a < countriesUpper_2.length; _a++) {
     var pais = countriesUpper_2[_a];
     var countrySlice = pais.slice(0, 3).toUpperCase();
     var paisLength = pais.length;
     var tam = paisLength.toString();
     resultArray.push([pais, countrySlice, tam]);
+    if (pais.indexOf("land") !== -1) {
+        arregloLand.push(pais);
+    }
+    if (pais.indexOf("ia") !== -1) {
+        arregloIa.push(pais);
+    }
 }
 console.log(resultArray);
-/* const resultArray = [];
-for (const country of countries) {
-  const countryCode = country.slice(0, 3).toLocaleUpperCase();
-  //   console.log(countryCode);
-  const countryLength = country.length;
-  //   console.log(countryLength);
-  resultArray.push([country, countryCode, countryLength]);
-}
-console.log(resultArray); */
+console.log(arregloLand);
+console.log(arregloIa);
