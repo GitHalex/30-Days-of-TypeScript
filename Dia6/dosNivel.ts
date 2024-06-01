@@ -123,3 +123,15 @@ for (const stack of mernStackArreglo) {
 
 const mernString: string = stackMern.join("");
 console.log(mernString);
+
+const frutas: string[] = ["banana", "orange", "mango", "lemon"];
+
+let tamanio: number = frutas.length - 1;
+
+let i: number = 0;
+console.log(i);
+
+while (tamanio >= 0) {
+  console.log(frutas[tamanio]);
+  tamanio--;
+}

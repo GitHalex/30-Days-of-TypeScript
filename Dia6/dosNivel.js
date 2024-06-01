@@ -113,3 +113,11 @@ for (var _a = 0, mernStackArreglo_1 = mernStackArreglo; _a < mernStackArreglo_1.
 }
 var mernString = stackMern.join("");
 console.log(mernString);
+var frutas = ["banana", "orange", "mango", "lemon"];
+var tamanio = frutas.length - 1;
+var i = 0;
+console.log(i);
+while (tamanio >= 0) {
+    console.log(frutas[tamanio]);
+    tamanio--;
+}
