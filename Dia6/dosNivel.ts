@@ -38,7 +38,7 @@ const countriesUpper: string[] = [
   "Kenya",
 ];
 
-let paisesUpper: string[] = [];
+/* let paisesUpper: string[] = [];
 let tamChar: number[] = [];
 for (const country of countriesUpper) {
   paisesUpper.push(country.toUpperCase());
@@ -67,4 +67,20 @@ for (const pais of countriesUpper) {
 console.log(resultArray);
 
 console.log(arregloLand);
-console.log(arregloIa);
+console.log(arregloIa); */
+let mayor: number = 0;
+let paisMayor: string = "";
+let cincoPais: string[] = [];
+for (const pais of countriesUpper) {
+  if (mayor < pais.length) {
+    mayor = pais.length;
+    paisMayor = pais;
+  }
+  if (pais.length == 5) {
+    cincoPais.push(pais);
+  }
+}
+
+console.log(mayor);
+console.log(paisMayor);
+console.log(cincoPais);

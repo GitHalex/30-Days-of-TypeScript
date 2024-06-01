@@ -35,31 +35,49 @@ var countriesUpper = [
     "Japan",
     "Kenya",
 ];
-var paisesUpper = [];
-var tamChar = [];
-for (var _i = 0, countriesUpper_1 = countriesUpper; _i < countriesUpper_1.length; _i++) {
-    var country = countriesUpper_1[_i];
-    paisesUpper.push(country.toUpperCase());
-    tamChar.push(country.length);
+/* let paisesUpper: string[] = [];
+let tamChar: number[] = [];
+for (const country of countriesUpper) {
+  paisesUpper.push(country.toUpperCase());
+  tamChar.push(country.length);
 }
 console.log(paisesUpper);
 console.log(tamChar);
-var resultArray = [];
-var arregloLand = [];
-var arregloIa = [];
-for (var _a = 0, countriesUpper_2 = countriesUpper; _a < countriesUpper_2.length; _a++) {
-    var pais = countriesUpper_2[_a];
-    var countrySlice = pais.slice(0, 3).toUpperCase();
-    var paisLength = pais.length;
-    var tam = paisLength.toString();
-    resultArray.push([pais, countrySlice, tam]);
-    if (pais.indexOf("land") !== -1) {
-        arregloLand.push(pais);
-    }
-    if (pais.indexOf("ia") !== -1) {
-        arregloIa.push(pais);
-    }
+
+const resultArray: Array<[string, string, string]> = [];
+
+const arregloLand: string[] = [];
+const arregloIa: string[] = [];
+
+for (const pais of countriesUpper) {
+  const countrySlice: string = pais.slice(0, 3).toUpperCase();
+  const paisLength: number = pais.length;
+  const tam: string = paisLength.toString();
+  resultArray.push([pais, countrySlice, tam]);
+  if (pais.indexOf("land") !== -1) {
+    arregloLand.push(pais);
+  }
+  if (pais.indexOf("ia") !== -1) {
+    arregloIa.push(pais);
+  }
 }
 console.log(resultArray);
+
 console.log(arregloLand);
-console.log(arregloIa);
+console.log(arregloIa); */
+var mayor = 0;
+var paisMayor = "";
+var cincoPais = [];
+for (var _i = 0, countriesUpper_1 = countriesUpper; _i < countriesUpper_1.length; _i++) {
+    var pais = countriesUpper_1[_i];
+    if (mayor < pais.length) {
+        mayor = pais.length;
+        paisMayor = pais;
+    }
+    if (pais.length == 5) {
+        cincoPais.push(pais);
+    }
+}
+console.log(mayor);
+console.log(paisMayor);
+console.log(cincoPais);
