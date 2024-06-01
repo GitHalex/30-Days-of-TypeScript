@@ -65,19 +65,51 @@ console.log(resultArray);
 
 console.log(arregloLand);
 console.log(arregloIa); */
-var mayor = 0;
-var paisMayor = "";
-var cincoPais = [];
-for (var _i = 0, countriesUpper_1 = countriesUpper; _i < countriesUpper_1.length; _i++) {
-    var pais = countriesUpper_1[_i];
-    if (mayor < pais.length) {
-        mayor = pais.length;
-        paisMayor = pais;
-    }
-    if (pais.length == 5) {
-        cincoPais.push(pais);
-    }
+/* let mayor: number = 0;
+let paisMayor: string = "";
+let cincoPais: string[] = [];
+for (const pais of countriesUpper) {
+  if (mayor < pais.length) {
+    mayor = pais.length;
+    paisMayor = pais;
+  }
+  if (pais.length == 5) {
+    cincoPais.push(pais);
+  }
 }
+
 console.log(mayor);
 console.log(paisMayor);
-console.log(cincoPais);
+console.log(cincoPais); */
+var webTechsArreglo = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Redux",
+    "Node",
+    "MongoDB",
+];
+var mayorTech = 0;
+var techonology = "";
+var resultArray = [];
+for (var _i = 0, webTechsArreglo_1 = webTechsArreglo; _i < webTechsArreglo_1.length; _i++) {
+    var tech = webTechsArreglo_1[_i];
+    if (mayorTech < tech.length) {
+        mayorTech = tech.length;
+        techonology = tech;
+    }
+    var tamTech = tech.length;
+    var convertido = tamTech.toString();
+    resultArray.push([tech, convertido]);
+}
+console.log("El mayor letra del arreglo es ".concat(techonology));
+console.log(resultArray);
+var mernStackArreglo = ["MongoDB", "Express", "React", "Node"];
+var stackMern = [];
+for (var _a = 0, mernStackArreglo_1 = mernStackArreglo; _a < mernStackArreglo_1.length; _a++) {
+    var stack = mernStackArreglo_1[_a];
+    stackMern.push(stack[0]);
+}
+var mernString = stackMern.join("");
+console.log(mernString);

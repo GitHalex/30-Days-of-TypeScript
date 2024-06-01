@@ -68,7 +68,8 @@ console.log(resultArray);
 
 console.log(arregloLand);
 console.log(arregloIa); */
-let mayor: number = 0;
+
+/* let mayor: number = 0;
 let paisMayor: string = "";
 let cincoPais: string[] = [];
 for (const pais of countriesUpper) {
@@ -83,4 +84,42 @@ for (const pais of countriesUpper) {
 
 console.log(mayor);
 console.log(paisMayor);
-console.log(cincoPais);
+console.log(cincoPais); */
+
+const webTechsArreglo = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
+let mayorTech: number = 0;
+let techonology: string = "";
+
+const resultArray: Array<[string, string]> = [];
+
+for (const tech of webTechsArreglo) {
+  if (mayorTech < tech.length) {
+    mayorTech = tech.length;
+    techonology = tech;
+  }
+  const tamTech: number = tech.length;
+  let convertido: string = tamTech.toString();
+  resultArray.push([tech, convertido]);
+}
+
+console.log(`El mayor letra del arreglo es ${techonology}`);
+console.log(resultArray);
+
+const mernStackArreglo: string[] = ["MongoDB", "Express", "React", "Node"];
+
+const stackMern: string[] = [];
+
+for (const stack of mernStackArreglo) {
+  stackMern.push(stack[0]);
+}
+
+const mernString: string = stackMern.join("");
+console.log(mernString);
