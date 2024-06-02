@@ -21,20 +21,20 @@ for (let i: number = 0; i < 3; i++) {
 }
 
 console.log(`rgb(${arregloNumber.toString()})`); */
-var countriesUpper = [
-    "Albania",
-    "Bolivia",
-    "Canada",
-    "Denmark",
-    "Ethiopia",
-    "Finland",
-    "Germany",
-    "Hungary",
-    "Ireland",
-    "Iceland",
-    "Japan",
-    "Kenya",
-];
+/* const countriesUpper: string[] = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Iceland",
+  "Japan",
+  "Kenya",
+]; */
 /* let paisesUpper: string[] = [];
 let tamChar: number[] = [];
 for (const country of countriesUpper) {
@@ -81,52 +81,61 @@ for (const pais of countriesUpper) {
 console.log(mayor);
 console.log(paisMayor);
 console.log(cincoPais); */
-var webTechsArreglo = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Redux",
-    "Node",
-    "MongoDB",
+/* const webTechsArreglo = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
 ];
-var mayorTech = 0;
-var techonology = "";
-var resultArray = [];
-for (var _i = 0, webTechsArreglo_1 = webTechsArreglo; _i < webTechsArreglo_1.length; _i++) {
-    var tech = webTechsArreglo_1[_i];
-    if (mayorTech < tech.length) {
-        mayorTech = tech.length;
-        techonology = tech;
-    }
-    var tamTech = tech.length;
-    var convertido = tamTech.toString();
-    resultArray.push([tech, convertido]);
+let mayorTech: number = 0;
+let techonology: string = "";
+
+const resultArray: Array<[string, string]> = [];
+
+for (const tech of webTechsArreglo) {
+  if (mayorTech < tech.length) {
+    mayorTech = tech.length;
+    techonology = tech;
+  }
+  const tamTech: number = tech.length;
+  let convertido: string = tamTech.toString();
+  resultArray.push([tech, convertido]);
 }
-console.log("El mayor letra del arreglo es ".concat(techonology));
+
+console.log(`El mayor letra del arreglo es ${techonology}`);
 console.log(resultArray);
-var mernStackArreglo = ["MongoDB", "Express", "React", "Node"];
-var stackMern = [];
-for (var _a = 0, mernStackArreglo_1 = mernStackArreglo; _a < mernStackArreglo_1.length; _a++) {
-    var stack = mernStackArreglo_1[_a];
-    stackMern.push(stack[0]);
+
+const mernStackArreglo: string[] = ["MongoDB", "Express", "React", "Node"];
+
+const stackMern: string[] = [];
+
+for (const stack of mernStackArreglo) {
+  stackMern.push(stack[0]);
 }
-var mernString = stackMern.join("");
+
+const mernString: string = stackMern.join("");
 console.log(mernString);
-var frutas = ["banana", "orange", "mango", "lemon"];
-var tamanio = frutas.length - 1;
-var i = 0;
-console.log(i);
+
+const frutas: string[] = ["banana", "orange", "mango", "lemon"];
+
+let tamanio: number = frutas.length - 1;
+
+let i: number = 0;
+console.log(i); */
 /* while (tamanio >= 0) {
   console.log(frutas[tamanio]);
   tamanio--;
 } */
-var fullStack = [
-    ["HTML", "CSS", "JS", "React"],
-    ["Node", "Express", "MongoDB"],
+/* const fullStack: string[][] = [
+  ["HTML", "CSS", "JS", "React"],
+  ["Node", "Express", "MongoDB"],
 ];
-for (var inde = 0; inde < fullStack.length; inde++) {
-    for (var jin = 0; jin < fullStack[inde].length; jin++) {
-        console.log(fullStack[inde][jin]);
-    }
-}
+
+for (let inde: number = 0; inde < fullStack.length; inde++) {
+  for (let jin: number = 0; jin < fullStack[inde].length; jin++) {
+    console.log(fullStack[inde][jin]);
+  }
+} */
