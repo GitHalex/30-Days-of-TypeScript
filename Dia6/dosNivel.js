@@ -117,7 +117,16 @@ var frutas = ["banana", "orange", "mango", "lemon"];
 var tamanio = frutas.length - 1;
 var i = 0;
 console.log(i);
-while (tamanio >= 0) {
-    console.log(frutas[tamanio]);
-    tamanio--;
+/* while (tamanio >= 0) {
+  console.log(frutas[tamanio]);
+  tamanio--;
+} */
+var fullStack = [
+    ["HTML", "CSS", "JS", "React"],
+    ["Node", "Express", "MongoDB"],
+];
+for (var inde = 0; inde < fullStack.length; inde++) {
+    for (var jin = 0; jin < fullStack[inde].length; jin++) {
+        console.log(fullStack[inde][jin]);
+    }
 }

@@ -131,7 +131,18 @@ let tamanio: number = frutas.length - 1;
 let i: number = 0;
 console.log(i);
 
-while (tamanio >= 0) {
+/* while (tamanio >= 0) {
   console.log(frutas[tamanio]);
   tamanio--;
+} */
+
+const fullStack: string[][] = [
+  ["HTML", "CSS", "JS", "React"],
+  ["Node", "Express", "MongoDB"],
+];
+
+for (let inde: number = 0; inde < fullStack.length; inde++) {
+  for (let jin: number = 0; jin < fullStack[inde].length; jin++) {
+    console.log(fullStack[inde][jin]);
+  }
 }
