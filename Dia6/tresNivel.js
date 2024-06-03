@@ -209,3 +209,11 @@ var webTechsArreglo = [
 console.log(webTechsArreglo.sort());
 var mernStackArreglo = ["MongoDB", "Express", "React", "Node"];
 console.log(mernStackArreglo.sort());
+var landCountries = [];
+for (var _i = 0, countriesArreglo_1 = countriesArreglo; _i < countriesArreglo_1.length; _i++) {
+    var pais = countriesArreglo_1[_i];
+    if (pais.indexOf("land") !== -1) {
+        landCountries.push(pais);
+    }
+}
+console.log(landCountries);

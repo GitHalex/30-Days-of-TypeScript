@@ -210,8 +210,16 @@ const webTechsArreglo: string[] = [
   "Node",
   "MongoDB",
 ];
-
 console.log(webTechsArreglo.sort());
 
 const mernStackArreglo: string[] = ["MongoDB", "Express", "React", "Node"];
 console.log(mernStackArreglo.sort());
+
+const landCountries: string[] = [];
+for (const pais of countriesArreglo) {
+  if (pais.indexOf("land") !== -1) {
+    landCountries.push(pais);
+  }
+}
+
+console.log(landCountries);
