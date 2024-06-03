@@ -197,3 +197,6 @@ const countriesArreglo: string[] = [
 const countriesCopy = countriesArreglo.slice();
 
 console.log(countriesCopy);
+
+const sortedCountries: string[] = countriesArreglo.sort();
+console.log(sortedCountries);

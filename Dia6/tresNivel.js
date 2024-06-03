@@ -195,3 +195,5 @@ var countriesArreglo = [
 ];
 var countriesCopy = countriesArreglo.slice();
 console.log(countriesCopy);
+var sortedCountries = countriesArreglo.sort();
+console.log(sortedCountries);
