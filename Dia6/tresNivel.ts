@@ -221,5 +221,17 @@ for (const pais of countriesArreglo) {
     landCountries.push(pais);
   }
 }
-
 console.log(landCountries);
+
+let tamLargo: number = 0;
+let indexLargo: number = 0;
+
+for (let index: number = 0; index < countriesArreglo.length; index++) {
+  const elementLength: number = countriesArreglo[index].length;
+  if (tamLargo < elementLength) {
+    tamLargo = elementLength;
+    indexLargo = index;
+  }
+}
+
+console.log(countriesArreglo[indexLargo]);

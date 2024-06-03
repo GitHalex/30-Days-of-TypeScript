@@ -217,3 +217,13 @@ for (var _i = 0, countriesArreglo_1 = countriesArreglo; _i < countriesArreglo_1.
     }
 }
 console.log(landCountries);
+var tamLargo = 0;
+var indexLargo = 0;
+for (var index = 0; index < countriesArreglo.length; index++) {
+    var elementLength = countriesArreglo[index].length;
+    if (tamLargo < elementLength) {
+        tamLargo = elementLength;
+        indexLargo = index;
+    }
+}
+console.log(countriesArreglo[indexLargo]);
