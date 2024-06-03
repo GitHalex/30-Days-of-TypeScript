@@ -200,3 +200,18 @@ console.log(countriesCopy);
 
 const sortedCountries: string[] = countriesArreglo.sort();
 console.log(sortedCountries);
+
+const webTechsArreglo: string[] = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
+
+console.log(webTechsArreglo.sort());
+
+const mernStackArreglo: string[] = ["MongoDB", "Express", "React", "Node"];
+console.log(mernStackArreglo.sort());

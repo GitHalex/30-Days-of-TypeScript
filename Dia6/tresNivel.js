@@ -197,3 +197,15 @@ var countriesCopy = countriesArreglo.slice();
 console.log(countriesCopy);
 var sortedCountries = countriesArreglo.sort();
 console.log(sortedCountries);
+var webTechsArreglo = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Redux",
+    "Node",
+    "MongoDB",
+];
+console.log(webTechsArreglo.sort());
+var mernStackArreglo = ["MongoDB", "Express", "React", "Node"];
+console.log(mernStackArreglo.sort());
