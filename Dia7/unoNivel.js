@@ -10,3 +10,8 @@ function addNumbers(numero1, numero2) {
     return numero1 + numero2;
 }
 console.log(addNumbers(2, 4));
+function areaOfRectangle(ancho, alto) {
+    var area = ancho * alto;
+    return "El area es: ".concat(area);
+}
+console.log(areaOfRectangle(2, 4));

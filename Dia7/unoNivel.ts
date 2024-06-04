@@ -12,3 +12,10 @@ function addNumbers(numero1: number, numero2: number): number {
   return numero1 + numero2;
 }
 console.log(addNumbers(2, 4));
+
+function areaOfRectangle(ancho: number, alto: number): string {
+  let area: number = ancho * alto;
+  return `El area es: ${area}`;
+}
+
+console.log(areaOfRectangle(2, 4));
