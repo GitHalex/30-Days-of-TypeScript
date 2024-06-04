@@ -240,4 +240,10 @@ const fourCharCountries: string[] = countriesArreglo.filter(
   (country) => country.length === 4
 );
 
+const multiWordCountries: string[] = countriesArreglo.filter((country) =>
+  country.includes(" ")
+);
+
 console.log(fourCharCountries);
+console.log(multiWordCountries);
+console.log(countriesArreglo.reverse());

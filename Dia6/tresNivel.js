@@ -228,4 +228,9 @@ for (var index = 0; index < countriesArreglo.length; index++) {
 }
 console.log(countriesArreglo[indexLargo]);
 var fourCharCountries = countriesArreglo.filter(function (country) { return country.length === 4; });
+var multiWordCountries = countriesArreglo.filter(function (country) {
+    return country.includes(" ");
+});
 console.log(fourCharCountries);
+console.log(multiWordCountries);
+console.log(countriesArreglo.reverse());
