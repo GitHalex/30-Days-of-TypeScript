@@ -227,3 +227,5 @@ for (var index = 0; index < countriesArreglo.length; index++) {
     }
 }
 console.log(countriesArreglo[indexLargo]);
+var fourCharCountries = countriesArreglo.filter(function (country) { return country.length === 4; });
+console.log(fourCharCountries);

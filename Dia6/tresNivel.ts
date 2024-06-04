@@ -235,3 +235,9 @@ for (let index: number = 0; index < countriesArreglo.length; index++) {
 }
 
 console.log(countriesArreglo[indexLargo]);
+
+const fourCharCountries: string[] = countriesArreglo.filter(
+  (country) => country.length === 4
+);
+
+console.log(fourCharCountries);
