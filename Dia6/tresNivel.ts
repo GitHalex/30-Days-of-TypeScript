@@ -1,4 +1,4 @@
-const countriesArreglo: string[] = [
+/* const countriesArreglo: string[] = [
   "Afghanistan",
   "Albania",
   "Algeria",
@@ -246,4 +246,4 @@ const multiWordCountries: string[] = countriesArreglo.filter((country) =>
 
 console.log(fourCharCountries);
 console.log(multiWordCountries);
-console.log(countriesArreglo.reverse());
+console.log(countriesArreglo.reverse()); */
