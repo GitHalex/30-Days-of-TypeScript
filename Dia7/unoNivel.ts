@@ -19,3 +19,10 @@ function areaOfRectangle(ancho: number, alto: number): string {
 }
 
 console.log(areaOfRectangle(2, 4));
+
+function perimeterOfRectangle(length: number, width: number): string {
+  let perimeter: number = 2 * (length + width);
+  return `el perimetro del rectangulo es:  ${perimeter}`;
+}
+
+console.log(perimeterOfRectangle(2, 2));

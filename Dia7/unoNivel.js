@@ -15,3 +15,8 @@ function areaOfRectangle(ancho, alto) {
     return "El area es: ".concat(area);
 }
 console.log(areaOfRectangle(2, 4));
+function perimeterOfRectangle(length, width) {
+    var perimeter = 2 * (length + width);
+    return "el perimetro del rectangulo es:  ".concat(perimeter);
+}
+console.log(perimeterOfRectangle(2, 2));
