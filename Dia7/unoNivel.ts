@@ -26,3 +26,18 @@ function perimeterOfRectangle(length: number, width: number): string {
 }
 
 console.log(perimeterOfRectangle(2, 2));
+
+function volumeOfRectPrism(len: number, wid: number, hei: number): string {
+  let volumen: number = len * wid * hei;
+  return `El volumen de un prisma rectangular es: ${volumen}: `;
+}
+
+console.log(volumeOfRectPrism(2, 2, 2));
+
+const PI: number = Math.PI;
+function areaOfCircle(radio: number): string {
+  let areaCirculo: number = PI * radio ** 2;
+  return `El area del circulo es: ${Math.floor(areaCirculo)}`;
+}
+
+console.log(areaOfCircle(2));

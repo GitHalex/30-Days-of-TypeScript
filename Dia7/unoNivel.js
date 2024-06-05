@@ -20,3 +20,14 @@ function perimeterOfRectangle(length, width) {
     return "el perimetro del rectangulo es:  ".concat(perimeter);
 }
 console.log(perimeterOfRectangle(2, 2));
+function volumeOfRectPrism(len, wid, hei) {
+    var volumen = len * wid * hei;
+    return "El volumen de un prisma rectangular es: ".concat(volumen, ": ");
+}
+console.log(volumeOfRectPrism(2, 2, 2));
+var PI = Math.PI;
+function areaOfCircle(radio) {
+    var areaCirculo = PI * Math.pow(radio, 2);
+    return "El area del circulo es: ".concat(Math.floor(areaCirculo));
+}
+console.log(areaOfCircle(2));
