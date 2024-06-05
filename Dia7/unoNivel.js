@@ -31,23 +31,30 @@ function areaOfCircle(radio: number): string {
   return `El area del circulo es: ${Math.floor(areaCirculo)}`;
 }
 console.log(areaOfCircle(2)); */
+/* function densidad(mass: number, volume: number): number {
+  let density = mass / volume;
+  return density;
+}
+
+console.log(`La densidad de una sustancia es: ${densidad(2, 2)}`); */
 /* const PI: number = Math.PI;
 function circumOfCircle(radio: number): number {
   return PI * radio * 2;
 }
 console.log(`La circunferencia de un circulo es: ${circumOfCircle(2)}`); */
-function calculateSpeed(distance, time) {
-    if (time === 0) {
-        throw new Error("El tiempo no puede ser cero.");
-    }
-    return distance / time;
+/* function calculateSpeed(distance: number, time: number): number {
+  if (time === 0) {
+    throw new Error("El tiempo no puede ser cero.");
+  }
+  return distance / time;
 }
-var distanceTravelled = 100; // en metros
-var timeTaken = 10; // en segundos
+
+const distanceTravelled: number = 100; // en metros
+const timeTaken: number = 10; // en segundos
+
 try {
-    var speed = calculateSpeed(distanceTravelled, timeTaken);
-    console.log("La velocidad del objeto en movimiento es ".concat(speed, " m/s"));
-}
-catch (error) {
-    console.error(error.message);
-}
+  const speed: number = calculateSpeed(distanceTravelled, timeTaken);
+  console.log(`La velocidad del objeto en movimiento es ${speed} m/s`);
+} catch (error) {
+  console.error(error.message);
+}*/

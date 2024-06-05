@@ -38,13 +38,20 @@ function areaOfCircle(radio: number): string {
 }
 console.log(areaOfCircle(2)); */
 
+/* function densidad(mass: number, volume: number): number {
+  let density = mass / volume;
+  return density;
+}
+
+console.log(`La densidad de una sustancia es: ${densidad(2, 2)}`); */
+
 /* const PI: number = Math.PI;
 function circumOfCircle(radio: number): number {
   return PI * radio * 2;
 }
 console.log(`La circunferencia de un circulo es: ${circumOfCircle(2)}`); */
 
-function calculateSpeed(distance: number, time: number): number {
+/* function calculateSpeed(distance: number, time: number): number {
   if (time === 0) {
     throw new Error("El tiempo no puede ser cero.");
   }
@@ -58,5 +65,5 @@ try {
   const speed: number = calculateSpeed(distanceTravelled, timeTaken);
   console.log(`La velocidad del objeto en movimiento es ${speed} m/s`);
 } catch (error) {
-  console.error(error.message);
-}
+  console.error(error.message); 
+}*/
