@@ -89,5 +89,50 @@ function imc(peso: number, altura: number): string {
 
   return pesoIMC;
 }
-
 console.log(imc(84, 1.64));
+
+function checkSeason(mes: string): string {
+  let stacion: string = "";
+  let mesLower: string = mes.toLowerCase();
+  if (mesLower === "marzo" || mesLower === "abril" || mesLower === "mayo") {
+    stacion = "PRIMAVERA";
+  } else if (
+    mesLower === "julio" ||
+    mesLower === "junio" ||
+    mesLower == "agosto"
+  ) {
+    stacion = "VERANO";
+  } else if (
+    mesLower === "septiembre" ||
+    mesLower === "octubre" ||
+    mesLower === "noviembre"
+  ) {
+    stacion = "OTOÑO";
+  } else if (
+    mesLower === "diciembre" ||
+    mesLower === "enero" ||
+    mesLower === "febrero"
+  ) {
+    stacion = "INVIERNO";
+  } else {
+    stacion = `Introduciste esto: ${mes}`;
+  }
+
+  return stacion;
+}
+
+console.log(checkSeason("enero"));
+
+function findMax(num1: number, num2: number, num3: number): number {
+  let candidato: number = num1;
+  if (num2 > candidato) {
+    candidato = num2;
+  }
+  if (num3 > candidato) {
+    candidato = num3;
+  }
+
+  return candidato;
+}
+
+console.log(findMax(0, 10, 5));

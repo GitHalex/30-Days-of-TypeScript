@@ -80,3 +80,41 @@ function imc(peso, altura) {
     return pesoIMC;
 }
 console.log(imc(84, 1.64));
+function checkSeason(mes) {
+    var stacion = "";
+    var mesLower = mes.toLowerCase();
+    if (mesLower === "marzo" || mesLower === "abril" || mesLower === "mayo") {
+        stacion = "PRIMAVERA";
+    }
+    else if (mesLower === "julio" ||
+        mesLower === "junio" ||
+        mesLower == "agosto") {
+        stacion = "VERANO";
+    }
+    else if (mesLower === "septiembre" ||
+        mesLower === "octubre" ||
+        mesLower === "noviembre") {
+        stacion = "OTOÑO";
+    }
+    else if (mesLower === "diciembre" ||
+        mesLower === "enero" ||
+        mesLower === "febrero") {
+        stacion = "INVIERNO";
+    }
+    else {
+        stacion = "Introduciste esto: ".concat(mes);
+    }
+    return stacion;
+}
+console.log(checkSeason("enero"));
+function findMax(num1, num2, num3) {
+    var candidato = num1;
+    if (num2 > candidato) {
+        candidato = num2;
+    }
+    if (num3 > candidato) {
+        candidato = num3;
+    }
+    return candidato;
+}
+console.log(findMax(0, 10, 5));
