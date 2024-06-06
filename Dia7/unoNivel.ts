@@ -67,3 +67,27 @@ try {
 } catch (error) {
   console.error(error.message); 
 }*/
+
+function convertCelsiusToFahrenheit(celcius: number): number {
+  return (celcius * 9) / 5 + 32;
+}
+
+console.log(`La convertion de celcis es: ${convertCelsiusToFahrenheit(10)}`);
+
+function imc(peso: number, altura: number): string {
+  const IMC: number = Math.floor(peso / (altura * altura));
+  let pesoIMC: string = "";
+  if (IMC < 18.5) {
+    pesoIMC = `${IMC} peso bajo`;
+  } else if (IMC >= 18.5 && IMC <= 24.9) {
+    pesoIMC = `${IMC} peso normal`;
+  } else if (IMC >= 24 && IMC <= 29.9) {
+    pesoIMC = `${IMC} Sobrepeso`;
+  } else {
+    pesoIMC = `${IMC} Obeso`;
+  }
+
+  return pesoIMC;
+}
+
+console.log(imc(84, 1.64));

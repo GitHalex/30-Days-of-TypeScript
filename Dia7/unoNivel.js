@@ -58,3 +58,25 @@ try {
 } catch (error) {
   console.error(error.message);
 }*/
+function convertCelsiusToFahrenheit(celcius) {
+    return (celcius * 9) / 5 + 32;
+}
+console.log("La convertion de celcis es: ".concat(convertCelsiusToFahrenheit(10)));
+function imc(peso, altura) {
+    var IMC = Math.floor(peso / (altura * altura));
+    var pesoIMC = "";
+    if (IMC < 18.5) {
+        pesoIMC = "".concat(IMC, " peso bajo");
+    }
+    else if (IMC >= 18.5 && IMC <= 24.9) {
+        pesoIMC = "".concat(IMC, " peso normal");
+    }
+    else if (IMC >= 24 && IMC <= 29.9) {
+        pesoIMC = "".concat(IMC, " Sobrepeso");
+    }
+    else {
+        pesoIMC = "".concat(IMC, " Obeso");
+    }
+    return pesoIMC;
+}
+console.log(imc(84, 1.64));
