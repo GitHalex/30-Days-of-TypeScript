@@ -114,17 +114,16 @@ const items = ["apple", "banana", "cherry", "date"];
 const newItems = removeItem(items, 2);
 console.log(newItems); */
 
-const sumOfNumbers = (n: number): number => {
+/* const sumOfNumbers = (n: number): number => {
   let suma: number = 0;
   for (let index = 1; index <= n; index++) {
     suma += index;
   }
   return suma;
 };
+console.log(sumOfNumbers(4)); */
 
-console.log(sumOfNumbers(4));
-
-const sumOfOdds = (numeroIngresado: number): number => {
+/* const sumOfOdds = (numeroIngresado: number): number => {
   let sumaOdds: number = 0;
   for (let i: number = 1; i <= numeroIngresado; i++) {
     if (i % 2 != 0) {
@@ -133,5 +132,15 @@ const sumOfOdds = (numeroIngresado: number): number => {
   }
   return sumaOdds;
 };
+console.log(sumOfOdds(5)); */
 
-console.log(sumOfOdds(5));
+const sumOfEven = (numeroIngresado: number): number => {
+  let sumaEven: number = 0;
+  for (let i: number = 1; i <= numeroIngresado; i++) {
+    if (i % 2 == 0) {
+      sumaEven = sumaEven + i;
+    }
+  }
+  return sumaEven;
+};
+console.log(sumOfEven(5));

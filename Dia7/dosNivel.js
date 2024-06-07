@@ -105,21 +105,31 @@ console.log(addItem("píjas")); */
 const items = ["apple", "banana", "cherry", "date"];
 const newItems = removeItem(items, 2);
 console.log(newItems); */
-var sumOfNumbers = function (n) {
-    var suma = 0;
-    for (var index = 1; index <= n; index++) {
-        suma += index;
-    }
-    return suma;
+/* const sumOfNumbers = (n: number): number => {
+  let suma: number = 0;
+  for (let index = 1; index <= n; index++) {
+    suma += index;
+  }
+  return suma;
 };
-console.log(sumOfNumbers(4));
-var sumOfOdds = function (numeroIngresado) {
-    var sumaOdds = 0;
+console.log(sumOfNumbers(4)); */
+/* const sumOfOdds = (numeroIngresado: number): number => {
+  let sumaOdds: number = 0;
+  for (let i: number = 1; i <= numeroIngresado; i++) {
+    if (i % 2 != 0) {
+      sumaOdds = sumaOdds + i;
+    }
+  }
+  return sumaOdds;
+};
+console.log(sumOfOdds(5)); */
+var sumOfEven = function (numeroIngresado) {
+    var sumaEven = 0;
     for (var i = 1; i <= numeroIngresado; i++) {
-        if (i % 2 != 0) {
-            sumaOdds = sumaOdds + i;
+        if (i % 2 == 0) {
+            sumaEven = sumaEven + i;
         }
     }
-    return sumaOdds;
+    return sumaEven;
 };
-console.log(sumOfOdds(5));
+console.log(sumOfEven(5));
