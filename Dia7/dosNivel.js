@@ -178,3 +178,10 @@ var sumAllNums = function () {
 console.log(sumAllNums(1, 2, 3, 4)); // 10
 console.log(sumAllNums(10, 20, 13, 40, 10)); // 93
 console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40)); // 173
+var randomUserIp = function (claseC) {
+    var primerOcteto = Math.floor(Math.random() * 256);
+    var segundoOcteto = Math.floor(Math.random() * 256);
+    var tercerOcteto = Math.floor(Math.random() * 256);
+    return "User IP: ".concat(claseC, ":").concat(primerOcteto, ":").concat(segundoOcteto, ":").concat(tercerOcteto);
+};
+console.log(randomUserIp(192));

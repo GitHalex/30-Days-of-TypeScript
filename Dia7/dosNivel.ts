@@ -186,3 +186,12 @@ const sumAllNums = (...args: number[]): number => {
 console.log(sumAllNums(1, 2, 3, 4)); // 10
 console.log(sumAllNums(10, 20, 13, 40, 10)); // 93
 console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40)); // 173
+
+const randomUserIp = (claseC: number): string => {
+  let primerOcteto: number = Math.floor(Math.random() * 256);
+  let segundoOcteto: number = Math.floor(Math.random() * 256);
+  let tercerOcteto: number = Math.floor(Math.random() * 256);
+  return `User IP: ${claseC}:${primerOcteto}:${segundoOcteto}:${tercerOcteto}`;
+};
+
+console.log(randomUserIp(192));
