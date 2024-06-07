@@ -21,6 +21,15 @@ try {
 } catch (error) {
   console.error(error.message);
 } */
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 /* const solveQuadratic = (a: number, b: number, c: number): string => {
   if (a === 0) {
     console.log(`El coeficiente ${a} no puede ser 0`);
@@ -77,19 +86,30 @@ console.log(`x: ${newX}, y: ${newY}`); */
 };
 
 console.log(reverseArray([1, 2, 3, 4, 5])); */
-var capitalizaArray = function (arregloName) {
-    var capitalizedarray = [];
-    for (var _i = 0, arregloName_1 = arregloName; _i < arregloName_1.length; _i++) {
-        var name_1 = arregloName_1[_i];
-        capitalizedarray.push(name_1.toUpperCase());
-    }
-    return capitalizedarray;
+/* const capitalizaArray = (arregloName: string[]): string[] => {
+  const capitalizedarray: string[] = [];
+  for (const name of arregloName) {
+    capitalizedarray.push(name.toUpperCase());
+  }
+  return capitalizedarray;
 };
-console.log(capitalizaArray(["Alex", "Ariel", "Max"]));
-var addItem = function (cadena) {
-    var arregloCadena = [];
-    arregloCadena.push(cadena);
-    return arregloCadena;
+
+console.log(capitalizaArray(["Alex", "Ariel", "Max"])); */
+/* const addItem = (cadena: string): string[] => {
+  const arregloCadena: string[] = [];
+  arregloCadena.push(cadena);
+  return arregloCadena;
 };
+
 console.log(addItem("alex"));
-console.log(addItem("píjas"));
+console.log(addItem("píjas")); */
+var removeItem = function (arr, index) {
+    if (index < 0 || index >= arr.length) {
+        throw new Error("Index out of bounds");
+    }
+    return __spreadArray(__spreadArray([], arr.slice(0, index), true), arr.slice(index + 1), true);
+};
+// Ejemplo de uso
+var items = ["apple", "banana", "cherry", "date"];
+var newItems = removeItem(items, 2);
+console.log(newItems);

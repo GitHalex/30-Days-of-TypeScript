@@ -83,7 +83,7 @@ console.log(`x: ${newX}, y: ${newY}`); */
 
 console.log(reverseArray([1, 2, 3, 4, 5])); */
 
-const capitalizaArray = (arregloName: string[]): string[] => {
+/* const capitalizaArray = (arregloName: string[]): string[] => {
   const capitalizedarray: string[] = [];
   for (const name of arregloName) {
     capitalizedarray.push(name.toUpperCase());
@@ -91,13 +91,25 @@ const capitalizaArray = (arregloName: string[]): string[] => {
   return capitalizedarray;
 };
 
-console.log(capitalizaArray(["Alex", "Ariel", "Max"]));
+console.log(capitalizaArray(["Alex", "Ariel", "Max"])); */
 
-const addItem = (cadena: string): string[] => {
+/* const addItem = (cadena: string): string[] => {
   const arregloCadena: string[] = [];
   arregloCadena.push(cadena);
   return arregloCadena;
 };
 
 console.log(addItem("alex"));
-console.log(addItem("píjas"));
+console.log(addItem("píjas")); */
+
+const removeItem = (arr: any[], index: number): any[] => {
+  if (index < 0 || index >= arr.length) {
+    throw new Error("Index out of bounds");
+  }
+  return [...arr.slice(0, index), ...arr.slice(index + 1)];
+};
+
+// Ejemplo de uso
+const items = ["apple", "banana", "cherry", "date"];
+const newItems = removeItem(items, 2);
+console.log(newItems);
