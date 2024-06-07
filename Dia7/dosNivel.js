@@ -123,13 +123,27 @@ console.log(sumOfNumbers(4)); */
   return sumaOdds;
 };
 console.log(sumOfOdds(5)); */
-var sumOfEven = function (numeroIngresado) {
+/* const sumOfEven = (numeroIngresado: number): number => {
+  let sumaEven: number = 0;
+  for (let i: number = 1; i <= numeroIngresado; i++) {
+    if (i % 2 == 0) {
+      sumaEven = sumaEven + i;
+    }
+  }
+  return sumaEven;
+};
+console.log(sumOfEven(5)); */
+var evensAndOdds = function (inputNumber) {
+    var sumaOdds = 0;
     var sumaEven = 0;
-    for (var i = 1; i <= numeroIngresado; i++) {
+    for (var i = 0; i <= inputNumber; i++) {
         if (i % 2 == 0) {
-            sumaEven = sumaEven + i;
+            sumaEven += 1;
+        }
+        else {
+            sumaOdds += 1;
         }
     }
-    return sumaEven;
+    return "El numero de impares son ".concat(sumaOdds, ".\nEl numero de pares es ").concat(sumaEven);
 };
-console.log(sumOfEven(5));
+console.log(evensAndOdds(100));

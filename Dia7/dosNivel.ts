@@ -134,7 +134,7 @@ console.log(sumOfNumbers(4)); */
 };
 console.log(sumOfOdds(5)); */
 
-const sumOfEven = (numeroIngresado: number): number => {
+/* const sumOfEven = (numeroIngresado: number): number => {
   let sumaEven: number = 0;
   for (let i: number = 1; i <= numeroIngresado; i++) {
     if (i % 2 == 0) {
@@ -143,4 +143,19 @@ const sumOfEven = (numeroIngresado: number): number => {
   }
   return sumaEven;
 };
-console.log(sumOfEven(5));
+console.log(sumOfEven(5)); */
+
+const evensAndOdds = (inputNumber: number): string => {
+  let sumaOdds: number = 0;
+  let sumaEven: number = 0;
+  for (let i: number = 0; i <= inputNumber; i++) {
+    if (i % 2 == 0) {
+      sumaEven += 1;
+    } else {
+      sumaOdds += 1;
+    }
+  }
+  return `El numero de impares son ${sumaOdds}.\nEl numero de pares es ${sumaEven}`;
+};
+
+console.log(evensAndOdds(100));
