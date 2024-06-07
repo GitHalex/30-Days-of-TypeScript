@@ -55,22 +55,34 @@ namesArray(["Alex", "Pijas"]); */
 };
 
 console.log(showDateTime()); */
-var swapValues = function (x, y) {
-    var temp = x;
-    x = y;
-    y = temp;
-    return [x, y];
+/* const swapValues = (x: number, y: number): [number, number] => {
+  const temp: number = x;
+  x = y;
+  y = temp;
+  return [x, y];
 };
-var _a = swapValues(3, 5), newX = _a[0], newY = _a[1];
-console.log("x: ".concat(newX, ", y: ").concat(newY));
-var reverseArray = function (arregloNumbers) {
-    var i = 0;
-    var arregloReverse = [];
-    var tamanio = arregloNumbers.length - 1;
-    while (tamanio >= i) {
-        arregloReverse.push(arregloNumbers[tamanio]);
-        tamanio--;
+
+const [newX, newY] = swapValues(3, 5);
+console.log(`x: ${newX}, y: ${newY}`); */
+/* const reverseArray = (arregloNumbers: number[]): number[] => {
+  let i: number = 0;
+  const arregloReverse: number[] = [];
+  let tamanio: number = arregloNumbers.length - 1;
+  while (tamanio >= i) {
+    arregloReverse.push(arregloNumbers[tamanio]);
+    tamanio--;
+  }
+
+  return arregloReverse;
+};
+
+console.log(reverseArray([1, 2, 3, 4, 5])); */
+var capitalizaArray = function (arregloName) {
+    var capitalizedarray = [];
+    for (var _i = 0, arregloName_1 = arregloName; _i < arregloName_1.length; _i++) {
+        var name_1 = arregloName_1[_i];
+        capitalizedarray.push(name_1.toUpperCase());
     }
-    return arregloReverse;
+    return capitalizedarray;
 };
-console.log(reverseArray([1, 2, 3, 4, 5]));
+console.log(capitalizaArray(["Alex", "Ariel", "Max"]));

@@ -59,7 +59,7 @@ namesArray(["Alex", "Pijas"]); */
 
 console.log(showDateTime()); */
 
-const swapValues = (x: number, y: number): [number, number] => {
+/* const swapValues = (x: number, y: number): [number, number] => {
   const temp: number = x;
   x = y;
   y = temp;
@@ -67,9 +67,9 @@ const swapValues = (x: number, y: number): [number, number] => {
 };
 
 const [newX, newY] = swapValues(3, 5);
-console.log(`x: ${newX}, y: ${newY}`);
+console.log(`x: ${newX}, y: ${newY}`); */
 
-const reverseArray = (arregloNumbers: number[]): number[] => {
+/* const reverseArray = (arregloNumbers: number[]): number[] => {
   let i: number = 0;
   const arregloReverse: number[] = [];
   let tamanio: number = arregloNumbers.length - 1;
@@ -81,4 +81,14 @@ const reverseArray = (arregloNumbers: number[]): number[] => {
   return arregloReverse;
 };
 
-console.log(reverseArray([1, 2, 3, 4, 5]));
+console.log(reverseArray([1, 2, 3, 4, 5])); */
+
+const capitalizaArray = (arregloName: string[]): string[] => {
+  const capitalizedarray: string[] = [];
+  for (const name of arregloName) {
+    capitalizedarray.push(name.toUpperCase());
+  }
+  return capitalizedarray;
+};
+
+console.log(capitalizaArray(["Alex", "Ariel", "Max"]));
