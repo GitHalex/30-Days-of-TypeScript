@@ -92,3 +92,12 @@ const capitalizaArray = (arregloName: string[]): string[] => {
 };
 
 console.log(capitalizaArray(["Alex", "Ariel", "Max"]));
+
+const addItem = (cadena: string): string[] => {
+  const arregloCadena: string[] = [];
+  arregloCadena.push(cadena);
+  return arregloCadena;
+};
+
+console.log(addItem("alex"));
+console.log(addItem("píjas"));

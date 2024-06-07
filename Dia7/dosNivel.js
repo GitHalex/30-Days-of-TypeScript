@@ -86,3 +86,10 @@ var capitalizaArray = function (arregloName) {
     return capitalizedarray;
 };
 console.log(capitalizaArray(["Alex", "Ariel", "Max"]));
+var addItem = function (cadena) {
+    var arregloCadena = [];
+    arregloCadena.push(cadena);
+    return arregloCadena;
+};
+console.log(addItem("alex"));
+console.log(addItem("píjas"));
