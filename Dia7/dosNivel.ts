@@ -123,3 +123,15 @@ const sumOfNumbers = (n: number): number => {
 };
 
 console.log(sumOfNumbers(4));
+
+const sumOfOdds = (numeroIngresado: number): number => {
+  let sumaOdds: number = 0;
+  for (let i: number = 1; i <= numeroIngresado; i++) {
+    if (i % 2 != 0) {
+      sumaOdds = sumaOdds + i;
+    }
+  }
+  return sumaOdds;
+};
+
+console.log(sumOfOdds(5));

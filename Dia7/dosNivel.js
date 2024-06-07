@@ -113,3 +113,13 @@ var sumOfNumbers = function (n) {
     return suma;
 };
 console.log(sumOfNumbers(4));
+var sumOfOdds = function (numeroIngresado) {
+    var sumaOdds = 0;
+    for (var i = 1; i <= numeroIngresado; i++) {
+        if (i % 2 != 0) {
+            sumaOdds = sumaOdds + i;
+        }
+    }
+    return sumaOdds;
+};
+console.log(sumOfOdds(5));
