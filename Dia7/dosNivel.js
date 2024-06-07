@@ -62,4 +62,15 @@ var swapValues = function (x, y) {
     return [x, y];
 };
 var _a = swapValues(3, 5), newX = _a[0], newY = _a[1];
-console.log("x: ".concat(newX, ", y: ").concat(newY)); // x: 5, y: 3
+console.log("x: ".concat(newX, ", y: ").concat(newY));
+var reverseArray = function (arregloNumbers) {
+    var i = 0;
+    var arregloReverse = [];
+    var tamanio = arregloNumbers.length - 1;
+    while (tamanio >= i) {
+        arregloReverse.push(arregloNumbers[tamanio]);
+        tamanio--;
+    }
+    return arregloReverse;
+};
+console.log(reverseArray([1, 2, 3, 4, 5]));

@@ -67,4 +67,18 @@ const swapValues = (x: number, y: number): [number, number] => {
 };
 
 const [newX, newY] = swapValues(3, 5);
-console.log(`x: ${newX}, y: ${newY}`); // x: 5, y: 3
+console.log(`x: ${newX}, y: ${newY}`);
+
+const reverseArray = (arregloNumbers: number[]): number[] => {
+  let i: number = 0;
+  const arregloReverse: number[] = [];
+  let tamanio: number = arregloNumbers.length - 1;
+  while (tamanio >= i) {
+    arregloReverse.push(arregloNumbers[tamanio]);
+    tamanio--;
+  }
+
+  return arregloReverse;
+};
+
+console.log(reverseArray([1, 2, 3, 4, 5]));
