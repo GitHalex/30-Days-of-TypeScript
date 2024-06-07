@@ -195,3 +195,23 @@ const randomUserIp = (claseC: number): string => {
 };
 
 console.log(randomUserIp(192));
+
+const randomMacAddress = (): string => {
+  const getRandomHex = (): string => {
+    const hex: string = Math.floor(Math.random() * 256).toString(16);
+    return hex.padStart(2, "0");
+  };
+
+  let macAddress = "";
+  for (let i = 0; i < 6; i++) {
+    macAddress += getRandomHex();
+    if (i < 5) {
+      macAddress += ":";
+    }
+  }
+
+  return macAddress;
+};
+
+// Ejemplo de uso
+console.log(randomMacAddress()); // Ejemplo de salida: "e4:62:b1:4f:28:3d"
