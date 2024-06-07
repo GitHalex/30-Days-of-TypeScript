@@ -102,7 +102,7 @@ console.log(capitalizaArray(["Alex", "Ariel", "Max"])); */
 console.log(addItem("alex"));
 console.log(addItem("píjas")); */
 
-const removeItem = (arr: any[], index: number): any[] => {
+/* const removeItem = (arr: any[], index: number): any[] => {
   if (index < 0 || index >= arr.length) {
     throw new Error("Index out of bounds");
   }
@@ -112,4 +112,14 @@ const removeItem = (arr: any[], index: number): any[] => {
 // Ejemplo de uso
 const items = ["apple", "banana", "cherry", "date"];
 const newItems = removeItem(items, 2);
-console.log(newItems);
+console.log(newItems); */
+
+const sumOfNumbers = (n: number): number => {
+  let suma: number = 0;
+  for (let index = 1; index <= n; index++) {
+    suma += index;
+  }
+  return suma;
+};
+
+console.log(sumOfNumbers(4));

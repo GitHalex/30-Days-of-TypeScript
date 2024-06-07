@@ -21,15 +21,6 @@ try {
 } catch (error) {
   console.error(error.message);
 } */
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
 /* const solveQuadratic = (a: number, b: number, c: number): string => {
   if (a === 0) {
     console.log(`El coeficiente ${a} no puede ser 0`);
@@ -103,13 +94,22 @@ console.log(capitalizaArray(["Alex", "Ariel", "Max"])); */
 
 console.log(addItem("alex"));
 console.log(addItem("píjas")); */
-var removeItem = function (arr, index) {
-    if (index < 0 || index >= arr.length) {
-        throw new Error("Index out of bounds");
-    }
-    return __spreadArray(__spreadArray([], arr.slice(0, index), true), arr.slice(index + 1), true);
+/* const removeItem = (arr: any[], index: number): any[] => {
+  if (index < 0 || index >= arr.length) {
+    throw new Error("Index out of bounds");
+  }
+  return [...arr.slice(0, index), ...arr.slice(index + 1)];
 };
+
 // Ejemplo de uso
-var items = ["apple", "banana", "cherry", "date"];
-var newItems = removeItem(items, 2);
-console.log(newItems);
+const items = ["apple", "banana", "cherry", "date"];
+const newItems = removeItem(items, 2);
+console.log(newItems); */
+var sumOfNumbers = function (n) {
+    var suma = 0;
+    for (var index = 1; index <= n; index++) {
+        suma += index;
+    }
+    return suma;
+};
+console.log(sumOfNumbers(4));
