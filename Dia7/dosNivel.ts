@@ -216,7 +216,7 @@ console.log(randomUserIp(192));
 // Ejemplo de uso
 console.log(randomMacAddress()); */ // Ejemplo de salida: "e4:62:b1:4f:28:3d"
 
-const randomHexaNumberGenerator = (): string => {
+/* const randomHexaNumberGenerator = (): string => {
   let char: string = "#";
   const characteres: string = "0123456789ABCDEF";
   for (let i: number = 0; i < 6; i++) {
@@ -226,4 +226,17 @@ const randomHexaNumberGenerator = (): string => {
 
   return char;
 };
-console.log(randomHexaNumberGenerator());
+console.log(randomHexaNumberGenerator()); */
+
+const userIdGenerator = (): string => {
+  let characteres: string =
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWYZ0123456789";
+  let id: string = "";
+  for (let index: number = 0; index < 7; index++) {
+    let charRandom: number = Math.floor(Math.random() * characteres.length);
+    id += characteres[charRandom];
+  }
+  return id;
+};
+
+console.log(userIdGenerator());

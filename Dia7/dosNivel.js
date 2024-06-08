@@ -197,13 +197,24 @@ console.log(randomUserIp(192));
 
 // Ejemplo de uso
 console.log(randomMacAddress()); */ // Ejemplo de salida: "e4:62:b1:4f:28:3d"
-var randomHexaNumberGenerator = function () {
-    var char = "#";
-    var characteres = "0123456789ABCDEF";
-    for (var i = 0; i < 6; i++) {
-        var charRandom = Math.floor(Math.random() * characteres.length);
-        char = char + characteres[charRandom];
-    }
-    return char;
+/* const randomHexaNumberGenerator = (): string => {
+  let char: string = "#";
+  const characteres: string = "0123456789ABCDEF";
+  for (let i: number = 0; i < 6; i++) {
+    let charRandom: number = Math.floor(Math.random() * characteres.length);
+    char = char + characteres[charRandom];
+  }
+
+  return char;
 };
-console.log(randomHexaNumberGenerator());
+console.log(randomHexaNumberGenerator()); */
+var userIdGenerator = function () {
+    var characteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWYZ0123456789";
+    var id = "";
+    for (var index = 0; index < 7; index++) {
+        var charRandom = Math.floor(Math.random() * characteres.length);
+        id += characteres[charRandom];
+    }
+    return id;
+};
+console.log(userIdGenerator());
