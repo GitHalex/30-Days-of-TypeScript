@@ -148,36 +148,29 @@ console.log(sumOfEven(5)); */
 
 console.log(evensAndOdds(100)); */
 // Declaración
-function sumAll() {
-    var args = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        args[_i] = arguments[_i];
-    }
-    var sum = 0;
-    for (var i = 0; i < args.length; i++) {
-        sum += args[i];
-    }
-    return sum;
+/* function sumAll(...args: number[]): number {
+  let sum: number = 0;
+  for (let i: number = 0; i < args.length; i++) {
+    sum += args[i];
+  }
+  return sum;
 }
+
 console.log(sumAll(1, 2, 3, 4)); // 10
 console.log(sumAll(10, 20, 13, 40, 10)); // 93
-console.log(sumAll(15, 20, 30, 25, 10, 33, 40)); // 173
+console.log(sumAll(15, 20, 30, 25, 10, 33, 40)); */ // 173
 // declaración
-var sumAllNums = function () {
-    var args = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        args[_i] = arguments[_i];
-    }
-    var sum = 0;
-    for (var _a = 0, args_1 = args; _a < args_1.length; _a++) {
-        var element = args_1[_a];
-        sum += element;
-    }
-    return sum;
+/* const sumAllNums = (...args: number[]): number => {
+  let sum = 0;
+  for (const element of args) {
+    sum += element;
+  }
+  return sum;
 };
+
 console.log(sumAllNums(1, 2, 3, 4)); // 10
 console.log(sumAllNums(10, 20, 13, 40, 10)); // 93
-console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40)); // 173
+console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40)); // 173 */
 var randomUserIp = function (claseC) {
     var primerOcteto = Math.floor(Math.random() * 256);
     var segundoOcteto = Math.floor(Math.random() * 256);
@@ -185,19 +178,32 @@ var randomUserIp = function (claseC) {
     return "User IP: ".concat(claseC, ":").concat(primerOcteto, ":").concat(segundoOcteto, ":").concat(tercerOcteto);
 };
 console.log(randomUserIp(192));
-var randomMacAddress = function () {
-    var getRandomHex = function () {
-        var hex = Math.floor(Math.random() * 256).toString(16);
-        return hex.padStart(2, "0");
-    };
-    var macAddress = "";
-    for (var i = 0; i < 6; i++) {
-        macAddress += getRandomHex();
-        if (i < 5) {
-            macAddress += ":";
-        }
+/* const randomMacAddress = (): string => {
+  const getRandomHex = (): string => {
+    const hex: string = Math.floor(Math.random() * 256).toString(16);
+    return hex.padStart(2, "0");
+  };
+
+  let macAddress = "";
+  for (let i = 0; i < 6; i++) {
+    macAddress += getRandomHex();
+    if (i < 5) {
+      macAddress += ":";
     }
-    return macAddress;
+  }
+
+  return macAddress;
 };
+
 // Ejemplo de uso
-console.log(randomMacAddress()); // Ejemplo de salida: "e4:62:b1:4f:28:3d"
+console.log(randomMacAddress()); */ // Ejemplo de salida: "e4:62:b1:4f:28:3d"
+var randomHexaNumberGenerator = function () {
+    var char = "#";
+    var characteres = "0123456789ABCDEF";
+    for (var i = 0; i < 6; i++) {
+        var charRandom = Math.floor(Math.random() * characteres.length);
+        char = char + characteres[charRandom];
+    }
+    return char;
+};
+console.log(randomHexaNumberGenerator());

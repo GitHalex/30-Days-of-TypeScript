@@ -162,7 +162,7 @@ console.log(evensAndOdds(100)); */
 
 // Declaración
 
-function sumAll(...args: number[]): number {
+/* function sumAll(...args: number[]): number {
   let sum: number = 0;
   for (let i: number = 0; i < args.length; i++) {
     sum += args[i];
@@ -172,10 +172,10 @@ function sumAll(...args: number[]): number {
 
 console.log(sumAll(1, 2, 3, 4)); // 10
 console.log(sumAll(10, 20, 13, 40, 10)); // 93
-console.log(sumAll(15, 20, 30, 25, 10, 33, 40)); // 173
+console.log(sumAll(15, 20, 30, 25, 10, 33, 40)); */ // 173
 
 // declaración
-const sumAllNums = (...args: number[]): number => {
+/* const sumAllNums = (...args: number[]): number => {
   let sum = 0;
   for (const element of args) {
     sum += element;
@@ -185,7 +185,7 @@ const sumAllNums = (...args: number[]): number => {
 
 console.log(sumAllNums(1, 2, 3, 4)); // 10
 console.log(sumAllNums(10, 20, 13, 40, 10)); // 93
-console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40)); // 173
+console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40)); // 173 */
 
 const randomUserIp = (claseC: number): string => {
   let primerOcteto: number = Math.floor(Math.random() * 256);
@@ -196,7 +196,7 @@ const randomUserIp = (claseC: number): string => {
 
 console.log(randomUserIp(192));
 
-const randomMacAddress = (): string => {
+/* const randomMacAddress = (): string => {
   const getRandomHex = (): string => {
     const hex: string = Math.floor(Math.random() * 256).toString(16);
     return hex.padStart(2, "0");
@@ -214,4 +214,16 @@ const randomMacAddress = (): string => {
 };
 
 // Ejemplo de uso
-console.log(randomMacAddress()); // Ejemplo de salida: "e4:62:b1:4f:28:3d"
+console.log(randomMacAddress()); */ // Ejemplo de salida: "e4:62:b1:4f:28:3d"
+
+const randomHexaNumberGenerator = (): string => {
+  let char: string = "#";
+  const characteres: string = "0123456789ABCDEF";
+  for (let i: number = 0; i < 6; i++) {
+    let charRandom: number = Math.floor(Math.random() * characteres.length);
+    char = char + characteres[charRandom];
+  }
+
+  return char;
+};
+console.log(randomHexaNumberGenerator());
