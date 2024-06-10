@@ -27,3 +27,23 @@ const rgbColorGenerator = (): string => {
 };
 
 console.log(rgbColorGenerator());
+
+const generateHexColor = (): string => {
+  const hexChars = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    const randomIndex = Math.floor(Math.random() * hexChars.length);
+    color += hexChars[randomIndex];
+  }
+  return color;
+};
+
+const arrayOfHexaColors = (numColors: number): string[] => {
+  const colors: string[] = [];
+  for (let i = 0; i < numColors; i++) {
+    colors.push(generateHexColor());
+  }
+  return colors;
+};
+
+console.log(arrayOfHexaColors(5));

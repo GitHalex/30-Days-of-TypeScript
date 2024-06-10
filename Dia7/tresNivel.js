@@ -25,3 +25,20 @@ var rgbColorGenerator = function () {
     return "rgb(".concat(red, ",").concat(green, ",").concat(blue, ")");
 };
 console.log(rgbColorGenerator());
+var generateHexColor = function () {
+    var hexChars = "0123456789ABCDEF";
+    var color = "#";
+    for (var i = 0; i < 6; i++) {
+        var randomIndex = Math.floor(Math.random() * hexChars.length);
+        color += hexChars[randomIndex];
+    }
+    return color;
+};
+var arrayOfHexaColors = function (numColors) {
+    var colors = [];
+    for (var i = 0; i < numColors; i++) {
+        colors.push(generateHexColor());
+    }
+    return colors;
+};
+console.log(arrayOfHexaColors(5));
