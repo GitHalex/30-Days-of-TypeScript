@@ -47,3 +47,20 @@ const arrayOfHexaColors = (numColors: number): string[] => {
 };
 
 console.log(arrayOfHexaColors(5));
+
+const generateRgbColor = (): string => {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r},${g},${b})`;
+};
+
+const arrayOfRgbColors = (numColors: number): string[] => {
+  const colors: string[] = [];
+  for (let i = 0; i < numColors; i++) {
+    colors.push(generateRgbColor());
+  }
+  return colors;
+};
+
+console.log(arrayOfRgbColors(5));

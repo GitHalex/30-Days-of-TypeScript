@@ -42,3 +42,17 @@ var arrayOfHexaColors = function (numColors) {
     return colors;
 };
 console.log(arrayOfHexaColors(5));
+var generateRgbColor = function () {
+    var r = Math.floor(Math.random() * 256);
+    var g = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    return "rgb(".concat(r, ",").concat(g, ",").concat(b, ")");
+};
+var arrayOfRgbColors = function (numColors) {
+    var colors = [];
+    for (var i = 0; i < numColors; i++) {
+        colors.push(generateRgbColor());
+    }
+    return colors;
+};
+console.log(arrayOfRgbColors(5));
