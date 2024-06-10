@@ -228,7 +228,7 @@ console.log(randomMacAddress()); */ // Ejemplo de salida: "e4:62:b1:4f:28:3d"
 };
 console.log(randomHexaNumberGenerator()); */
 
-const userIdGenerator = (): string => {
+/* const userIdGenerator = (): string => {
   let characteres: string =
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWYZ0123456789";
   let id: string = "";
@@ -239,4 +239,4 @@ const userIdGenerator = (): string => {
   return id;
 };
 
-console.log(userIdGenerator());
+console.log(userIdGenerator()); */
