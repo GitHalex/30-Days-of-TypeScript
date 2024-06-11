@@ -17,45 +17,50 @@
 
 console.log(userIdGenerator(5, 6));
 console.log(userIdGenerator(5, 16));  */
-var rgbColorGenerator = function () {
-    var getRandomValue = function () { return Math.floor(Math.random() * 256); };
-    var red = getRandomValue();
-    var green = getRandomValue();
-    var blue = getRandomValue();
-    return "rgb(".concat(red, ",").concat(green, ",").concat(blue, ")");
+/* const rgbColorGenerator = (): string => {
+  const getRandomValue = (): number => Math.floor(Math.random() * 256);
+  const red = getRandomValue();
+  const green = getRandomValue();
+  const blue = getRandomValue();
+  return `rgb(${red},${green},${blue})`;
 };
-console.log(rgbColorGenerator());
-var generateHexColor = function () {
-    var hexChars = "0123456789ABCDEF";
-    var color = "#";
-    for (var i = 0; i < 6; i++) {
-        var randomIndex = Math.floor(Math.random() * hexChars.length);
-        color += hexChars[randomIndex];
-    }
-    return color;
+
+console.log(rgbColorGenerator()); */
+/* const generateHexColor = (): string => {
+  const hexChars = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    const randomIndex = Math.floor(Math.random() * hexChars.length);
+    color += hexChars[randomIndex];
+  }
+  return color;
 };
-var arrayOfHexaColors = function (numColors) {
-    var colors = [];
-    for (var i = 0; i < numColors; i++) {
-        colors.push(generateHexColor());
-    }
-    return colors;
+
+const arrayOfHexaColors = (numColors: number): string[] => {
+  const colors: string[] = [];
+  for (let i = 0; i < numColors; i++) {
+    colors.push(generateHexColor());
+  }
+  return colors;
 };
-console.log(arrayOfHexaColors(5));
-var generateRgbColor = function () {
-    var r = Math.floor(Math.random() * 256);
-    var g = Math.floor(Math.random() * 256);
-    var b = Math.floor(Math.random() * 256);
-    return "rgb(".concat(r, ",").concat(g, ",").concat(b, ")");
+
+console.log(arrayOfHexaColors(5)); */
+/* const generateRgbColor = (): string => {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r},${g},${b})`;
 };
-var arrayOfRgbColors = function (numColors) {
-    var colors = [];
-    for (var i = 0; i < numColors; i++) {
-        colors.push(generateRgbColor());
-    }
-    return colors;
+
+const arrayOfRgbColors = (numColors: number): string[] => {
+  const colors: string[] = [];
+  for (let i = 0; i < numColors; i++) {
+    colors.push(generateRgbColor());
+  }
+  return colors;
 };
-console.log(arrayOfRgbColors(5));
+
+console.log(arrayOfRgbColors(5)); */
 /**
  * Convierte un color hexadecimal a un color RGB.
  * @param hex - El color en formato hexadecimal.
@@ -87,3 +92,48 @@ var convertHexaToRgb = function (hex) {
 console.log(convertHexaToRgb("#a3e12f")); // Output: rgb(163, 225, 47)
 console.log(convertHexaToRgb("#03f")); // Output: rgb(0, 51, 255)
 console.log(convertHexaToRgb("#ff5733")); // Output: rgb(255, 87, 51)
+/**
+ * Genera un color hexadecimal aleatorio.
+ * @returns Un color hexadecimal en formato string.
+ */
+var generateHexaColor = function () {
+    var hex = "#";
+    var chars = "0123456789abcdef";
+    for (var i = 0; i < 6; i++) {
+        hex += chars[Math.floor(Math.random() * 16)];
+    }
+    return hex;
+};
+/**
+ * Genera un color RGB aleatorio.
+ * @returns Un color RGB en formato string.
+ */
+var generateRgbColor = function () {
+    var r = Math.floor(Math.random() * 256);
+    var g = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    return "rgb(".concat(r, ", ").concat(g, ", ").concat(b, ")");
+};
+/**
+ * Genera una cantidad específica de colores en formato hexadecimal o RGB.
+ * @param type - El tipo de color a generar ('hexa' o 'rgb').
+ * @param count - La cantidad de colores a generar.
+ * @returns Un array de colores o un solo color si count es 1.
+ */
+var generateColors = function (type, count) {
+    var colors = [];
+    for (var i = 0; i < count; i++) {
+        if (type === "hexa") {
+            colors.push(generateHexaColor());
+        }
+        else if (type === "rgb") {
+            colors.push(generateRgbColor());
+        }
+    }
+    return count === 1 ? colors[0] : colors;
+};
+// Ejemplos de uso
+console.log(generateColors("hexa", 3)); // ['#a3e12f', '#03ed55', '#eb3d2b']
+console.log(generateColors("hexa", 1)); // '#b334ef'
+console.log(generateColors("rgb", 3)); // ['rgb(5, 55, 175)', 'rgb(50, 105, 100)', 'rgb(15, 26, 80)']
+console.log(generateColors("rgb", 1)); // 'rgb(33,79, 176)'

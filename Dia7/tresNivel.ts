@@ -18,7 +18,7 @@
 console.log(userIdGenerator(5, 6)); 
 console.log(userIdGenerator(5, 16));  */
 
-const rgbColorGenerator = (): string => {
+/* const rgbColorGenerator = (): string => {
   const getRandomValue = (): number => Math.floor(Math.random() * 256);
   const red = getRandomValue();
   const green = getRandomValue();
@@ -26,9 +26,9 @@ const rgbColorGenerator = (): string => {
   return `rgb(${red},${green},${blue})`;
 };
 
-console.log(rgbColorGenerator());
+console.log(rgbColorGenerator()); */
 
-const generateHexColor = (): string => {
+/* const generateHexColor = (): string => {
   const hexChars = "0123456789ABCDEF";
   let color = "#";
   for (let i = 0; i < 6; i++) {
@@ -46,9 +46,9 @@ const arrayOfHexaColors = (numColors: number): string[] => {
   return colors;
 };
 
-console.log(arrayOfHexaColors(5));
+console.log(arrayOfHexaColors(5)); */
 
-const generateRgbColor = (): string => {
+/* const generateRgbColor = (): string => {
   const r = Math.floor(Math.random() * 256);
   const g = Math.floor(Math.random() * 256);
   const b = Math.floor(Math.random() * 256);
@@ -63,7 +63,7 @@ const arrayOfRgbColors = (numColors: number): string[] => {
   return colors;
 };
 
-console.log(arrayOfRgbColors(5));
+console.log(arrayOfRgbColors(5)); */
 
 /**
  * Convierte un color hexadecimal a un color RGB.
@@ -101,3 +101,56 @@ const convertHexaToRgb = (hex: string): string => {
 console.log(convertHexaToRgb("#a3e12f")); // Output: rgb(163, 225, 47)
 console.log(convertHexaToRgb("#03f")); // Output: rgb(0, 51, 255)
 console.log(convertHexaToRgb("#ff5733")); // Output: rgb(255, 87, 51)
+
+/**
+ * Genera un color hexadecimal aleatorio.
+ * @returns Un color hexadecimal en formato string.
+ */
+const generateHexaColor = (): string => {
+  let hex = "#";
+  const chars = "0123456789abcdef";
+  for (let i = 0; i < 6; i++) {
+    hex += chars[Math.floor(Math.random() * 16)];
+  }
+  return hex;
+};
+
+/**
+ * Genera un color RGB aleatorio.
+ * @returns Un color RGB en formato string.
+ */
+const generateRgbColor = (): string => {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+};
+
+/**
+ * Genera una cantidad específica de colores en formato hexadecimal o RGB.
+ * @param type - El tipo de color a generar ('hexa' o 'rgb').
+ * @param count - La cantidad de colores a generar.
+ * @returns Un array de colores o un solo color si count es 1.
+ */
+const generateColors = (
+  type: "hexa" | "rgb",
+  count: number
+): string | string[] => {
+  const colors: string[] = [];
+
+  for (let i = 0; i < count; i++) {
+    if (type === "hexa") {
+      colors.push(generateHexaColor());
+    } else if (type === "rgb") {
+      colors.push(generateRgbColor());
+    }
+  }
+
+  return count === 1 ? colors[0] : colors;
+};
+
+// Ejemplos de uso
+console.log(generateColors("hexa", 3)); // ['#a3e12f', '#03ed55', '#eb3d2b']
+console.log(generateColors("hexa", 1)); // '#b334ef'
+console.log(generateColors("rgb", 3)); // ['rgb(5, 55, 175)', 'rgb(50, 105, 100)', 'rgb(15, 26, 80)']
+console.log(generateColors("rgb", 1)); // 'rgb(33,79, 176)'
