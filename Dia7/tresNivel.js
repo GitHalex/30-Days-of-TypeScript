@@ -56,3 +56,34 @@ var arrayOfRgbColors = function (numColors) {
     return colors;
 };
 console.log(arrayOfRgbColors(5));
+/**
+ * Convierte un color hexadecimal a un color RGB.
+ * @param hex - El color en formato hexadecimal.
+ * @returns El color en formato RGB.
+ */
+var convertHexaToRgb = function (hex) {
+    // Verifica si el formato hexadecimal es correcto
+    var validHex = /^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/;
+    if (!validHex.test(hex)) {
+        throw new Error("El formato hexadecimal no es válido");
+    }
+    // Elimina el símbolo "#" si está presente
+    hex = hex.replace(/^#/, "");
+    // Si el hex es de 3 caracteres, convierte a 6 caracteres
+    if (hex.length === 3) {
+        hex = hex
+            .split("")
+            .map(function (char) { return char + char; })
+            .join("");
+    }
+    // Extrae valores de los colores rojo, verde y azul
+    var bigint = parseInt(hex, 16);
+    var r = (bigint >> 16) & 255;
+    var g = (bigint >> 8) & 255;
+    var b = bigint & 255;
+    return "rgb(".concat(r, ", ").concat(g, ", ").concat(b, ")");
+};
+// Ejemplos de uso
+console.log(convertHexaToRgb("#a3e12f")); // Output: rgb(163, 225, 47)
+console.log(convertHexaToRgb("#03f")); // Output: rgb(0, 51, 255)
+console.log(convertHexaToRgb("#ff5733")); // Output: rgb(255, 87, 51)
