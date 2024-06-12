@@ -158,7 +158,7 @@ console.log(generateColors("hexa", 1)); // '#b334ef'
 console.log(generateColors("rgb", 3)); // ['rgb(5, 55, 175)', 'rgb(50, 105, 100)', 'rgb(15, 26, 80)']
 console.log(generateColors("rgb", 1)); // 'rgb(33,79, 176)' */
 
-const newArray = (arreglo: number[]): number[] => {
+/* const newArray = (arreglo: number[]): number[] => {
   const arregloMezclado: number[] = [];
   for (let i: number = 0; i < arreglo.length; i++) {
     let randomChar: number = Math.floor(Math.random() * arreglo.length);
@@ -167,3 +167,14 @@ const newArray = (arreglo: number[]): number[] => {
   return arregloMezclado;
 };
 console.log(newArray([1, 2, 3, 4, 5]));
+ */
+
+const factorial = (entradaNumber: number): number => {
+  let inicio: number = 1;
+  for (let j: number = 1; j <= entradaNumber; j++) {
+    inicio = inicio * j;
+  }
+  return inicio;
+};
+console.log(factorial(3));
+console.log(factorial(4));

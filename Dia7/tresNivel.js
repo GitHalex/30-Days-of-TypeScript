@@ -147,12 +147,22 @@ console.log(convertHexaToRgb("#ff5733")); // Output: rgb(255, 87, 51) */
 console.log(generateColors("hexa", 1)); // '#b334ef'
 console.log(generateColors("rgb", 3)); // ['rgb(5, 55, 175)', 'rgb(50, 105, 100)', 'rgb(15, 26, 80)']
 console.log(generateColors("rgb", 1)); // 'rgb(33,79, 176)' */
-var newArray = function (arreglo) {
-    var arregloMezclado = [];
-    for (var i = 0; i < arreglo.length; i++) {
-        var randomChar = Math.floor(Math.random() * arreglo.length);
-        arregloMezclado[i] = arreglo[randomChar];
-    }
-    return arregloMezclado;
+/* const newArray = (arreglo: number[]): number[] => {
+  const arregloMezclado: number[] = [];
+  for (let i: number = 0; i < arreglo.length; i++) {
+    let randomChar: number = Math.floor(Math.random() * arreglo.length);
+    arregloMezclado[i] = arreglo[randomChar];
+  }
+  return arregloMezclado;
 };
 console.log(newArray([1, 2, 3, 4, 5]));
+ */
+var factorial = function (entradaNumber) {
+    var inicio = 1;
+    for (var j = 1; j <= entradaNumber; j++) {
+        inicio = inicio * j;
+    }
+    return inicio;
+};
+console.log(factorial(3));
+console.log(factorial(4));
