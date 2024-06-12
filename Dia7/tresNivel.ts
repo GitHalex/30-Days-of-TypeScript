@@ -178,3 +178,39 @@ const factorial = (entradaNumber: number): number => {
 };
 console.log(factorial(3));
 console.log(factorial(4));
+
+/**
+ * Verifica si el valor dado está vacío.
+ * @param value - El valor a verificar.
+ * @returns `true` si el valor está vacío, `false` en caso contrario.
+ */
+const isEmpty = (value: any): boolean => {
+  if (value === null || value === undefined) {
+    return true;
+  }
+
+  if (typeof value === "string" && value.trim() === "") {
+    return true;
+  }
+
+  if (Array.isArray(value) && value.length === 0) {
+    return true;
+  }
+
+  if (typeof value === "object" && !Array.isArray(value)) {
+    return Object.keys(value).length === 0;
+  }
+
+  return false;
+};
+
+// Ejemplos de uso
+console.log(isEmpty(null)); // true
+console.log(isEmpty(undefined)); // true
+console.log(isEmpty("")); // true
+console.log(isEmpty(" ")); // true
+console.log(isEmpty([])); // true
+console.log(isEmpty({})); // true
+console.log(isEmpty("Hello")); // false
+console.log(isEmpty([1, 2, 3])); // false
+console.log(isEmpty({ key: "value" })); // false
