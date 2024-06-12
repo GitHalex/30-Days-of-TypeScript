@@ -214,3 +214,16 @@ console.log(isEmpty({})); // true
 console.log(isEmpty("Hello")); // false
 console.log(isEmpty([1, 2, 3])); // false
 console.log(isEmpty({ key: "value" })); // false
+
+const sumAllNums = (...args: number[]): number => {
+  let sum: number = 0;
+  for (const element of args) {
+    sum += element;
+  }
+  return sum;
+};
+
+// Ejemplos de uso
+console.log(sumAllNums(1, 2, 3, 4)); // 10
+console.log(sumAllNums(10, 20, 13, 40, 10)); // 93
+console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40)); // 173

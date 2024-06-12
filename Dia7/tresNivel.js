@@ -196,3 +196,19 @@ console.log(isEmpty({})); // true
 console.log(isEmpty("Hello")); // false
 console.log(isEmpty([1, 2, 3])); // false
 console.log(isEmpty({ key: "value" })); // false
+var sumAllNums = function () {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    var sum = 0;
+    for (var _a = 0, args_1 = args; _a < args_1.length; _a++) {
+        var element = args_1[_a];
+        sum += element;
+    }
+    return sum;
+};
+// Ejemplos de uso
+console.log(sumAllNums(1, 2, 3, 4)); // 10
+console.log(sumAllNums(10, 20, 13, 40, 10)); // 93
+console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40)); // 173
