@@ -212,3 +212,13 @@ var sumAllNums = function () {
 console.log(sumAllNums(1, 2, 3, 4)); // 10
 console.log(sumAllNums(10, 20, 13, 40, 10)); // 93
 console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40)); // 173
+var average = function (arreglosNum) {
+    var sumaNum = 0;
+    for (var _i = 0, arreglosNum_1 = arreglosNum; _i < arreglosNum_1.length; _i++) {
+        var numero = arreglosNum_1[_i];
+        sumaNum = sumaNum + numero;
+    }
+    var promedio = sumaNum / arreglosNum.length;
+    return "el arreglo ".concat(arreglosNum, " tiene un promedio de ").concat(promedio);
+};
+console.log(average([10, 10, 9, 10]));

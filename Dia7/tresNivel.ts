@@ -227,3 +227,13 @@ const sumAllNums = (...args: number[]): number => {
 console.log(sumAllNums(1, 2, 3, 4)); // 10
 console.log(sumAllNums(10, 20, 13, 40, 10)); // 93
 console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40)); // 173
+
+const average = (arreglosNum: number[]): string => {
+  let sumaNum: number = 0;
+  for (const numero of arreglosNum) {
+    sumaNum = sumaNum + numero;
+  }
+  let promedio: number = sumaNum / arreglosNum.length;
+  return `el arreglo ${arreglosNum} tiene un promedio de ${promedio}`;
+};
+console.log(average([10, 10, 9, 10]));
