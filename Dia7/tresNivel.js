@@ -222,25 +222,55 @@ console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40)); // 173 */
   return `el arreglo ${arreglosNum} tiene un promedio de ${promedio}`;
 };
 console.log(average([10, 10, 9, 10])); */
-var modifyArray = function (arregloCadena) {
-    var arregloModificado = [];
-    if (arregloCadena.length < 5) {
-        console.log("Elemento no encontrado");
-        return arregloModificado; // Retorna un array vacío si no hay suficientes elementos
+/* const modifyArray = (arregloCadena: string[]): string[] => {
+  const arregloModificado: string[] = [];
+
+  if (arregloCadena.length < 5) {
+    console.log("Elemento no encontrado");
+    return arregloModificado; // Retorna un array vacío si no hay suficientes elementos
+  }
+
+  for (let indice: number = 0; indice < arregloCadena.length; indice++) {
+    if (indice !== 4) {
+      arregloModificado.push(arregloCadena[indice]);
+    } else {
+      arregloModificado.push(arregloCadena[indice].toUpperCase());
     }
-    for (var indice = 0; indice < arregloCadena.length; indice++) {
-        if (indice !== 4) {
-            arregloModificado.push(arregloCadena[indice]);
-        }
-        else {
-            arregloModificado.push(arregloCadena[indice].toUpperCase());
-        }
-    }
-    return arregloModificado;
+  }
+
+  return arregloModificado;
 };
+
 // Ejemplo de uso
-var ejemploArreglo = ["uno", "dos", "tres", "cuatro", "cinco", "seis"];
+const ejemploArreglo = ["uno", "dos", "tres", "cuatro", "cinco", "seis"];
 console.log(modifyArray(ejemploArreglo)); // ["uno", "dos", "tres", "cuatro", "CINCO", "seis"]
-console.log(modifyArray(["Avocado", "Tomato", "Potato", "Mango", "Lemon", "Carrot"]));
-console.log(modifyArray(["Google", "Facebook", "Apple", "Amazon", "Microsoft", "IBM"]));
-console.log(modifyArray(["Google", "Facebook", "Apple", "Amazon"]));
+
+console.log(
+  modifyArray(["Avocado", "Tomato", "Potato", "Mango", "Lemon", "Carrot"])
+);
+console.log(
+  modifyArray(["Google", "Facebook", "Apple", "Amazon", "Microsoft", "IBM"])
+);
+
+console.log(modifyArray(["Google", "Facebook", "Apple", "Amazon"])); */
+var isPrime = function (num) {
+    if (num <= 1)
+        return false; // Los números menores o iguales a 1 no son primos
+    if (num <= 3)
+        return true; // 2 y 3 son números primos
+    if (num % 2 === 0 || num % 3 === 0)
+        return false; // Elimina múltiplos de 2 y 3
+    for (var i = 5; i * i <= num; i += 6) {
+        if (num % i === 0 || num % (i + 2) === 0)
+            return false; // Verifica divisibilidad
+    }
+    return true; // Si no encuentra divisores, el número es primo
+};
+// Ejemplos de uso
+console.log(isPrime(2)); // true
+console.log(isPrime(3)); // true
+console.log(isPrime(4)); // false
+console.log(isPrime(5)); // true
+console.log(isPrime(11)); // true
+console.log(isPrime(15)); // false
+console.log(isPrime(17)); // true

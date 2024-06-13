@@ -238,7 +238,7 @@ console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40)); // 173 */
 };
 console.log(average([10, 10, 9, 10])); */
 
-const modifyArray = (arregloCadena: string[]): string[] => {
+/* const modifyArray = (arregloCadena: string[]): string[] => {
   const arregloModificado: string[] = [];
 
   if (arregloCadena.length < 5) {
@@ -268,4 +268,26 @@ console.log(
   modifyArray(["Google", "Facebook", "Apple", "Amazon", "Microsoft", "IBM"])
 );
 
-console.log(modifyArray(["Google", "Facebook", "Apple", "Amazon"]));
+console.log(modifyArray(["Google", "Facebook", "Apple", "Amazon"])); */
+
+const isPrime = (num: number): boolean => {
+  if (num <= 1) return false; // Los números menores o iguales a 1 no son primos
+  if (num <= 3) return true; // 2 y 3 son números primos
+
+  if (num % 2 === 0 || num % 3 === 0) return false; // Elimina múltiplos de 2 y 3
+
+  for (let i = 5; i * i <= num; i += 6) {
+    if (num % i === 0 || num % (i + 2) === 0) return false; // Verifica divisibilidad
+  }
+
+  return true; // Si no encuentra divisores, el número es primo
+};
+
+// Ejemplos de uso
+console.log(isPrime(2)); // true
+console.log(isPrime(3)); // true
+console.log(isPrime(4)); // false
+console.log(isPrime(5)); // true
+console.log(isPrime(11)); // true
+console.log(isPrime(15)); // false
+console.log(isPrime(17)); // true
