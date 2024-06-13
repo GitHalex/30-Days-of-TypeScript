@@ -171,23 +171,27 @@ console.log(factorial(4));
  * @param value - El valor a verificar.
  * @returns `true` si el valor está vacío, `false` en caso contrario.
  */
-var isEmpty = function (value) {
-    if (value === null || value === undefined) {
-        return true;
-    }
-    if (typeof value === "string" && value.trim() === "") {
-        return true;
-    }
-    if (Array.isArray(value) && value.length === 0) {
-        return true;
-    }
-    if (typeof value === "object" && !Array.isArray(value)) {
-        return Object.keys(value).length === 0;
-    }
-    return false;
-};
+/* const isEmpty = (value: any): boolean => {
+  if (value === null || value === undefined) {
+    return true;
+  }
+
+  if (typeof value === "string" && value.trim() === "") {
+    return true;
+  }
+
+  if (Array.isArray(value) && value.length === 0) {
+    return true;
+  }
+
+  if (typeof value === "object" && !Array.isArray(value)) {
+    return Object.keys(value).length === 0;
+  }
+
+  return false;
+}; */
 // Ejemplos de uso
-console.log(isEmpty(null)); // true
+/* console.log(isEmpty(null)); // true
 console.log(isEmpty(undefined)); // true
 console.log(isEmpty("")); // true
 console.log(isEmpty(" ")); // true
@@ -196,29 +200,47 @@ console.log(isEmpty({})); // true
 console.log(isEmpty("Hello")); // false
 console.log(isEmpty([1, 2, 3])); // false
 console.log(isEmpty({ key: "value" })); // false
-var sumAllNums = function () {
-    var args = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        args[_i] = arguments[_i];
-    }
-    var sum = 0;
-    for (var _a = 0, args_1 = args; _a < args_1.length; _a++) {
-        var element = args_1[_a];
-        sum += element;
-    }
-    return sum;
+
+const sumAllNums = (...args: number[]): number => {
+  let sum: number = 0;
+  for (const element of args) {
+    sum += element;
+  }
+  return sum;
 };
+
 // Ejemplos de uso
 console.log(sumAllNums(1, 2, 3, 4)); // 10
 console.log(sumAllNums(10, 20, 13, 40, 10)); // 93
-console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40)); // 173
-var average = function (arreglosNum) {
-    var sumaNum = 0;
-    for (var _i = 0, arreglosNum_1 = arreglosNum; _i < arreglosNum_1.length; _i++) {
-        var numero = arreglosNum_1[_i];
-        sumaNum = sumaNum + numero;
-    }
-    var promedio = sumaNum / arreglosNum.length;
-    return "el arreglo ".concat(arreglosNum, " tiene un promedio de ").concat(promedio);
+console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40)); // 173 */
+/* const average = (arreglosNum: number[]): string => {
+  let sumaNum: number = 0;
+  for (const numero of arreglosNum) {
+    sumaNum = sumaNum + numero;
+  }
+  let promedio: number = sumaNum / arreglosNum.length;
+  return `el arreglo ${arreglosNum} tiene un promedio de ${promedio}`;
 };
-console.log(average([10, 10, 9, 10]));
+console.log(average([10, 10, 9, 10])); */
+var modifyArray = function (arregloCadena) {
+    var arregloModificado = [];
+    if (arregloCadena.length < 5) {
+        console.log("Elemento no encontrado");
+        return arregloModificado; // Retorna un array vacío si no hay suficientes elementos
+    }
+    for (var indice = 0; indice < arregloCadena.length; indice++) {
+        if (indice !== 4) {
+            arregloModificado.push(arregloCadena[indice]);
+        }
+        else {
+            arregloModificado.push(arregloCadena[indice].toUpperCase());
+        }
+    }
+    return arregloModificado;
+};
+// Ejemplo de uso
+var ejemploArreglo = ["uno", "dos", "tres", "cuatro", "cinco", "seis"];
+console.log(modifyArray(ejemploArreglo)); // ["uno", "dos", "tres", "cuatro", "CINCO", "seis"]
+console.log(modifyArray(["Avocado", "Tomato", "Potato", "Mango", "Lemon", "Carrot"]));
+console.log(modifyArray(["Google", "Facebook", "Apple", "Amazon", "Microsoft", "IBM"]));
+console.log(modifyArray(["Google", "Facebook", "Apple", "Amazon"]));

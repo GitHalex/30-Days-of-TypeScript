@@ -184,7 +184,7 @@ console.log(factorial(4));
  * @param value - El valor a verificar.
  * @returns `true` si el valor está vacío, `false` en caso contrario.
  */
-const isEmpty = (value: any): boolean => {
+/* const isEmpty = (value: any): boolean => {
   if (value === null || value === undefined) {
     return true;
   }
@@ -202,10 +202,10 @@ const isEmpty = (value: any): boolean => {
   }
 
   return false;
-};
+}; */
 
 // Ejemplos de uso
-console.log(isEmpty(null)); // true
+/* console.log(isEmpty(null)); // true
 console.log(isEmpty(undefined)); // true
 console.log(isEmpty("")); // true
 console.log(isEmpty(" ")); // true
@@ -226,9 +226,9 @@ const sumAllNums = (...args: number[]): number => {
 // Ejemplos de uso
 console.log(sumAllNums(1, 2, 3, 4)); // 10
 console.log(sumAllNums(10, 20, 13, 40, 10)); // 93
-console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40)); // 173
+console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40)); // 173 */
 
-const average = (arreglosNum: number[]): string => {
+/* const average = (arreglosNum: number[]): string => {
   let sumaNum: number = 0;
   for (const numero of arreglosNum) {
     sumaNum = sumaNum + numero;
@@ -236,4 +236,36 @@ const average = (arreglosNum: number[]): string => {
   let promedio: number = sumaNum / arreglosNum.length;
   return `el arreglo ${arreglosNum} tiene un promedio de ${promedio}`;
 };
-console.log(average([10, 10, 9, 10]));
+console.log(average([10, 10, 9, 10])); */
+
+const modifyArray = (arregloCadena: string[]): string[] => {
+  const arregloModificado: string[] = [];
+
+  if (arregloCadena.length < 5) {
+    console.log("Elemento no encontrado");
+    return arregloModificado; // Retorna un array vacío si no hay suficientes elementos
+  }
+
+  for (let indice: number = 0; indice < arregloCadena.length; indice++) {
+    if (indice !== 4) {
+      arregloModificado.push(arregloCadena[indice]);
+    } else {
+      arregloModificado.push(arregloCadena[indice].toUpperCase());
+    }
+  }
+
+  return arregloModificado;
+};
+
+// Ejemplo de uso
+const ejemploArreglo = ["uno", "dos", "tres", "cuatro", "cinco", "seis"];
+console.log(modifyArray(ejemploArreglo)); // ["uno", "dos", "tres", "cuatro", "CINCO", "seis"]
+
+console.log(
+  modifyArray(["Avocado", "Tomato", "Potato", "Mango", "Lemon", "Carrot"])
+);
+console.log(
+  modifyArray(["Google", "Facebook", "Apple", "Amazon", "Microsoft", "IBM"])
+);
+
+console.log(modifyArray(["Google", "Facebook", "Apple", "Amazon"]));
