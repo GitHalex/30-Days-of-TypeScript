@@ -336,3 +336,85 @@ console.log(
   areAllElementsUnique(uniqueArray)
 );
 console.log("Array sin duplicados:", removeDuplicates(uniqueArray));
+
+const isValidVariable = (variable: string): boolean => {
+  const validVariablePattern = /^[a-zA-Z_$][a-zA-Z_$0-9]*$/;
+  const reservedWords: string[] = [
+    "abstract",
+    "await",
+    "boolean",
+    "break",
+    "byte",
+    "case",
+    "catch",
+    "char",
+    "class",
+    "const",
+    "continue",
+    "debugger",
+    "default",
+    "delete",
+    "do",
+    "double",
+    "else",
+    "enum",
+    "export",
+    "extends",
+    "false",
+    "final",
+    "finally",
+    "float",
+    "for",
+    "function",
+    "goto",
+    "if",
+    "implements",
+    "import",
+    "in",
+    "instanceof",
+    "int",
+    "interface",
+    "let",
+    "long",
+    "native",
+    "new",
+    "null",
+    "package",
+    "private",
+    "protected",
+    "public",
+    "return",
+    "short",
+    "static",
+    "super",
+    "switch",
+    "synchronized",
+    "this",
+    "throw",
+    "throws",
+    "transient",
+    "true",
+    "try",
+    "typeof",
+    "var",
+    "void",
+    "volatile",
+    "while",
+    "with",
+    "yield",
+  ];
+
+  // Check if the variable matches the valid pattern and is not a reserved word
+  return (
+    validVariablePattern.test(variable) && !reservedWords.includes(variable)
+  );
+};
+
+// Ejemplos de uso
+console.log(isValidVariable("var_name")); // true
+console.log(isValidVariable("$varName")); // true
+console.log(isValidVariable("_varName")); // true
+console.log(isValidVariable("2varName")); // false
+console.log(isValidVariable("varName!")); // false
+console.log(isValidVariable("let")); // false (reserved word)
+console.log(isValidVariable("variable")); // true
