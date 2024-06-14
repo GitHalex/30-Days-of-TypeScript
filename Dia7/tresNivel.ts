@@ -436,3 +436,18 @@ const generateUniqueRandomNumbers = (
 
 const uniqueRandomNumbersArray = generateUniqueRandomNumbers(7, 0, 9);
 console.log(uniqueRandomNumbersArray); // Ejemplo de salida: [3, 7, 1, 9, 2, 0, 8]
+
+const reverseCountries = (countries: string[]): string[] => {
+  // Copiar el array original
+  const countriesCopy = [...countries];
+  // Invertir el array copiado
+  const reversedCountries = countriesCopy.reverse();
+  // Retornar el array invertido
+  return reversedCountries;
+};
+
+// Ejemplo de uso
+
+const reversedCountriesArray = reverseCountries(countries);
+console.log(reversedCountriesArray);
+console.log(countries); // Para asegurarnos de que el array original no ha sido modificado

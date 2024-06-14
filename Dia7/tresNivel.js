@@ -17,6 +17,15 @@
 
 console.log(userIdGenerator(5, 6));
 console.log(userIdGenerator(5, 16));  */
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 /* const rgbColorGenerator = (): string => {
   const getRandomValue = (): number => Math.floor(Math.random() * 256);
   const red = getRandomValue();
@@ -395,3 +404,15 @@ var generateUniqueRandomNumbers = function (length, min, max) {
 };
 var uniqueRandomNumbersArray = generateUniqueRandomNumbers(7, 0, 9);
 console.log(uniqueRandomNumbersArray); // Ejemplo de salida: [3, 7, 1, 9, 2, 0, 8]
+var reverseCountries = function (countries) {
+    // Copiar el array original
+    var countriesCopy = __spreadArray([], countries, true);
+    // Invertir el array copiado
+    var reversedCountries = countriesCopy.reverse();
+    // Retornar el array invertido
+    return reversedCountries;
+};
+// Ejemplo de uso
+var reversedCountriesArray = reverseCountries(countries);
+console.log(reversedCountriesArray);
+console.log(countries); // Para asegurarnos de que el array original no ha sido modificado
