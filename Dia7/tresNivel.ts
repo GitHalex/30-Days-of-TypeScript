@@ -303,3 +303,36 @@ console.log(areAllElementsUnique([1, 2, 2, 4, 5])); // false
 console.log(areAllElementsUnique(["a", "b", "c", "d"])); // true
 console.log(areAllElementsUnique(["a", "b", "c", "a"])); // false
 console.log(areAllElementsUnique([])); // true */
+
+const removeDuplicates = (arr: any[]): any[] => {
+  const uniqueArray: any[] = [];
+  for (const element of arr) {
+    if (!uniqueArray.includes(element)) {
+      uniqueArray.push(element);
+    }
+  }
+  return uniqueArray;
+};
+
+const areAllElementsUnique = (arr: any[]): boolean => {
+  return arr.length === removeDuplicates(arr).length;
+};
+
+// Ejemplos de uso
+const arrayWithDuplicates = [1, 2, 2, 3, 4, 4, 5];
+const arrayWithoutDuplicates = removeDuplicates(arrayWithDuplicates);
+
+console.log("Array original:", arrayWithDuplicates);
+console.log(
+  "¿Todos los elementos son únicos?:",
+  areAllElementsUnique(arrayWithDuplicates)
+);
+console.log("Array sin duplicados:", arrayWithoutDuplicates);
+
+const uniqueArray = [1, 2, 3, 4, 5];
+console.log("Array original:", uniqueArray);
+console.log(
+  "¿Todos los elementos son únicos?:",
+  areAllElementsUnique(uniqueArray)
+);
+console.log("Array sin duplicados:", removeDuplicates(uniqueArray));

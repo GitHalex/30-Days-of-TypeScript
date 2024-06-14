@@ -285,3 +285,26 @@ console.log(areAllElementsUnique([1, 2, 2, 4, 5])); // false
 console.log(areAllElementsUnique(["a", "b", "c", "d"])); // true
 console.log(areAllElementsUnique(["a", "b", "c", "a"])); // false
 console.log(areAllElementsUnique([])); // true */
+var removeDuplicates = function (arr) {
+    var uniqueArray = [];
+    for (var _i = 0, arr_1 = arr; _i < arr_1.length; _i++) {
+        var element = arr_1[_i];
+        if (!uniqueArray.includes(element)) {
+            uniqueArray.push(element);
+        }
+    }
+    return uniqueArray;
+};
+var areAllElementsUnique = function (arr) {
+    return arr.length === removeDuplicates(arr).length;
+};
+// Ejemplos de uso
+var arrayWithDuplicates = [1, 2, 2, 3, 4, 4, 5];
+var arrayWithoutDuplicates = removeDuplicates(arrayWithDuplicates);
+console.log("Array original:", arrayWithDuplicates);
+console.log("¿Todos los elementos son únicos?:", areAllElementsUnique(arrayWithDuplicates));
+console.log("Array sin duplicados:", arrayWithoutDuplicates);
+var uniqueArray = [1, 2, 3, 4, 5];
+console.log("Array original:", uniqueArray);
+console.log("¿Todos los elementos son únicos?:", areAllElementsUnique(uniqueArray));
+console.log("Array sin duplicados:", removeDuplicates(uniqueArray));
