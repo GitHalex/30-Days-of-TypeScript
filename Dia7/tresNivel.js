@@ -253,19 +253,19 @@ console.log(
 );
 
 console.log(modifyArray(["Google", "Facebook", "Apple", "Amazon"])); */
-var isPrime = function (num) {
-    if (num <= 1)
-        return false; // Los números menores o iguales a 1 no son primos
-    if (num <= 3)
-        return true; // 2 y 3 son números primos
-    if (num % 2 === 0 || num % 3 === 0)
-        return false; // Elimina múltiplos de 2 y 3
-    for (var i = 5; i * i <= num; i += 6) {
-        if (num % i === 0 || num % (i + 2) === 0)
-            return false; // Verifica divisibilidad
-    }
-    return true; // Si no encuentra divisores, el número es primo
+/* const isPrime = (num: number): boolean => {
+  if (num <= 1) return false; // Los números menores o iguales a 1 no son primos
+  if (num <= 3) return true; // 2 y 3 son números primos
+
+  if (num % 2 === 0 || num % 3 === 0) return false; // Elimina múltiplos de 2 y 3
+
+  for (let i = 5; i * i <= num; i += 6) {
+    if (num % i === 0 || num % (i + 2) === 0) return false; // Verifica divisibilidad
+  }
+
+  return true; // Si no encuentra divisores, el número es primo
 };
+
 // Ejemplos de uso
 console.log(isPrime(2)); // true
 console.log(isPrime(3)); // true
@@ -273,4 +273,15 @@ console.log(isPrime(4)); // false
 console.log(isPrime(5)); // true
 console.log(isPrime(11)); // true
 console.log(isPrime(15)); // false
-console.log(isPrime(17)); // true
+console.log(isPrime(17)); // true */
+/* const areAllElementsUnique = (arr: any[]): boolean => {
+  const uniqueElements = new Set(arr);
+  return uniqueElements.size === arr.length;
+};
+
+// Ejemplos de uso
+console.log(areAllElementsUnique([1, 2, 3, 4, 5])); // true
+console.log(areAllElementsUnique([1, 2, 2, 4, 5])); // false
+console.log(areAllElementsUnique(["a", "b", "c", "d"])); // true
+console.log(areAllElementsUnique(["a", "b", "c", "a"])); // false
+console.log(areAllElementsUnique([])); // true */

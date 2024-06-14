@@ -270,7 +270,7 @@ console.log(
 
 console.log(modifyArray(["Google", "Facebook", "Apple", "Amazon"])); */
 
-const isPrime = (num: number): boolean => {
+/* const isPrime = (num: number): boolean => {
   if (num <= 1) return false; // Los números menores o iguales a 1 no son primos
   if (num <= 3) return true; // 2 y 3 son números primos
 
@@ -290,4 +290,16 @@ console.log(isPrime(4)); // false
 console.log(isPrime(5)); // true
 console.log(isPrime(11)); // true
 console.log(isPrime(15)); // false
-console.log(isPrime(17)); // true
+console.log(isPrime(17)); // true */
+
+/* const areAllElementsUnique = (arr: any[]): boolean => {
+  const uniqueElements = new Set(arr);
+  return uniqueElements.size === arr.length;
+};
+
+// Ejemplos de uso
+console.log(areAllElementsUnique([1, 2, 3, 4, 5])); // true
+console.log(areAllElementsUnique([1, 2, 2, 4, 5])); // false
+console.log(areAllElementsUnique(["a", "b", "c", "d"])); // true
+console.log(areAllElementsUnique(["a", "b", "c", "a"])); // false
+console.log(areAllElementsUnique([])); // true */
