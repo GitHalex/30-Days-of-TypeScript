@@ -418,3 +418,21 @@ console.log(isValidVariable("2varName")); // false
 console.log(isValidVariable("varName!")); // false
 console.log(isValidVariable("let")); // false (reserved word)
 console.log(isValidVariable("variable")); // true
+
+const generateUniqueRandomNumbers = (
+  length: number,
+  min: number,
+  max: number
+): number[] => {
+  const uniqueNumbers = new Set<number>();
+
+  while (uniqueNumbers.size < length) {
+    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+    uniqueNumbers.add(randomNumber);
+  }
+
+  return Array.from(uniqueNumbers);
+};
+
+const uniqueRandomNumbersArray = generateUniqueRandomNumbers(7, 0, 9);
+console.log(uniqueRandomNumbersArray); // Ejemplo de salida: [3, 7, 1, 9, 2, 0, 8]

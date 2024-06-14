@@ -385,3 +385,13 @@ console.log(isValidVariable("2varName")); // false
 console.log(isValidVariable("varName!")); // false
 console.log(isValidVariable("let")); // false (reserved word)
 console.log(isValidVariable("variable")); // true
+var generateUniqueRandomNumbers = function (length, min, max) {
+    var uniqueNumbers = new Set();
+    while (uniqueNumbers.size < length) {
+        var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+        uniqueNumbers.add(randomNumber);
+    }
+    return Array.from(uniqueNumbers);
+};
+var uniqueRandomNumbersArray = generateUniqueRandomNumbers(7, 0, 9);
+console.log(uniqueRandomNumbersArray); // Ejemplo de salida: [3, 7, 1, 9, 2, 0, 8]
