@@ -24,6 +24,8 @@ interface Dog {
   color: string;
   age: number;
   bark: () => string;
+  breed?: boolean;
+  getDogInfo?: () => string;
 }
 const dog: Dog = {
   name: "Marrano",
@@ -41,6 +43,11 @@ console.log(dog.legs);
 console.log(dog.color);
 console.log(dog.age);
 console.log(dog.bark());
+dog.breed = false;
+dog.getDogInfo = function () {
+  return `Mi nombre es: ${this.name}\nMi color es: ${this.color}`;
+};
+console.log(dog.getDogInfo());
 
 const person: Person = {
   firstName: "Asabeneh",
@@ -67,7 +74,6 @@ const person: Person = {
     city: "Helsinki",
   },
 };
-
 person.nationality = "Ethiopian";
 person.country = "Finland";
 person.title = "teacher";

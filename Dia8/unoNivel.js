@@ -14,6 +14,11 @@ console.log(dog.legs);
 console.log(dog.color);
 console.log(dog.age);
 console.log(dog.bark());
+dog.breed = false;
+dog.getDogInfo = function () {
+    return "Mi nombre es: ".concat(this.name, "\nMi color es: ").concat(this.color);
+};
+console.log(dog.getDogInfo());
 var person = {
     firstName: "Asabeneh",
     lastName: "Yetayeh",
