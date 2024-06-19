@@ -154,19 +154,14 @@ console.log(users); */
 
 // #5 Obtener todas las claves o propiedades del objeto usuarios
 
-const obtenerClaves = (users: Users): string[] => {
+/* const obtenerClaves = (users: Users): string[] => {
   return Object.keys(users);
 };
 
-console.log(obtenerClaves(users));
+console.log(obtenerClaves(users)); */
 
 // #6 Obtener todos los valores del objeto usuarios
-
-/* const obtenerValores = (users) => {
-  const valores = [];
-  for (const valor of Object.values(users)) {
-    valores.push(valor);
-  }
-  return valores;
+/* const obtenerValores = (users: Users): string[] => {
+  return Object.values(users);
 };
 console.log(obtenerValores(users)); */
