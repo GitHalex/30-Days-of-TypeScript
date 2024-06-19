@@ -150,6 +150,7 @@ const copia: Users = Object.assign({}, users, {
 });
 
 console.log(copia);
+console.log(users);
 
 // #5 Obtener todas las claves o propiedades del objeto usuarios
 /* const obtenerClaves = (users) => {
