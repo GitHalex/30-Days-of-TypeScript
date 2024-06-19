@@ -105,29 +105,14 @@ console.log(encontrarPersonaConMasHabilidades(users)); */
 };
 
 console.log(usuariosConectados(users)); */
-var findDevMERN = function (users) {
-    var personasMern = [];
-    var mernStack = ["MongoDB", "Express", "React", "Node"];
-    var _loop_1 = function (nombre, usuario) {
-        var habilidades = usuario.skills;
-        if (mernStack.every(function (tech) { return habilidades.includes(tech); })) {
-            personasMern.push(nombre);
-        }
-    };
-    for (var _i = 0, _a = Object.entries(users); _i < _a.length; _i++) {
-        var _b = _a[_i], nombre = _b[0], usuario = _b[1];
-        _loop_1(nombre, usuario);
-    }
-    return personasMern;
-};
-console.log(findDevMERN(users));
-//Esta mierda no funciona
-/* const findDevMERN = (users) => {
-  let personasMern = [];
+/* const findDevMERN = (users: Users): string[] => {
+  let personasMern: string[] = [];
+  const mernStack: string[] = ["MongoDB", "Express", "React", "Node"];
+
   for (const [nombre, usuario] of Object.entries(users)) {
-    let habilidades = usuario.skills;
-    const letras = ["M", "E", "R", "N"];
-    if (letras.every((letra) => habilidades.includes(letra))) {
+    let habilidades: string[] = usuario.skills;
+
+    if (mernStack.every((tech) => habilidades.includes(tech))) {
       personasMern.push(nombre);
     }
   }
@@ -136,9 +121,16 @@ console.log(findDevMERN(users));
 
 console.log(findDevMERN(users)); */
 // #4 Establezca su nombre en el objeto usuarios sin modificar el objeto usuarios original
-/* const copia = Object.assign({ hanyinson: { email: "cale@gmail.com" } }, users);
+var copia = Object.assign({}, users, {
+    hanyinson: {
+        email: "cale@gmail.com",
+        skills: ["Java", "Python"],
+        age: 20,
+        isLoggedIn: true,
+        points: 0,
+    },
+});
 console.log(copia);
-console.log(users); */
 // #5 Obtener todas las claves o propiedades del objeto usuarios
 /* const obtenerClaves = (users) => {
   let claves = [];
