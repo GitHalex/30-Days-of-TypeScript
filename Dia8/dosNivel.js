@@ -82,48 +82,45 @@ console.log(users);
 };
 
 console.log(encontrarPersonaConMasHabilidades(users)); */
-var usuariosConectados = function (users) {
-    var conectados = [];
-    var masPuntos = [];
-    var cantidadConectados = 0;
-    var puntos = 0;
-    for (var _i = 0, _a = Object.entries(users); _i < _a.length; _i++) {
-        var _b = _a[_i], nombre = _b[0], usuario = _b[1];
-        if (usuario.isLoggedIn) {
-            conectados.push(nombre);
-            cantidadConectados += 1;
-        }
-        if (usuario.points >= 50) {
-            masPuntos.push(nombre);
-            puntos += 1;
-        }
-    }
-    return "usuarios conectados ".concat(conectados, " \n en total son ").concat(cantidadConectados, "\nusuarios que tienen mas de 50 puntos ").concat(masPuntos.join(", "), " cantidad ").concat(puntos);
-};
-console.log(usuariosConectados(users));
-/* const usuariosConectados = (users) => {
-  let conectados = [];
-  let maspuntos = [];
-  let cantidadConectados = 0;
-  let puntos = 0;
+/* const usuariosConectados = (users: Users): string => {
+  let conectados: string[] = [];
+  let masPuntos: number[] = [];
+  let cantidadConectados: number = 0;
+  let puntos: number = 0;
+
   for (const [nombre, usuario] of Object.entries(users)) {
     if (usuario.isLoggedIn) {
       conectados.push(nombre);
-      cantidadConectados++;
+      cantidadConectados += 1;
     }
     if (usuario.points >= 50) {
-      maspuntos.push(nombre);
-      puntos++;
+      masPuntos.push(nombre);
+      puntos += 1;
     }
   }
-  return `usuarios conectados ${conectados.join(
-    ", "
-  )} : en total son :${cantidadConectados}\n usuarios que tienen mas de 50 puntos ${maspuntos.join(
+
+  return `usuarios conectados ${conectados} \n en total son ${cantidadConectados}\nusuarios que tienen mas de 50 puntos ${masPuntos.join(
     ", "
   )} cantidad ${puntos}`;
 };
 
 console.log(usuariosConectados(users)); */
+var findDevMERN = function (users) {
+    var personasMern = [];
+    var mernStack = ["MongoDB", "Express", "React", "Node"];
+    var _loop_1 = function (nombre, usuario) {
+        var habilidades = usuario.skills;
+        if (mernStack.every(function (tech) { return habilidades.includes(tech); })) {
+            personasMern.push(nombre);
+        }
+    };
+    for (var _i = 0, _a = Object.entries(users); _i < _a.length; _i++) {
+        var _b = _a[_i], nombre = _b[0], usuario = _b[1];
+        _loop_1(nombre, usuario);
+    }
+    return personasMern;
+};
+console.log(findDevMERN(users));
 //Esta mierda no funciona
 /* const findDevMERN = (users) => {
   let personasMern = [];

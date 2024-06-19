@@ -97,7 +97,7 @@ console.log(users);
 
 console.log(encontrarPersonaConMasHabilidades(users)); */
 
-const usuariosConectados = (users: Users): string => {
+/* const usuariosConectados = (users: Users): string => {
   let conectados: string[] = [];
   let masPuntos: number[] = [];
   let cantidadConectados: number = 0;
@@ -119,31 +119,23 @@ const usuariosConectados = (users: Users): string => {
   )} cantidad ${puntos}`;
 };
 
-console.log(usuariosConectados(users));
+console.log(usuariosConectados(users)); */
 
-/* const usuariosConectados = (users) => {
-  let conectados = [];
-  let maspuntos = [];
-  let cantidadConectados = 0;
-  let puntos = 0;
+const findDevMERN = (users: Users): string[] => {
+  let personasMern: string[] = [];
+  const mernStack: string[] = ["MongoDB", "Express", "React", "Node"];
+
   for (const [nombre, usuario] of Object.entries(users)) {
-    if (usuario.isLoggedIn) {
-      conectados.push(nombre);
-      cantidadConectados++;
-    }
-    if (usuario.points >= 50) {
-      maspuntos.push(nombre);
-      puntos++;
+    let habilidades: string[] = usuario.skills;
+
+    if (mernStack.every((tech) => habilidades.includes(tech))) {
+      personasMern.push(nombre);
     }
   }
-  return `usuarios conectados ${conectados.join(
-    ", "
-  )} : en total son :${cantidadConectados}\n usuarios que tienen mas de 50 puntos ${maspuntos.join(
-    ", "
-  )} cantidad ${puntos}`;
+  return personasMern;
 };
 
-console.log(usuariosConectados(users)); */
+console.log(findDevMERN(users));
 
 //Esta mierda no funciona
 /* const findDevMERN = (users) => {
