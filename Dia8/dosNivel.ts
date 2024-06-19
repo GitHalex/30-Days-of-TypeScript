@@ -81,7 +81,7 @@ const users: Users = {
 
 console.log(users);
 
-const encontrarPersonaConMasHabilidades = (users: Users): string => {
+/* const encontrarPersonaConMasHabilidades = (users: Users): string => {
   let maxSkills: number = 0;
   let personaConMasHabilidades: string = "";
   let habilidades: string[] = [];
@@ -95,4 +95,92 @@ const encontrarPersonaConMasHabilidades = (users: Users): string => {
   return `persona con mas habilidades ${personaConMasHabilidades} y sus habilidades son\n${habilidades} `;
 };
 
-console.log(encontrarPersonaConMasHabilidades(users));
+console.log(encontrarPersonaConMasHabilidades(users)); */
+
+const usuariosConectados = (users: Users): string => {
+  let conectados: string[] = [];
+  let masPuntos: number[] = [];
+  let cantidadConectados: number = 0;
+  let puntos: number = 0;
+
+  for (const [nombre, usuario] of Object.entries(users)) {
+    if (usuario.isLoggedIn) {
+      conectados.push(nombre);
+      cantidadConectados += 1;
+    }
+    if (usuario.points >= 50) {
+      masPuntos.push(nombre);
+      puntos += 1;
+    }
+  }
+
+  return `usuarios conectados ${conectados} \n en total son ${cantidadConectados}\nusuarios que tienen mas de 50 puntos ${masPuntos.join(
+    ", "
+  )} cantidad ${puntos}`;
+};
+
+console.log(usuariosConectados(users));
+
+/* const usuariosConectados = (users) => {
+  let conectados = [];
+  let maspuntos = [];
+  let cantidadConectados = 0;
+  let puntos = 0;
+  for (const [nombre, usuario] of Object.entries(users)) {
+    if (usuario.isLoggedIn) {
+      conectados.push(nombre);
+      cantidadConectados++;
+    }
+    if (usuario.points >= 50) {
+      maspuntos.push(nombre);
+      puntos++;
+    }
+  }
+  return `usuarios conectados ${conectados.join(
+    ", "
+  )} : en total son :${cantidadConectados}\n usuarios que tienen mas de 50 puntos ${maspuntos.join(
+    ", "
+  )} cantidad ${puntos}`;
+};
+
+console.log(usuariosConectados(users)); */
+
+//Esta mierda no funciona
+/* const findDevMERN = (users) => {
+  let personasMern = [];
+  for (const [nombre, usuario] of Object.entries(users)) {
+    let habilidades = usuario.skills;
+    const letras = ["M", "E", "R", "N"];
+    if (letras.every((letra) => habilidades.includes(letra))) {
+      personasMern.push(nombre);
+    }
+  }
+  return personasMern;
+};
+
+console.log(findDevMERN(users)); */
+
+// #4 Establezca su nombre en el objeto usuarios sin modificar el objeto usuarios original
+/* const copia = Object.assign({ hanyinson: { email: "cale@gmail.com" } }, users);
+console.log(copia);
+console.log(users); */
+
+// #5 Obtener todas las claves o propiedades del objeto usuarios
+/* const obtenerClaves = (users) => {
+  let claves = [];
+  for (const clave of Object.keys(users)) {
+    claves.push(clave);
+  }
+  return claves;
+};
+console.log(obtenerClaves(users)); */
+
+// #6 Obtener todos los valores del objeto usuarios
+/* const obtenerValores = (users) => {
+  const valores = [];
+  for (const valor of Object.values(users)) {
+    valores.push(valor);
+  }
+  return valores;
+};
+console.log(obtenerValores(users)); */
