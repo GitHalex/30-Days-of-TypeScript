@@ -165,3 +165,17 @@ console.log(obtenerClaves(users)); */
   return Object.values(users);
 };
 console.log(obtenerValores(users)); */
+
+const COUNTRIES: string[] = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
+];
