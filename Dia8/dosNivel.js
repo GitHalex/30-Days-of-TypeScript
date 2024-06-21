@@ -144,3 +144,16 @@ console.log(obtenerClaves(users)); */
   return Object.values(users);
 };
 console.log(obtenerValores(users)); */
+var COUNTRIES = [
+    "Albania",
+    "Bolivia",
+    "Canada",
+    "Denmark",
+    "Ethiopia",
+    "Finland",
+    "Germany",
+    "Hungary",
+    "Ireland",
+    "Japan",
+    "Kenya",
+];
