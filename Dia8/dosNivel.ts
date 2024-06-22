@@ -1,4 +1,4 @@
-interface User {
+/* interface User {
   email: string;
   skills: string[];
   age: number;
@@ -79,7 +79,7 @@ const users: Users = {
   },
 };
 
-console.log(users);
+console.log(users); */
 
 /* const encontrarPersonaConMasHabilidades = (users: Users): string => {
   let maxSkills: number = 0;

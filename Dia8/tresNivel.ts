@@ -64,8 +64,8 @@ personAccount.addExpense("Utilities", 150);
 console.log(personAccount.totalExpense()); // 1450
 console.log(personAccount.accountBalance()); // 3250 */
 
-interface User {
-  _id: string;
+/* interface User {
+  id: string;
   username: string;
   email: string;
   password: string;
@@ -73,9 +73,9 @@ interface User {
   isLoggedIn: boolean;
 }
 
-const usersTres: User[] = [
+const usuarios: User[] = [
   {
-    _id: "ab12ex",
+    id: "ab12ex",
     username: "Alex",
     email: "alex@alex.com",
     password: "123123",
@@ -83,7 +83,7 @@ const usersTres: User[] = [
     isLoggedIn: false,
   },
   {
-    _id: "fg12cy",
+    id: "fg12cy",
     username: "Asab",
     email: "asab@asab.com",
     password: "123456",
@@ -91,7 +91,7 @@ const usersTres: User[] = [
     isLoggedIn: true,
   },
   {
-    _id: "zwf8md",
+    id: "zwf8md",
     username: "Brook",
     email: "brook@brook.com",
     password: "123111",
@@ -99,7 +99,7 @@ const usersTres: User[] = [
     isLoggedIn: true,
   },
   {
-    _id: "eefamr",
+    id: "eefamr",
     username: "Martha",
     email: "martha@martha.com",
     password: "123222",
@@ -107,11 +107,11 @@ const usersTres: User[] = [
     isLoggedIn: false,
   },
   {
-    _id: "ghderc",
+    id: "ghderc",
     username: "Thomas",
     email: "thomas@thomas.com",
     password: "123333",
     createdAt: "08/01/2020 10:00 AM",
     isLoggedIn: false,
   },
-];
+]; */
