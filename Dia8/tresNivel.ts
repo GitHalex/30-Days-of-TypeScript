@@ -1,4 +1,4 @@
-/* interface Income {
+interface Income {
   description: string;
   amount: number;
 }
@@ -11,8 +11,8 @@ interface Expense {
 interface PersonAccount {
   firstName: string;
   lastName: string;
-  incomes: Income[];
-  expenses: Expense[];
+  incomes: Income[]; //ingresos
+  expenses: Expense[]; //gastos
   totalIncome: () => number;
   totalExpense: () => number;
   accountInfo: () => string;
@@ -62,9 +62,9 @@ console.log(personAccount.totalIncome()); // 4700
 
 personAccount.addExpense("Utilities", 150);
 console.log(personAccount.totalExpense()); // 1450
-console.log(personAccount.accountBalance()); // 3250 */
+console.log(personAccount.accountBalance()); // 3250
 
-/* interface User {
+interface User {
   id: string;
   username: string;
   email: string;
@@ -114,4 +114,54 @@ const usuarios: User[] = [
     createdAt: "08/01/2020 10:00 AM",
     isLoggedIn: false,
   },
-]; */
+];
+
+const signUp = (
+  newUser: Omit<User, "id" | "createdAt" | "isLoggedIn">
+): string => {
+  const userExists = usuarios.some(
+    (user) => user.email === newUser.email || user.username === newUser.username
+  );
+
+  if (userExists) {
+    return "Usuario ya tiene una cuenta.";
+  } else {
+    const newUserWithId: User = {
+      id: Math.random().toString(36).substring(2, 15),
+      ...newUser,
+      createdAt: new Date().toLocaleString(),
+      isLoggedIn: false,
+    };
+    usuarios.push(newUserWithId);
+    return "Usuario registrado exitosamente.";
+  }
+};
+
+const signIn = (usernameOrEmail: string, password: string): string => {
+  const user = usuarios.find(
+    (user) =>
+      (user.email === usernameOrEmail || user.username === usernameOrEmail) &&
+      user.password === password
+  );
+
+  if (user) {
+    if (user.isLoggedIn) {
+      return "El usuario ya está conectado.";
+    } else {
+      user.isLoggedIn = true;
+      return "Inicio de sesión exitoso.";
+    }
+  } else {
+    return "Nombre de usuario o contraseña incorrectos.";
+  }
+};
+
+console.log(
+  signUp({
+    username: "NewUser",
+    email: "newuser@example.com",
+    password: "password123",
+  })
+);
+console.log(signIn("newuser@example.com", "password123"));
+console.log(signIn("Alex", "123123"));
