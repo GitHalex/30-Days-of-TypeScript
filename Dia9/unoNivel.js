@@ -58,6 +58,9 @@ console.log(sumArray(numbers)); */
 numbers.forEach(function (elemento, indice) {
     return console.log("Arreglo: ".concat(numbers, "\nPosicion: ").concat(indice + 1, "\televado al cuadrado => ").concat(elemento * elemento));
 });
+// Usar map para crear un nuevo array con los números elevados al cuadrado
+var numerosCuadrados = numbers.map(function (elemento) { return elemento * elemento; });
+console.log(numerosCuadrados); // [1, 4, 9, 16, 25]
 var mayusculasPaises = countriesArreglo.map(function (pais) { return pais.toUpperCase(); });
 console.log(mayusculasPaises);
 // Definir el tipo del array de entrada

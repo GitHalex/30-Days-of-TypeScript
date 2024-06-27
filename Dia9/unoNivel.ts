@@ -89,6 +89,11 @@ numbers.forEach((elemento: number, indice: number) =>
     }`
   )
 );
+// Usar map para crear un nuevo array con los números elevados al cuadrado
+const numerosCuadrados: number[] = numbers.map(
+  (elemento: number): number => elemento * elemento
+);
+console.log(numerosCuadrados); // [1, 4, 9, 16, 25]
 
 const mayusculasPaises: string[] = countriesArreglo.map(
   (pais: string): string => pais.toUpperCase()
