@@ -25,6 +25,8 @@ var intervalId = setInterval(sayHello, 1000); // Imprime "Hello" cada segundo
 clearInterval(intervalId);
 // Usar setTimeout y guardar el identificador del temporizador con el tipo number
 var timeoutId = setTimeout(sayHello, 2000); // Imprime "Hello" después de 2 segundos
+// Si necesitas limpiar el temporizador antes de que se ejecute, usa clearTimeout
+clearTimeout(timeoutId);
 // Una función callback, el nombre de la función puede ser cualquier nombre
 var callback = function (n) {
     return Math.pow(n, 2);
@@ -63,11 +65,6 @@ var numerosCuadrados = numbers.map(function (elemento) { return elemento * eleme
 console.log(numerosCuadrados); // [1, 4, 9, 16, 25]
 var mayusculasPaises = countriesArreglo.map(function (pais) { return pais.toUpperCase(); });
 console.log(mayusculasPaises);
-// Definir el tipo del array de entrada
-var numbersArr = [1, 2, 3, 4, 5];
-// Usar la función map con una función flecha tipada
-var numbersSquare = numbersArr.map(function (num) { return num * num; });
-console.log(numbersSquare);
 var countriesContaingLand = countriesArreglo.filter(function (pais) { return pais.length === 7; });
 console.log(countriesContaingLand);
 var scores = [
@@ -89,25 +86,52 @@ var fruits = [
 ];
 var totalFruits = fruits.reduce(function (acc, fruit) { return acc + fruit.quantity; }, 0);
 console.log(totalFruits); // Salida: 12
-var areAllStr = countriesArreglo.every(function (pais) { return typeof pais === "string"; });
-console.log("la lista: ".concat(countriesArreglo, " son todos de tipo cadena => ").concat(areAllStr));
-var producto = products.find(function (product) { return product.product.length > 4; });
+// countriesArreglo.forEach((pais: string) => console.log(pais));
+// namesArreglo.forEach((name: string) => console.log(name));
+// numbers.forEach((numero: number) => console.log(numero));
+/* const areAllStr: boolean = countriesArreglo.every(
+  (pais) => typeof pais === "string"
+);
+console.log(
+  `la lista: ${countriesArreglo} son todos de tipo cadena => ${areAllStr}`
+);
+
+const producto: Product | undefined = products.find(
+  (product) => product.product.length > 4
+);
+
 if (producto) {
-    console.log(producto);
+  console.log(producto);
+} else {
+  console.log(
+    "No se encontró ningún producto con un nombre de más de 4 caracteres."
+  );
 }
-else {
-    console.log("No se encontró ningún producto con un nombre de más de 4 caracteres.");
-}
-var result = numbers.findIndex(function (name) { return name >= 7; });
+
+const result: number = numbers.findIndex((name) => name >= 7);
 console.log(result);
-var someAllStr = countriesArreglo.some(function (pais) { return typeof pais === "string"; });
-console.log("la lista: ".concat(countriesArreglo, " son algunos de tipo cadena => ").concat(someAllStr));
-var numbersFloat = [9.81, 3.14, 100, 37];
+
+const someAllStr: boolean = countriesArreglo.some(
+  (pais) => typeof pais === "string"
+);
+console.log(
+  `la lista: ${countriesArreglo} son algunos de tipo cadena => ${someAllStr}`
+);
+
+const numbersFloat: number[] = [9.81, 3.14, 100, 37];
+
 console.log(numbers.sort()); // Ordenación incorrecta: [100, 3.14, 37, 9.81]
-numbers.sort(function (a, b) { return a - b; });
+
+numbers.sort((a: number, b: number): number => a - b);
 console.log(numbers); // Ordenación correcta: [3.14, 9.81, 37, 100]
-numbers.sort(function (a, b) { return b - a; });
+
+numbers.sort((a: number, b: number): number => b - a);
 console.log(numbers); // Ordenación correcta: [100, 37, 9.81, 3.14]
+
+interface User {
+  name: string;
+  age: number;
+} */
 /* const users: User[] = [
   { name: "Asabeneh", age: 150 },
   { name: "Brook", age: 50 },

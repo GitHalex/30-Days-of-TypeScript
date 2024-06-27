@@ -36,7 +36,7 @@ clearInterval(intervalId);
 const timeoutId: number = setTimeout(sayHello, 2000); // Imprime "Hello" después de 2 segundos
 // Si necesitas limpiar el temporizador antes de que se ejecute, usa clearTimeout
 
-// clearTimeout(timeoutId);
+clearTimeout(timeoutId);
 
 // Definimos el tipo de la función callback
 type CallbackFunction = (n: number) => number;
@@ -94,27 +94,15 @@ const numerosCuadrados: number[] = numbers.map(
   (elemento: number): number => elemento * elemento
 );
 console.log(numerosCuadrados); // [1, 4, 9, 16, 25]
-
 const mayusculasPaises: string[] = countriesArreglo.map(
   (pais: string): string => pais.toUpperCase()
 );
 console.log(mayusculasPaises);
 
-// Definir el tipo del array de entrada
-const numbersArr: number[] = [1, 2, 3, 4, 5];
-
-// Usar la función map con una función flecha tipada
-const numbersSquare: number[] = numbersArr.map(
-  (num: number): number => num * num
-);
-
-console.log(numbersSquare);
-
 const countriesContaingLand: string[] = countriesArreglo.filter(
   (pais: string) => pais.length === 7
 );
 console.log(countriesContaingLand);
-
 interface Score {
   name: string;
   score: number;
@@ -127,30 +115,29 @@ const scores: Score[] = [
   { name: "Martha", score: 85 },
   { name: "John", score: 100 },
 ];
-
 const scoresGreaterEighty = scores.filter((score) => score.score > 80);
 console.log(scoresGreaterEighty);
 
 const sum = numbers.reduce((acc, cur) => acc + cur, 0);
-
 console.log(sum); // Salida: 15
 
 interface Fruit {
   name: string;
   quantity: number;
 }
-
 const fruits: Fruit[] = [
   { name: "apple", quantity: 5 },
   { name: "banana", quantity: 3 },
   { name: "orange", quantity: 4 },
 ];
-
 const totalFruits = fruits.reduce((acc, fruit) => acc + fruit.quantity, 0);
-
 console.log(totalFruits); // Salida: 12
 
-const areAllStr: boolean = countriesArreglo.every(
+// countriesArreglo.forEach((pais: string) => console.log(pais));
+// namesArreglo.forEach((name: string) => console.log(name));
+// numbers.forEach((numero: number) => console.log(numero));
+
+/* const areAllStr: boolean = countriesArreglo.every(
   (pais) => typeof pais === "string"
 );
 console.log(
@@ -192,7 +179,7 @@ console.log(numbers); // Ordenación correcta: [100, 37, 9.81, 3.14]
 interface User {
   name: string;
   age: number;
-}
+} */
 
 /* const users: User[] = [
   { name: "Asabeneh", age: 150 },
