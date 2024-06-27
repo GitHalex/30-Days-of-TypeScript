@@ -89,6 +89,14 @@ console.log(totalFruits); // Salida: 12
 // countriesArreglo.forEach((pais: string) => console.log(pais));
 // namesArreglo.forEach((name: string) => console.log(name));
 // numbers.forEach((numero: number) => console.log(numero));
+var mayusculasFrutas = fruits.map(function (fruta) {
+    return fruta.name.toUpperCase();
+});
+console.log(mayusculasFrutas);
+var tamPaises = countriesArreglo.map(function (countri) { return countri.length; });
+console.log(tamPaises);
+var precioDoble = fruits.map(function (fruta) { return Math.pow(fruta.quantity, 2); });
+console.log(precioDoble);
 /* const areAllStr: boolean = countriesArreglo.every(
   (pais) => typeof pais === "string"
 );

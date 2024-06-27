@@ -94,6 +94,7 @@ const numerosCuadrados: number[] = numbers.map(
   (elemento: number): number => elemento * elemento
 );
 console.log(numerosCuadrados); // [1, 4, 9, 16, 25]
+
 const mayusculasPaises: string[] = countriesArreglo.map(
   (pais: string): string => pais.toUpperCase()
 );
@@ -136,6 +137,17 @@ console.log(totalFruits); // Salida: 12
 // countriesArreglo.forEach((pais: string) => console.log(pais));
 // namesArreglo.forEach((name: string) => console.log(name));
 // numbers.forEach((numero: number) => console.log(numero));
+
+const mayusculasFrutas: string[] = fruits.map((fruta: Fruit) =>
+  fruta.name.toUpperCase()
+);
+console.log(mayusculasFrutas);
+const tamPaises: number[] = countriesArreglo.map(
+  (countri: string) => countri.length
+);
+console.log(tamPaises);
+const precioDoble: number[] = fruits.map((fruta: Fruit) => fruta.quantity ** 2);
+console.log(precioDoble);
 
 /* const areAllStr: boolean = countriesArreglo.every(
   (pais) => typeof pais === "string"
