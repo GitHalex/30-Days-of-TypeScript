@@ -138,7 +138,7 @@ console.log(totalFruits); // Salida: 12
 // namesArreglo.forEach((name: string) => console.log(name));
 // numbers.forEach((numero: number) => console.log(numero));
 
-const mayusculasFrutas: string[] = fruits.map((fruta: Fruit) =>
+/* const mayusculasFrutas: string[] = fruits.map((fruta: Fruit) =>
   fruta.name.toUpperCase()
 );
 console.log(mayusculasFrutas);
@@ -148,6 +148,25 @@ const tamPaises: number[] = countriesArreglo.map(
 console.log(tamPaises);
 const precioDoble: number[] = fruits.map((fruta: Fruit) => fruta.quantity ** 2);
 console.log(precioDoble);
+const namesMayusculas: string[] = namesArreglo.map((name: string) =>
+  name.toUpperCase()
+);
+console.log(namesMayusculas);
+const preciosArreglo: any = products.map((precio: Product) => precio.price);
+console.log(preciosArreglo); */
+
+const landPaises: string[] = countriesArreglo.filter((pais: string) =>
+  pais.includes("land")
+);
+console.log(landPaises);
+const seisCaracteres: string[] = countriesArreglo.filter(
+  (pais: string) => pais.length === 6
+);
+console.log(seisCaracteres);
+const seisOMasCaracteres: string[] = countriesArreglo.filter(
+  (pais: string) => pais.length >= 6
+);
+console.log(seisOMasCaracteres);
 
 /* const areAllStr: boolean = countriesArreglo.every(
   (pais) => typeof pais === "string"

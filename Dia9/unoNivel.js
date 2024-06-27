@@ -89,14 +89,30 @@ console.log(totalFruits); // Salida: 12
 // countriesArreglo.forEach((pais: string) => console.log(pais));
 // namesArreglo.forEach((name: string) => console.log(name));
 // numbers.forEach((numero: number) => console.log(numero));
-var mayusculasFrutas = fruits.map(function (fruta) {
-    return fruta.name.toUpperCase();
-});
+/* const mayusculasFrutas: string[] = fruits.map((fruta: Fruit) =>
+  fruta.name.toUpperCase()
+);
 console.log(mayusculasFrutas);
-var tamPaises = countriesArreglo.map(function (countri) { return countri.length; });
+const tamPaises: number[] = countriesArreglo.map(
+  (countri: string) => countri.length
+);
 console.log(tamPaises);
-var precioDoble = fruits.map(function (fruta) { return Math.pow(fruta.quantity, 2); });
+const precioDoble: number[] = fruits.map((fruta: Fruit) => fruta.quantity ** 2);
 console.log(precioDoble);
+const namesMayusculas: string[] = namesArreglo.map((name: string) =>
+  name.toUpperCase()
+);
+console.log(namesMayusculas);
+const preciosArreglo: any = products.map((precio: Product) => precio.price);
+console.log(preciosArreglo); */
+var landPaises = countriesArreglo.filter(function (pais) {
+    return pais.includes("land");
+});
+console.log(landPaises);
+var seisCaracteres = countriesArreglo.filter(function (pais) { return pais.length === 6; });
+console.log(seisCaracteres);
+var seisOMasCaracteres = countriesArreglo.filter(function (pais) { return pais.length >= 6; });
+console.log(seisOMasCaracteres);
 /* const areAllStr: boolean = countriesArreglo.every(
   (pais) => typeof pais === "string"
 );
