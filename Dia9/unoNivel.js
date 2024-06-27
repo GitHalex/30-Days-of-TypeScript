@@ -52,10 +52,12 @@ console.log(lowerCase(callbackString, "AlEx"));
 };
 
 console.log(sumArray(numbers)); */
-countriesArreglo.forEach(function (element, i) {
-    console.log("".concat(i, " -> ").concat(element.toUpperCase()));
+/* countriesArreglo.forEach((element: string, i: number): void => {
+  console.log(`${i} -> ${element.toUpperCase()}`);
+}); */
+numbers.forEach(function (elemento, indice) {
+    return console.log("Arreglo: ".concat(numbers, "\nPosicion: ").concat(indice + 1, "\televado al cuadrado => ").concat(elemento * elemento));
 });
-console.log(countriesArreglo);
 var mayusculasPaises = countriesArreglo.map(function (pais) { return pais.toUpperCase(); });
 console.log(mayusculasPaises);
 // Definir el tipo del array de entrada

@@ -78,10 +78,17 @@ console.log(lowerCase(callbackString, "AlEx"));
 
 console.log(sumArray(numbers)); */
 
-countriesArreglo.forEach((element: string, i: number): void => {
+/* countriesArreglo.forEach((element: string, i: number): void => {
   console.log(`${i} -> ${element.toUpperCase()}`);
-});
-console.log(countriesArreglo);
+}); */
+
+numbers.forEach((elemento: number, indice: number) =>
+  console.log(
+    `Arreglo: ${numbers}\nPosicion: ${indice + 1}\televado al cuadrado => ${
+      elemento * elemento
+    }`
+  )
+);
 
 const mayusculasPaises: string[] = countriesArreglo.map(
   (pais: string): string => pais.toUpperCase()
