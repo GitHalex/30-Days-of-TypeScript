@@ -127,6 +127,14 @@ var stringArray = getStringLists(mixedArray);
 console.log(stringArray); // ["hello", "world", "typescript"]
 var sum = numbers.reduce(function (acc, cur) { return acc + cur; }, 0);
 console.log(sum); // Salida: 15
+var concatenarCadenas = countriesArreglo.reduce(function (acumulador, actual) { return acumulador + "," + actual; });
+console.log(concatenarCadenas);
+var algunoTam7 = namesArreglo.some(function (name) { return name.length === 7; });
+console.log(algunoTam7);
+var todosLand = countriesArreglo.every(function (pais) {
+    return pais.includes("land");
+});
+console.log(todosLand);
 /* const areAllStr: boolean = countriesArreglo.every(
   (pais) => typeof pais === "string"
 );

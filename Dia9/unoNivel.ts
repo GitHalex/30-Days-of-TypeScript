@@ -182,8 +182,22 @@ const mixedArray: any[] = [1, "hello", true, "world", {}, "typescript", 42];
 const stringArray: string[] = getStringLists(mixedArray);
 console.log(stringArray); // ["hello", "world", "typescript"]
 
-const sum = numbers.reduce((acc, cur) => acc + cur, 0);
+const sum: number = numbers.reduce((acc, cur) => acc + cur, 0);
 console.log(sum); // Salida: 15
+const concatenarCadenas: string = countriesArreglo.reduce(
+  (acumulador: string, actual: string) => acumulador + "," + actual
+);
+console.log(concatenarCadenas);
+
+const algunoTam7: boolean = namesArreglo.some(
+  (name: string) => name.length === 7
+);
+console.log(algunoTam7);
+
+const todosLand: boolean = countriesArreglo.every((pais: string) =>
+  pais.includes("land")
+);
+console.log(todosLand);
 
 /* const areAllStr: boolean = countriesArreglo.every(
   (pais) => typeof pais === "string"
