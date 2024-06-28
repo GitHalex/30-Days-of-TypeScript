@@ -4,6 +4,7 @@ const countriesArreglo: string[] = [
   "Sweden",
   "Norway",
   "Iceland",
+  "España",
 ];
 
 const namesArreglo: string[] = ["Alex", "Mathias", "Elias", "Brook"];
@@ -167,6 +168,14 @@ const seisOMasCaracteres: string[] = countriesArreglo.filter(
   (pais: string) => pais.length >= 6
 );
 console.log(seisOMasCaracteres);
+const paisesConE: string[] = countriesArreglo.filter((pais: string) =>
+  pais.startsWith("E")
+);
+console.log(paisesConE);
+const valoresPrecios: any = products.filter(
+  (producto: any) => producto.price !== "" && producto.price !== " "
+);
+console.log(valoresPrecios);
 
 /* const areAllStr: boolean = countriesArreglo.every(
   (pais) => typeof pais === "string"

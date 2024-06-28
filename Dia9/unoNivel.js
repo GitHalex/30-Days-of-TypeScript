@@ -4,6 +4,7 @@ var countriesArreglo = [
     "Sweden",
     "Norway",
     "Iceland",
+    "España",
 ];
 var namesArreglo = ["Alex", "Mathias", "Elias", "Brook"];
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -113,6 +114,12 @@ var seisCaracteres = countriesArreglo.filter(function (pais) { return pais.lengt
 console.log(seisCaracteres);
 var seisOMasCaracteres = countriesArreglo.filter(function (pais) { return pais.length >= 6; });
 console.log(seisOMasCaracteres);
+var paisesConE = countriesArreglo.filter(function (pais) {
+    return pais.startsWith("E");
+});
+console.log(paisesConE);
+var valoresPrecios = products.filter(function (producto) { return producto.price !== "" && producto.price !== " "; });
+console.log(valoresPrecios);
 /* const areAllStr: boolean = countriesArreglo.every(
   (pais) => typeof pais === "string"
 );
