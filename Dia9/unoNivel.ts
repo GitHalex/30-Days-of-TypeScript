@@ -199,6 +199,26 @@ const todosLand: boolean = countriesArreglo.every((pais: string) =>
 );
 console.log(todosLand);
 
+const primerElementoTam6: string | undefined = countriesArreglo.find(
+  (pais: string) => pais.length === 20
+);
+primerElementoTam6 !== undefined
+  ? console.log(primerElementoTam6)
+  : console.log("No se encontro un pais con la longitud de 20");
+
+const posicionPaisTam6: number = countriesArreglo.findIndex(
+  (pais: string) => pais.length === 6
+);
+console.log(posicionPaisTam6);
+const norwayPos: number = countriesArreglo.findIndex(
+  (pais: string) => pais == "Norway"
+);
+console.log(norwayPos);
+const rusiaPos: number = countriesArreglo.findIndex(
+  (pais: string) => pais == "Rusia"
+);
+console.log(rusiaPos);
+
 /* const areAllStr: boolean = countriesArreglo.every(
   (pais) => typeof pais === "string"
 );

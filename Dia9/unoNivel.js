@@ -135,6 +135,16 @@ var todosLand = countriesArreglo.every(function (pais) {
     return pais.includes("land");
 });
 console.log(todosLand);
+var primerElementoTam6 = countriesArreglo.find(function (pais) { return pais.length === 20; });
+primerElementoTam6 !== undefined
+    ? console.log(primerElementoTam6)
+    : console.log("No se encontro un pais con la longitud de 20");
+var posicionPaisTam6 = countriesArreglo.findIndex(function (pais) { return pais.length === 6; });
+console.log(posicionPaisTam6);
+var norwayPos = countriesArreglo.findIndex(function (pais) { return pais == "Norway"; });
+console.log(norwayPos);
+var rusiaPos = countriesArreglo.findIndex(function (pais) { return pais == "Rusia"; });
+console.log(rusiaPos);
 /* const areAllStr: boolean = countriesArreglo.every(
   (pais) => typeof pais === "string"
 );
