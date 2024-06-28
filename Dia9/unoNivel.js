@@ -78,8 +78,6 @@ var scores = [
 ];
 var scoresGreaterEighty = scores.filter(function (score) { return score.score > 80; });
 console.log(scoresGreaterEighty);
-var sum = numbers.reduce(function (acc, cur) { return acc + cur; }, 0);
-console.log(sum); // Salida: 15
 var fruits = [
     { name: "apple", quantity: 5 },
     { name: "banana", quantity: 3 },
@@ -120,6 +118,15 @@ var paisesConE = countriesArreglo.filter(function (pais) {
 console.log(paisesConE);
 var valoresPrecios = products.filter(function (producto) { return producto.price !== "" && producto.price !== " "; });
 console.log(valoresPrecios);
+function getStringLists(arr) {
+    return arr.filter(function (element) { return typeof element === "string"; });
+}
+// Ejemplo de uso
+var mixedArray = [1, "hello", true, "world", {}, "typescript", 42];
+var stringArray = getStringLists(mixedArray);
+console.log(stringArray); // ["hello", "world", "typescript"]
+var sum = numbers.reduce(function (acc, cur) { return acc + cur; }, 0);
+console.log(sum); // Salida: 15
 /* const areAllStr: boolean = countriesArreglo.every(
   (pais) => typeof pais === "string"
 );

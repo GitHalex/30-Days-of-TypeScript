@@ -120,9 +120,6 @@ const scores: Score[] = [
 const scoresGreaterEighty = scores.filter((score) => score.score > 80);
 console.log(scoresGreaterEighty);
 
-const sum = numbers.reduce((acc, cur) => acc + cur, 0);
-console.log(sum); // Salida: 15
-
 interface Fruit {
   name: string;
   quantity: number;
@@ -176,6 +173,17 @@ const valoresPrecios: any = products.filter(
   (producto: any) => producto.price !== "" && producto.price !== " "
 );
 console.log(valoresPrecios);
+
+function getStringLists(arr: any[]): string[] {
+  return arr.filter((element: string) => typeof element === "string");
+}
+// Ejemplo de uso
+const mixedArray: any[] = [1, "hello", true, "world", {}, "typescript", 42];
+const stringArray: string[] = getStringLists(mixedArray);
+console.log(stringArray); // ["hello", "world", "typescript"]
+
+const sum = numbers.reduce((acc, cur) => acc + cur, 0);
+console.log(sum); // Salida: 15
 
 /* const areAllStr: boolean = countriesArreglo.every(
   (pais) => typeof pais === "string"
