@@ -1,4 +1,4 @@
-const countriesArreglo: string[] = [
+/* const countriesArreglo: string[] = [
   "Finland",
   "Denmark",
   "Sweden",
@@ -23,7 +23,7 @@ const products: Product[] = [
   { product: "avocado", price: 8 },
   { product: "coffee", price: 10 },
   { product: "tea", price: "" },
-];
+]; */
 
 // Definir la función con el tipo de retorno void
 function sayHello(): void {
@@ -91,7 +91,8 @@ numbers.forEach((elemento: number, indice: number) =>
   )
 );
 // Usar map para crear un nuevo array con los números elevados al cuadrado
-const numerosCuadrados: number[] = numbers.map(
+
+/* const numerosCuadrados: number[] = numbers.map(
   (elemento: number): number => elemento * elemento
 );
 console.log(numerosCuadrados); // [1, 4, 9, 16, 25]
@@ -130,7 +131,7 @@ const fruits: Fruit[] = [
   { name: "orange", quantity: 4 },
 ];
 const totalFruits = fruits.reduce((acc, fruit) => acc + fruit.quantity, 0);
-console.log(totalFruits); // Salida: 12
+console.log(totalFruits); // Salida: 12 */
 
 // countriesArreglo.forEach((pais: string) => console.log(pais));
 // namesArreglo.forEach((name: string) => console.log(name));
@@ -153,7 +154,7 @@ console.log(namesMayusculas);
 const preciosArreglo: any = products.map((precio: Product) => precio.price);
 console.log(preciosArreglo); */
 
-const landPaises: string[] = countriesArreglo.filter((pais: string) =>
+/* const landPaises: string[] = countriesArreglo.filter((pais: string) =>
   pais.includes("land")
 );
 console.log(landPaises);
@@ -217,7 +218,7 @@ console.log(norwayPos);
 const rusiaPos: number = countriesArreglo.findIndex(
   (pais: string) => pais == "Rusia"
 );
-console.log(rusiaPos);
+console.log(rusiaPos); */
 
 /* const areAllStr: boolean = countriesArreglo.every(
   (pais) => typeof pais === "string"
