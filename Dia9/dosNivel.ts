@@ -24,3 +24,16 @@ const products: Product[] = [
   { product: "coffee", price: 10 },
   { product: "tea", price: "" },
 ];
+// filtrar los productos con precios validos
+const validProducts = products.filter(
+  (product: Product) =>
+    typeof product.price === "number" && !isNaN(product.price)
+);
+// mapear los precios
+const prices: number[] = validProducts.map(
+  (product: Product) => product.price as number
+);
+// reduce para sumar
+
+const total: number = prices.reduce((sum, price) => sum + price, 0);
+console.log(total);
