@@ -25,3 +25,12 @@ var prices = validProducts.map(function (product) { return product.price; });
 // reduce para sumar
 var total = prices.reduce(function (sum, price) { return sum + price; }, 0);
 console.log(total);
+// Usar reduce para filtrar y sumar los precios válidos
+var totalPrice = products.reduce(function (sum, product) {
+    // Comprobar si el precio es un número válido
+    if (typeof product.price === "number" && !isNaN(product.price)) {
+        return sum + product.price;
+    }
+    return sum;
+}, 0);
+console.log(totalPrice);
