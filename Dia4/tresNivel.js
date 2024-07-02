@@ -1,3 +1,4 @@
+"use strict";
 // Función para determinar si un año es bisiesto
 function esBisiesto(anio) {
     if ((anio % 4 === 0 && anio % 100 !== 0) || anio % 400 === 0) {
@@ -10,9 +11,9 @@ function obtenerDiasDelMes(mes, anio) {
     // Normalizamos la entrada del usuario para que tenga la primera letra en mayúscula y el resto en minúscula
     mes = mes.charAt(0).toUpperCase() + mes.slice(1).toLowerCase();
     // Mapa de meses a días (sin considerar el año bisiesto todavía)
-    var diasPorMes = {
+    const diasPorMes = {
         Enero: 31,
-        Febrero: 28,
+        Febrero: 28, // Se ajustará más adelante si el año es bisiesto
         Marzo: 31,
         Abril: 30,
         Mayo: 31,
@@ -30,19 +31,19 @@ function obtenerDiasDelMes(mes, anio) {
     }
     // Verificamos si el mes está en nuestro mapa
     if (diasPorMes.hasOwnProperty(mes)) {
-        return "".concat(mes, " de ").concat(anio, " tiene ").concat(diasPorMes[mes], " d\u00EDas.");
+        return `${mes} de ${anio} tiene ${diasPorMes[mes]} días.`;
     }
     else {
         return "Mes no válido. Por favor, introduce un mes válido.";
     }
 }
 // Ejemplo de uso
-var mesInput = prompt("Introduce un mes:");
-var anioInput = prompt("Introduce un año:");
+let mesInput = prompt("Introduce un mes:");
+let anioInput = prompt("Introduce un año:");
 if (mesInput !== null && anioInput !== null) {
-    var anio = parseInt(anioInput);
+    let anio = parseInt(anioInput);
     if (!isNaN(anio)) {
-        var resultado = obtenerDiasDelMes(mesInput, anio);
+        const resultado = obtenerDiasDelMes(mesInput, anio);
         console.log(resultado);
     }
     else {

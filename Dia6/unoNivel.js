@@ -1,4 +1,5 @@
-var paises = [
+"use strict";
+const paises = [
     "Albania",
     "Bolivia",
     "Canada",
@@ -11,7 +12,7 @@ var paises = [
     "Japan",
     "Kenya",
 ];
-var tecnologias = [
+const tecnologias = [
     "HTML",
     "CSS",
     "JavaScript",
@@ -20,7 +21,7 @@ var tecnologias = [
     "Node",
     "MongoDB",
 ];
-var mernStack = ["MongoDB", "Express", "React", "Node"];
+const mernStack = ["MongoDB", "Express", "React", "Node"];
 /* for (let index = 0; index < 11; index++) {
   console.log(index);
 } */
@@ -152,10 +153,11 @@ const uniqueRandomNumbers: number[] = generateUniqueRandomNumbers(5, 1, 100);
 
 // Print the result
 console.log(uniqueRandomNumbers); */
-var varriableArreglo = "abcdefghijklmnopqrstuvwxuz1234567890";
-var password = "";
-for (var index = 0; index < 6; index++) {
-    var indice = Math.floor(Math.random() * varriableArreglo.length);
-    password += varriableArreglo[indice];
+/* let varriableArreglo: string = "abcdefghijklmnopqrstuvwxuz1234567890";
+let password: string = "";
+for (let index = 0; index < 6; index++) {
+  let indice: number = Math.floor(Math.random() * varriableArreglo.length);
+  password += varriableArreglo[indice];
 }
-console.log(password);
+
+console.log(password); */

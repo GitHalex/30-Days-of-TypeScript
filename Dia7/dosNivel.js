@@ -1,3 +1,4 @@
+"use strict";
 /* const solveLinEquationForX = (
   a: number,
   b: number,
@@ -171,11 +172,11 @@ console.log(sumAll(15, 20, 30, 25, 10, 33, 40)); */ // 173
 console.log(sumAllNums(1, 2, 3, 4)); // 10
 console.log(sumAllNums(10, 20, 13, 40, 10)); // 93
 console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40)); // 173 */
-var randomUserIp = function (claseC) {
-    var primerOcteto = Math.floor(Math.random() * 256);
-    var segundoOcteto = Math.floor(Math.random() * 256);
-    var tercerOcteto = Math.floor(Math.random() * 256);
-    return "User IP: ".concat(claseC, ":").concat(primerOcteto, ":").concat(segundoOcteto, ":").concat(tercerOcteto);
+const randomUserIp = (claseC) => {
+    let primerOcteto = Math.floor(Math.random() * 256);
+    let segundoOcteto = Math.floor(Math.random() * 256);
+    let tercerOcteto = Math.floor(Math.random() * 256);
+    return `User IP: ${claseC}:${primerOcteto}:${segundoOcteto}:${tercerOcteto}`;
 };
 console.log(randomUserIp(192));
 /* const randomMacAddress = (): string => {
@@ -208,13 +209,15 @@ console.log(randomMacAddress()); */ // Ejemplo de salida: "e4:62:b1:4f:28:3d"
   return char;
 };
 console.log(randomHexaNumberGenerator()); */
-var userIdGenerator = function () {
-    var characteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWYZ0123456789";
-    var id = "";
-    for (var index = 0; index < 7; index++) {
-        var charRandom = Math.floor(Math.random() * characteres.length);
-        id += characteres[charRandom];
-    }
-    return id;
+/* const userIdGenerator = (): string => {
+  let characteres: string =
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWYZ0123456789";
+  let id: string = "";
+  for (let index: number = 0; index < 7; index++) {
+    let charRandom: number = Math.floor(Math.random() * characteres.length);
+    id += characteres[charRandom];
+  }
+  return id;
 };
-console.log(userIdGenerator());
+
+console.log(userIdGenerator()); */

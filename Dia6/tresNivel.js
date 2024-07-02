@@ -1,3 +1,4 @@
+"use strict";
 /* const countriesArreglo: string[] = [
   "Afghanistan",
   "Albania",

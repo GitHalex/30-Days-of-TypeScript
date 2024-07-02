@@ -1,3 +1,4 @@
+"use strict";
 /* let baseInput = prompt("Ingrese base: ");
 let alturaInput = prompt("Ingrese altura: ");
 if (baseInput !== null && alturaInput !== null) {

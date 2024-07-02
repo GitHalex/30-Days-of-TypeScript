@@ -1,3 +1,4 @@
+"use strict";
 /* function fullName(): void {
   console.log(`Mi nombre completo es: Alex Lopez`);
 }
@@ -61,28 +62,28 @@ try {
 function convertCelsiusToFahrenheit(celcius) {
     return (celcius * 9) / 5 + 32;
 }
-console.log("La convertion de celcis es: ".concat(convertCelsiusToFahrenheit(10)));
+console.log(`La convertion de celcis es: ${convertCelsiusToFahrenheit(10)}`);
 function imc(peso, altura) {
-    var IMC = Math.floor(peso / (altura * altura));
-    var pesoIMC = "";
+    const IMC = Math.floor(peso / (altura * altura));
+    let pesoIMC = "";
     if (IMC < 18.5) {
-        pesoIMC = "".concat(IMC, " peso bajo");
+        pesoIMC = `${IMC} peso bajo`;
     }
     else if (IMC >= 18.5 && IMC <= 24.9) {
-        pesoIMC = "".concat(IMC, " peso normal");
+        pesoIMC = `${IMC} peso normal`;
     }
     else if (IMC >= 24 && IMC <= 29.9) {
-        pesoIMC = "".concat(IMC, " Sobrepeso");
+        pesoIMC = `${IMC} Sobrepeso`;
     }
     else {
-        pesoIMC = "".concat(IMC, " Obeso");
+        pesoIMC = `${IMC} Obeso`;
     }
     return pesoIMC;
 }
 console.log(imc(84, 1.64));
 function checkSeason(mes) {
-    var stacion = "";
-    var mesLower = mes.toLowerCase();
+    let stacion = "";
+    let mesLower = mes.toLowerCase();
     if (mesLower === "marzo" || mesLower === "abril" || mesLower === "mayo") {
         stacion = "PRIMAVERA";
     }
@@ -102,13 +103,13 @@ function checkSeason(mes) {
         stacion = "INVIERNO";
     }
     else {
-        stacion = "Introduciste esto: ".concat(mes);
+        stacion = `Introduciste esto: ${mes}`;
     }
     return stacion;
 }
 console.log(checkSeason("enero"));
 function findMax(num1, num2, num3) {
-    var candidato = num1;
+    let candidato = num1;
     if (num2 > candidato) {
         candidato = num2;
     }

@@ -1,15 +1,5 @@
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-var personAccount = {
+"use strict";
+const personAccount = {
     firstName: "John",
     lastName: "Doe",
     incomes: [
@@ -20,22 +10,22 @@ var personAccount = {
         { description: "Rent", amount: 1000 },
         { description: "Groceries", amount: 300 },
     ],
-    totalIncome: function () {
-        return this.incomes.reduce(function (acc, income) { return acc + income.amount; }, 0);
+    totalIncome() {
+        return this.incomes.reduce((acc, income) => acc + income.amount, 0);
     },
-    totalExpense: function () {
-        return this.expenses.reduce(function (acc, expense) { return acc + expense.amount; }, 0);
+    totalExpense() {
+        return this.expenses.reduce((acc, expense) => acc + expense.amount, 0);
     },
-    accountInfo: function () {
-        return "Account Holder: ".concat(this.firstName, " ").concat(this.lastName);
+    accountInfo() {
+        return `Account Holder: ${this.firstName} ${this.lastName}`;
     },
-    addIncome: function (description, amount) {
-        this.incomes.push({ description: description, amount: amount });
+    addIncome(description, amount) {
+        this.incomes.push({ description, amount });
     },
-    addExpense: function (description, amount) {
-        this.expenses.push({ description: description, amount: amount });
+    addExpense(description, amount) {
+        this.expenses.push({ description, amount });
     },
-    accountBalance: function () {
+    accountBalance() {
         return this.totalIncome() - this.totalExpense();
     },
 };
@@ -48,7 +38,7 @@ console.log(personAccount.totalIncome()); // 4700
 personAccount.addExpense("Utilities", 150);
 console.log(personAccount.totalExpense()); // 1450
 console.log(personAccount.accountBalance()); // 3250
-var usuarios = [
+const usuarios = [
     {
         id: "ab12ex",
         username: "Alex",
@@ -90,22 +80,20 @@ var usuarios = [
         isLoggedIn: false,
     },
 ];
-var signUp = function (newUser) {
-    var userExists = usuarios.some(function (user) { return user.email === newUser.email || user.username === newUser.username; });
+const signUp = (newUser) => {
+    const userExists = usuarios.some((user) => user.email === newUser.email || user.username === newUser.username);
     if (userExists) {
         return "Usuario ya tiene una cuenta.";
     }
     else {
-        var newUserWithId = __assign(__assign({ id: Math.random().toString(36).substring(2, 15) }, newUser), { createdAt: new Date().toLocaleString(), isLoggedIn: false });
+        const newUserWithId = Object.assign(Object.assign({ id: Math.random().toString(36).substring(2, 15) }, newUser), { createdAt: new Date().toLocaleString(), isLoggedIn: false });
         usuarios.push(newUserWithId);
         return "Usuario registrado exitosamente.";
     }
 };
-var signIn = function (usernameOrEmail, password) {
-    var user = usuarios.find(function (user) {
-        return (user.email === usernameOrEmail || user.username === usernameOrEmail) &&
-            user.password === password;
-    });
+const signIn = (usernameOrEmail, password) => {
+    const user = usuarios.find((user) => (user.email === usernameOrEmail || user.username === usernameOrEmail) &&
+        user.password === password);
     if (user) {
         if (user.isLoggedIn) {
             return "El usuario ya está conectado.";

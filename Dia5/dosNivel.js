@@ -1,4 +1,5 @@
-var countriesArr = [
+"use strict";
+const countriesArr = [
     "Albania",
     "Bolivia",
     "Canada",
@@ -11,7 +12,7 @@ var countriesArr = [
     "Japan",
     "Kenya",
 ];
-var webTechsArr = [
+const webTechsArr = [
     "HTML",
     "CSS",
     "JavaScript",
@@ -47,15 +48,15 @@ console.log(shoppingCart);
 shoppingCart[3] = "Green Tea";
 console.log(shoppingCart); */
 // check if "ETHIOPIS" is in the array countriesArr
-var indexEthiopia = countriesArr.indexOf("Ethiopia");
+const indexEthiopia = countriesArr.indexOf("Ethiopia");
 if (indexEthiopia !== -1) {
-    console.log("".concat(countriesArr[indexEthiopia], " Si existe"));
+    console.log(`${countriesArr[indexEthiopia]} Si existe`);
 }
 else {
-    console.log("".concat(countriesArr[indexEthiopia], " No existe"));
+    console.log(`${countriesArr[indexEthiopia]} No existe`);
 }
 // Check if "Sass" exists in the webTechsArr array
-var indexSass = webTechsArr.indexOf("Sass");
+const indexSass = webTechsArr.indexOf("Sass");
 if (indexSass !== -1) {
     console.log("Sass es un preproceso de CSS");
 }
@@ -63,7 +64,7 @@ else {
     webTechsArr.push("Sass");
     console.log(webTechsArr);
 }
-var frontEnd = ["HTML", "CSS", "JS", "React", "Redux"];
-var backEnd = ["Node", "Express", "MongoDB"];
-var fullstack = frontEnd.concat(backEnd);
+const frontEnd = ["HTML", "CSS", "JS", "React", "Redux"];
+const backEnd = ["Node", "Express", "MongoDB"];
+const fullstack = frontEnd.concat(backEnd);
 console.log(fullstack);

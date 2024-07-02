@@ -1,3 +1,4 @@
+"use strict";
 /* let puntajeInput = prompt("Ingrese una nota: ");
 if (puntajeInput !== null) {
   let puntaje: number = parseInt(puntajeInput);
@@ -40,21 +41,21 @@ if (mesInput !== null) {
 } else {
   console.log("Entrada cancelada por el usuario.");
 } */
-var diaInput = prompt("¿Qué dia es hoy? ");
+let diaInput = prompt("¿Qué dia es hoy? ");
 if (diaInput !== null) {
-    var dia = diaInput.toLowerCase();
+    let dia = diaInput.toLowerCase();
     if (dia === "lunes" ||
         dia === "martes" ||
         dia === "miercoles" ||
         dia === "jueves" ||
         dia === "viernes") {
-        console.log("El ".concat(dia, " es un dia laborable"));
+        console.log(`El ${dia} es un dia laborable`);
     }
     else if (dia === "sabado" || dia === "domingo") {
-        console.log("El ".concat(dia, " es fin de semana"));
+        console.log(`El ${dia} es fin de semana`);
     }
     else {
-        console.log("El ".concat(dia, " no es valido"));
+        console.log(`El ${dia} no es valido`);
     }
 }
 else {

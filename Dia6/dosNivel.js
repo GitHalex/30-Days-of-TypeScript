@@ -1,3 +1,4 @@
+"use strict";
 /* let varriableArreglo: string = "abcdefghijklmnopqrstuvwxuz1234567890";
 let tamanio: number = Math.floor(Math.random() * varriableArreglo.length);
 let password: string = "";

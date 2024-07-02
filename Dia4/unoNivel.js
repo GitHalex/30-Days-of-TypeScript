@@ -1,3 +1,4 @@
+"use strict";
 /* let edadInput = prompt("Ingrese su edad: ");
 if (edadInput !== null) {
   let edadUser: number = parseInt(edadInput);
@@ -34,12 +35,12 @@ a > b
   : b > a
   ? console.log(`b: ${b} es mayor que a: ${a}`)
   : console.log(`${a} es igual ${b}`); */
-var numeroInput = prompt("Ingrese un numero: ");
+let numeroInput = prompt("Ingrese un numero: ");
 if (numeroInput !== null) {
-    var numberEntrada = parseInt(numeroInput);
+    let numberEntrada = parseInt(numeroInput);
     numberEntrada % 2 == 0
-        ? console.log("".concat(numberEntrada, " es par"))
-        : console.log("".concat(numberEntrada, " es impar"));
+        ? console.log(`${numberEntrada} es par`)
+        : console.log(`${numberEntrada} es impar`);
 }
 else {
     console.log("entrada cancelada por el usuario");

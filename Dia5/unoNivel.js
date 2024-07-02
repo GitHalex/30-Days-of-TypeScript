@@ -1,4 +1,5 @@
-var countries = [
+"use strict";
+const countries = [
     "Albania",
     "Bolivia",
     "Canada",
@@ -11,7 +12,7 @@ var countries = [
     "Japan",
     "Kenya",
 ];
-var webTechs = [
+const webTechs = [
     "HTML",
     "CSS",
     "JavaScript",
@@ -20,15 +21,15 @@ var webTechs = [
     "Node",
     "MongoDB",
 ];
-var mixedDataTypes = [
+const mixedDataTypes = [
     "Alex",
     2024,
     true,
     { country: "Bolivia", city: "Potosi" },
     { skills: ["Html", "CSS", "JS", "React", "Python"] },
 ];
-console.log("El tama\u00F1o del arreglo mixedDataTypes es ".concat(mixedDataTypes.length));
-var itCompanies = [
+console.log(`El tamaño del arreglo mixedDataTypes es ${mixedDataTypes.length}`);
+const itCompanies = [
     "Facebook",
     "Google",
     "Microsoft",
@@ -38,7 +39,7 @@ var itCompanies = [
     "Amazon",
 ];
 console.log(itCompanies);
-console.log("cantidad de empresas ".concat(itCompanies.length));
+console.log(`cantidad de empresas ${itCompanies.length}`);
 /* const primerElemento: string = itCompanies[0];
 const medio: number = Math.floor(itCompanies.length / 2); // Redondea hacia abajo para asegurar un índice entero
 
@@ -93,21 +94,21 @@ for (let i = 0; i < itCompanies.length; i++) {
 console.log(companiesWithMultipleOs); */
 /* const ordenadosIt: string[] = itCompanies.sort();
 console.log(ordenadosIt); */
-var revertidoIt = itCompanies.reverse();
+const revertidoIt = itCompanies.reverse();
 console.log(revertidoIt);
-var cortarPrimerosTres = itCompanies.slice(0, 3);
+const cortarPrimerosTres = itCompanies.slice(0, 3);
 console.log(cortarPrimerosTres);
-var cortarUltimosTres = itCompanies.slice(-3);
+const cortarUltimosTres = itCompanies.slice(-3);
 console.log(cortarUltimosTres);
-var medio = Math.floor(itCompanies.length / 2); // Redondea hacia abajo para asegurar un índice entero
-var empresasIntermedias;
+const medio = Math.floor(itCompanies.length / 2); // Redondea hacia abajo para asegurar un índice entero
+let empresasIntermedias;
 if (itCompanies.length % 2 == 0) {
     empresasIntermedias = itCompanies.slice(medio - 1, medio + 1);
 }
 else {
     empresasIntermedias = itCompanies.slice(medio, medio + 1);
 }
-console.log("Empresas intermedias: ".concat(empresasIntermedias));
+console.log(`Empresas intermedias: ${empresasIntermedias}`);
 console.log(itCompanies);
 /* itCompanies.shift();
 console.log(itCompanies); */

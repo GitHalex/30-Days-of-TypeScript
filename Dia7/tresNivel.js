@@ -1,3 +1,4 @@
+"use strict";
 /* const userIdGenerator = (numberOfIds: number, idLength: number): string[] => {
   let characters: string =
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -17,15 +18,6 @@
 
 console.log(userIdGenerator(5, 6));
 console.log(userIdGenerator(5, 16));  */
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
 /* const rgbColorGenerator = (): string => {
   const getRandomValue = (): number => Math.floor(Math.random() * 256);
   const red = getRandomValue();
@@ -166,9 +158,9 @@ console.log(generateColors("rgb", 1)); // 'rgb(33,79, 176)' */
 };
 console.log(newArray([1, 2, 3, 4, 5]));
  */
-var factorial = function (entradaNumber) {
-    var inicio = 1;
-    for (var j = 1; j <= entradaNumber; j++) {
+const factorial = (entradaNumber) => {
+    let inicio = 1;
+    for (let j = 1; j <= entradaNumber; j++) {
         inicio = inicio * j;
     }
     return inicio;
@@ -294,32 +286,31 @@ console.log(areAllElementsUnique([1, 2, 2, 4, 5])); // false
 console.log(areAllElementsUnique(["a", "b", "c", "d"])); // true
 console.log(areAllElementsUnique(["a", "b", "c", "a"])); // false
 console.log(areAllElementsUnique([])); // true */
-var removeDuplicates = function (arr) {
-    var uniqueArray = [];
-    for (var _i = 0, arr_1 = arr; _i < arr_1.length; _i++) {
-        var element = arr_1[_i];
+const removeDuplicates = (arr) => {
+    const uniqueArray = [];
+    for (const element of arr) {
         if (!uniqueArray.includes(element)) {
             uniqueArray.push(element);
         }
     }
     return uniqueArray;
 };
-var areAllElementsUnique = function (arr) {
+const areAllElementsUnique = (arr) => {
     return arr.length === removeDuplicates(arr).length;
 };
 // Ejemplos de uso
-var arrayWithDuplicates = [1, 2, 2, 3, 4, 4, 5];
-var arrayWithoutDuplicates = removeDuplicates(arrayWithDuplicates);
+const arrayWithDuplicates = [1, 2, 2, 3, 4, 4, 5];
+const arrayWithoutDuplicates = removeDuplicates(arrayWithDuplicates);
 console.log("Array original:", arrayWithDuplicates);
 console.log("¿Todos los elementos son únicos?:", areAllElementsUnique(arrayWithDuplicates));
 console.log("Array sin duplicados:", arrayWithoutDuplicates);
-var uniqueArray = [1, 2, 3, 4, 5];
+const uniqueArray = [1, 2, 3, 4, 5];
 console.log("Array original:", uniqueArray);
 console.log("¿Todos los elementos son únicos?:", areAllElementsUnique(uniqueArray));
 console.log("Array sin duplicados:", removeDuplicates(uniqueArray));
-var isValidVariable = function (variable) {
-    var validVariablePattern = /^[a-zA-Z_$][a-zA-Z_$0-9]*$/;
-    var reservedWords = [
+const isValidVariable = (variable) => {
+    const validVariablePattern = /^[a-zA-Z_$][a-zA-Z_$0-9]*$/;
+    const reservedWords = [
         "abstract",
         "await",
         "boolean",
@@ -394,25 +385,25 @@ console.log(isValidVariable("2varName")); // false
 console.log(isValidVariable("varName!")); // false
 console.log(isValidVariable("let")); // false (reserved word)
 console.log(isValidVariable("variable")); // true
-var generateUniqueRandomNumbers = function (length, min, max) {
-    var uniqueNumbers = new Set();
+const generateUniqueRandomNumbers = (length, min, max) => {
+    const uniqueNumbers = new Set();
     while (uniqueNumbers.size < length) {
-        var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+        const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
         uniqueNumbers.add(randomNumber);
     }
     return Array.from(uniqueNumbers);
 };
-var uniqueRandomNumbersArray = generateUniqueRandomNumbers(7, 0, 9);
+const uniqueRandomNumbersArray = generateUniqueRandomNumbers(7, 0, 9);
 console.log(uniqueRandomNumbersArray); // Ejemplo de salida: [3, 7, 1, 9, 2, 0, 8]
-var reverseCountries = function (countries) {
+const reverseCountries = (countries) => {
     // Copiar el array original
-    var countriesCopy = __spreadArray([], countries, true);
+    const countriesCopy = [...countries];
     // Invertir el array copiado
-    var reversedCountries = countriesCopy.reverse();
+    const reversedCountries = countriesCopy.reverse();
     // Retornar el array invertido
     return reversedCountries;
 };
 // Ejemplo de uso
-var reversedCountriesArray = reverseCountries(countries);
+const reversedCountriesArray = reverseCountries(countries);
 console.log(reversedCountriesArray);
 console.log(countries); // Para asegurarnos de que el array original no ha sido modificado
