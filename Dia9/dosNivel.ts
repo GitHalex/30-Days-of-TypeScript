@@ -288,3 +288,11 @@ function getStringLists(countries: string[]): LetterCount[] {
 // Ejemplo de uso
 const letterCounts = getStringLists(countriesARR);
 console.log(letterCounts);
+
+function getLastTenCountries(countries: string[]): string[] {
+  return countries.slice(-10);
+}
+
+// Ejemplo de uso
+const lastTenCountries = getLastTenCountries(countriesARR);
+console.log(lastTenCountries);

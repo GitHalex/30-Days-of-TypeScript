@@ -248,3 +248,9 @@ function getStringLists(countries) {
 // Ejemplo de uso
 var letterCounts = getStringLists(countriesARR);
 console.log(letterCounts);
+function getLastTenCountries(countries) {
+    return countries.slice(-10);
+}
+// Ejemplo de uso
+var lastTenCountries = getLastTenCountries(countriesARR);
+console.log(lastTenCountries);
