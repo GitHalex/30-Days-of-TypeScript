@@ -228,15 +228,23 @@ var totalPrice = products.reduce(function (sum, product) {
     return sum;
 }, 0);
 console.log(totalPrice);
-function categorizeCountries(countries, pattern) {
-    return countries.filter(function (country) { return country.includes(pattern); });
+function getStringLists(countries) {
+    var letterMap = {};
+    countries.forEach(function (country) {
+        var firstLetter = country[0].toUpperCase();
+        if (letterMap[firstLetter]) {
+            letterMap[firstLetter]++;
+        }
+        else {
+            letterMap[firstLetter] = 1;
+        }
+    });
+    var result = Object.keys(letterMap).map(function (letter) { return ({
+        letter: letter,
+        count: letterMap[letter],
+    }); });
+    return result;
 }
-// Ejemplos de uso Dia9
-var landCountries = categorizeCountries(countriesARR, "land");
-var iaCountries = categorizeCountries(countriesARR, "ia");
-var islandCountries = categorizeCountries(countriesARR, "island");
-var stanCountries = categorizeCountries(countriesARR, "stan");
-console.log('Países que contienen "land":', landCountries);
-console.log('Países que contienen "ia":', iaCountries);
-console.log('Países que contienen "island":', islandCountries);
-console.log('Países que contienen "stan":', stanCountries);
+// Ejemplo de uso
+var letterCounts = getStringLists(countriesARR);
+console.log(letterCounts);

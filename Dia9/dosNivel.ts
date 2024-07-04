@@ -244,7 +244,7 @@ const totalPrice = products.reduce((sum, product) => {
 
 console.log(totalPrice);
 
-function categorizeCountries(countries: string[], pattern: string): string[] {
+/* function categorizeCountries(countries: string[], pattern: string): string[] {
   return countries.filter((country) => country.includes(pattern));
 }
 
@@ -258,3 +258,33 @@ console.log('Países que contienen "land":', landCountries);
 console.log('Países que contienen "ia":', iaCountries);
 console.log('Países que contienen "island":', islandCountries);
 console.log('Países que contienen "stan":', stanCountries);
+ */
+
+interface LetterCount {
+  letter: string;
+  count: number;
+}
+
+function getStringLists(countries: string[]): LetterCount[] {
+  const letterMap: { [key: string]: number } = {};
+
+  countries.forEach((country) => {
+    const firstLetter = country[0].toUpperCase();
+    if (letterMap[firstLetter]) {
+      letterMap[firstLetter]++;
+    } else {
+      letterMap[firstLetter] = 1;
+    }
+  });
+
+  const result: LetterCount[] = Object.keys(letterMap).map((letter) => ({
+    letter,
+    count: letterMap[letter],
+  }));
+
+  return result;
+}
+
+// Ejemplo de uso
+const letterCounts = getStringLists(countriesARR);
+console.log(letterCounts);
