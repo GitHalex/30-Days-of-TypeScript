@@ -254,3 +254,27 @@ function getLastTenCountries(countries) {
 // Ejemplo de uso
 var lastTenCountries = getLastTenCountries(countriesARR);
 console.log(lastTenCountries);
+function mostCommonInitial(countries) {
+    var letterMap = {};
+    countries.forEach(function (country) {
+        var firstLetter = country[0].toUpperCase();
+        if (letterMap[firstLetter]) {
+            letterMap[firstLetter]++;
+        }
+        else {
+            letterMap[firstLetter] = 1;
+        }
+    });
+    var maxCount = 0;
+    var mostCommonLetter = "";
+    for (var letter in letterMap) {
+        if (letterMap[letter] > maxCount) {
+            maxCount = letterMap[letter];
+            mostCommonLetter = letter;
+        }
+    }
+    return mostCommonLetter;
+}
+// Ejemplo de uso
+var commonInitial = mostCommonInitial(countriesARR);
+console.log("La letra que se utiliza m\u00E1s veces como inicial de un nombre de pa\u00EDs es: ".concat(commonInitial));

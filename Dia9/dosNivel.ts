@@ -296,3 +296,34 @@ function getLastTenCountries(countries: string[]): string[] {
 // Ejemplo de uso
 const lastTenCountries = getLastTenCountries(countriesARR);
 console.log(lastTenCountries);
+
+function mostCommonInitial(countries: string[]): string {
+  const letterMap: { [key: string]: number } = {};
+
+  countries.forEach((country) => {
+    const firstLetter = country[0].toUpperCase();
+    if (letterMap[firstLetter]) {
+      letterMap[firstLetter]++;
+    } else {
+      letterMap[firstLetter] = 1;
+    }
+  });
+
+  let maxCount = 0;
+  let mostCommonLetter = "";
+
+  for (const letter in letterMap) {
+    if (letterMap[letter] > maxCount) {
+      maxCount = letterMap[letter];
+      mostCommonLetter = letter;
+    }
+  }
+
+  return mostCommonLetter;
+}
+
+// Ejemplo de uso
+const commonInitial = mostCommonInitial(countriesARR);
+console.log(
+  `La letra que se utiliza más veces como inicial de un nombre de país es: ${commonInitial}`
+);
