@@ -71,3 +71,48 @@ for (var _i = 0, countriesAux_1 = countriesAux; _i < countriesAux_1.length; _i++
     var _c = countriesAux_1[_i], country = _c[0], city = _c[1];
     console.log("Country ".concat(country, " => city: ").concat(city));
 }
+for (var _d = 0, fullStack_1 = fullStack; _d < fullStack_1.length; _d++) {
+    var _e = fullStack_1[_d], first = _e[0], second = _e[1], third = _e[2];
+    console.log("".concat(first.toUpperCase(), " => ").concat(second, " => ").concat(third));
+}
+var rectangle = {
+    width: 20,
+    height: 10,
+    area: 200,
+    perimeter: 80,
+};
+// Proporcionar un valor predeterminado para el perímetro
+var w = rectangle.width, h = rectangle.height, a = rectangle.area, _f = rectangle.perimeter, p = _f === void 0 ? 60 : _f;
+console.log(w, h, a, p);
+var calcularPerimeter = function (rectangle) {
+    return 2 * (rectangle.width + rectangle.height);
+};
+console.log(calcularPerimeter(rectangle));
+var person = {
+    firstName: "Asabeneh",
+    lastName: "Yetayeh",
+    age: 250,
+    country: "Finland",
+    job: "Instructor and Developer",
+    skills: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Redux",
+        "Node",
+        "MongoDB",
+        "Python",
+        "D3.js",
+    ],
+    languages: ["Amharic", "English", "Suomi(Finnish)"],
+};
+var getPersonInfo = function (obj) {
+    var skills = obj.skills;
+    var formattedSkills = skills.slice(0, -1).join(", ");
+    var languages = obj.languages;
+    var formattedLanguages = languages.slice(0, -1).join(", ");
+    var personInfo = "".concat(obj.firstName, " ").concat(obj.lastName, " lives in ").concat(obj.country, ". He is ").concat(obj.age, " years old. He is an ").concat(obj.job, ". He teaches ").concat(formattedSkills, " and ").concat(skills[skills.length - 1], ". He speaks ").concat(formattedLanguages, " and a little bit of ").concat(languages[2], ".");
+    return personInfo;
+};
+console.log(getPersonInfo(person));
