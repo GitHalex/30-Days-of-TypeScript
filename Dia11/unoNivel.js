@@ -55,3 +55,19 @@ var stringARR = [
 var secondPersona = stringARR[1];
 var fourthPersona = stringARR[3];
 console.log(secondPerson, fourthPerson);
+var namesAux = [undefined, "Brook", "David"];
+var _a = names[0], firstPersonAux = _a === void 0 ? "Asabeneh" : _a, secondPersonAux = names[1], thirdPersonAux = names[2], _b = names[3], fourthPersonAux = _b === void 0 ? "John" : _b;
+console.log(firstPerson, secondPerson, thirdPerson, fourthPerson);
+var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var num1 = nums[0], num2 = nums[1], num3 = nums[2], rest = nums.slice(3);
+console.log(num1, num2, num3);
+console.log(rest);
+var countriesAux = [
+    ["Finland", "Helsinki"],
+    ["Sweden", "Stockholm"],
+    ["Norway", "Oslo"],
+];
+for (var _i = 0, countriesAux_1 = countriesAux; _i < countriesAux_1.length; _i++) {
+    var _c = countriesAux_1[_i], country = _c[0], city = _c[1];
+    console.log("Country ".concat(country, " => city: ").concat(city));
+}

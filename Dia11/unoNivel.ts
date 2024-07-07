@@ -8,7 +8,7 @@ const fullStack: [string[], string[]] = [
   ["Node", "Express", "MongoDB"],
 ];
 
-const [frontEndARR, backEndARR]: [string[], string[]] = fullStack;
+const [frontEndARR, backEndARR] = fullStack;
 
 console.log(frontEndARR);
 console.log(backEndARR);
@@ -31,7 +31,7 @@ let numOne: number, numThree: number;
 
 console.log(numOne, numThree);
 
-const numbersARR: [number, number, number] = [1, 2, 3];
+const numbersARR: number[] = [1, 2, 3];
 let [numOneARR, , numThreeARR] = numbersARR; // 2 es omitido
 
 console.log(numOneARR, numThreeARR);
@@ -70,3 +70,29 @@ const secondPersona: string = stringARR[1];
 const fourthPersona: string = stringARR[3];
 
 console.log(secondPerson, fourthPerson);
+
+const namesAux: (string | undefined)[] = [undefined, "Brook", "David"];
+let [
+  firstPersonAux = "Asabeneh",
+  secondPersonAux,
+  thirdPersonAux,
+  fourthPersonAux = "John",
+]: (string | undefined)[] = names;
+
+console.log(firstPerson, secondPerson, thirdPerson, fourthPerson);
+
+const nums: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let [num1, num2, num3, ...rest] = nums;
+
+console.log(num1, num2, num3);
+console.log(rest);
+
+const countriesAux: [string[], string[], string[]] = [
+  ["Finland", "Helsinki"],
+  ["Sweden", "Stockholm"],
+  ["Norway", "Oslo"],
+];
+
+for (const [country, city] of countriesAux) {
+  console.log(`Country ${country} => city: ${city}`);
+}
