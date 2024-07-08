@@ -115,4 +115,39 @@ var getPersonInfo = function (obj) {
     var personInfo = "".concat(obj.firstName, " ").concat(obj.lastName, " lives in ").concat(obj.country, ". He is ").concat(obj.age, " years old. He is an ").concat(obj.job, ". He teaches ").concat(formattedSkills, " and ").concat(skills[skills.length - 1], ". He speaks ").concat(formattedLanguages, " and a little bit of ").concat(languages[2], ".");
     return personInfo;
 };
-console.log(getPersonInfo(person));
+var obtenerPerson = function (_a) {
+    var firstName = _a.firstName, lastName = _a.lastName, age = _a.age, country = _a.country, job = _a.job, skills = _a.skills, languages = _a.languages;
+    var formattedSkills = skills.slice(0, -1).join(", ");
+    var formattedLanguages = languages.slice(0, -1).join(", ");
+    var personInformacion = "".concat(firstName, " ").concat(lastName, " lives in ").concat(country, ". He is ").concat(age, " years old. He is an ").concat(job, ". He teaches ").concat(formattedSkills, " and ").concat(skills[skills.length - 1], ". He speaks ").concat(formattedLanguages, " and a little bit of 2024 ").concat(languages[2], ".");
+    return personInformacion;
+};
+console.log(obtenerPerson(person));
+var calcularPerimetro = function (_a) {
+    var width = _a.width, height = _a.height;
+    return 2 * (width + height);
+};
+console.log(calcularPerimeter(rectangle));
+// Crear el array de tareas con el tipo de la interfaz
+var todoList = [
+    {
+        task: "Prepare JS Test",
+        time: "4/1/2020 8:30",
+        completed: true,
+    },
+    {
+        task: "Give JS Test",
+        time: "4/1/2020 10:00",
+        completed: false,
+    },
+    {
+        task: "Assess Test Result",
+        time: "4/1/2020 1:00",
+        completed: false,
+    },
+];
+// Iterar sobre el array desestructurando los objetos
+for (var _g = 0, todoList_1 = todoList; _g < todoList_1.length; _g++) {
+    var _h = todoList_1[_g], task = _h.task, time = _h.time, completed = _h.completed;
+    console.log(task, time, completed);
+}

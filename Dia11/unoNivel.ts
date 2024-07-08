@@ -172,4 +172,60 @@ const getPersonInfo = (obj: Person): string => {
   return personInfo;
 };
 
-console.log(getPersonInfo(person));
+const obtenerPerson = ({
+  firstName,
+  lastName,
+  age,
+  country,
+  job,
+  skills,
+  languages,
+}: Person) => {
+  const formattedSkills = skills.slice(0, -1).join(", ");
+
+  const formattedLanguages = languages.slice(0, -1).join(", ");
+
+  const personInformacion = `${firstName} ${lastName} lives in ${country}. He is ${age} years old. He is an ${job}. He teaches ${formattedSkills} and ${
+    skills[skills.length - 1]
+  }. He speaks ${formattedLanguages} and a little bit of 2024 ${languages[2]}.`;
+
+  return personInformacion;
+};
+
+console.log(obtenerPerson(person));
+
+const calcularPerimetro = ({ width, height }: Rectangle) => {
+  return 2 * (width + height);
+};
+console.log(calcularPerimeter(rectangle));
+
+// Definir la interfaz para los objetos de la lista de tareas
+interface Todo {
+  task: string;
+  time: string;
+  completed: boolean;
+}
+
+// Crear el array de tareas con el tipo de la interfaz
+const todoList: Todo[] = [
+  {
+    task: "Prepare JS Test",
+    time: "4/1/2020 8:30",
+    completed: true,
+  },
+  {
+    task: "Give JS Test",
+    time: "4/1/2020 10:00",
+    completed: false,
+  },
+  {
+    task: "Assess Test Result",
+    time: "4/1/2020 1:00",
+    completed: false,
+  },
+];
+
+// Iterar sobre el array desestructurando los objetos
+for (const { task, time, completed } of todoList) {
+  console.log(task, time, completed);
+}
