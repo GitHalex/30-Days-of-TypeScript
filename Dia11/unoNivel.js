@@ -178,3 +178,8 @@ console.log(nordicCountries); // [ 'Finland', 'Sweden', 'Norway', 'Denmark', 'Ic
 var evens = [0, 2, 4, 6, 8, 10];
 var evenNumbers = __spreadArray([], evens, true);
 console.log(evenNumbers);
+var odds = [1, 3, 5, 7, 9];
+var oddNumbers = __spreadArray([], odds, true);
+console.log(oddNumbers);
+var wholeNumbers = __spreadArray(__spreadArray([], evens, true), odds, true);
+console.log(wholeNumbers);
