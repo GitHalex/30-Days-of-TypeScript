@@ -1,3 +1,12 @@
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 var names = ["Asabeneh", "Brook", "David", "John"];
 var firstPerson = names[0], secondPerson = names[1], thirdPerson = names[2], fourthPerson = names[3];
 console.log(firstPerson, secondPerson, thirdPerson, fourthPerson);
@@ -151,3 +160,21 @@ for (var _g = 0, todoList_1 = todoList; _g < todoList_1.length; _g++) {
     var _h = todoList_1[_g], task = _h.task, time = _h.time, completed = _h.completed;
     console.log(task, time, completed);
 }
+var paisesArr = [
+    "Germany",
+    "France",
+    "Belgium",
+    "Finland",
+    "Sweden",
+    "Norway",
+    "Denmark",
+    "Iceland",
+];
+// Desestructuración del array
+var gem = paisesArr[0], fra = paisesArr[1], nordicCountries = paisesArr.slice(3);
+console.log(gem); // Germany
+console.log(fra); // France
+console.log(nordicCountries); // [ 'Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland' ]
+var evens = [0, 2, 4, 6, 8, 10];
+var evenNumbers = __spreadArray([], evens, true);
+console.log(evenNumbers);

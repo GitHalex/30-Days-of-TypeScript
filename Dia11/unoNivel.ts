@@ -229,3 +229,25 @@ const todoList: Todo[] = [
 for (const { task, time, completed } of todoList) {
   console.log(task, time, completed);
 }
+
+const paisesArr: string[] = [
+  "Germany",
+  "France",
+  "Belgium",
+  "Finland",
+  "Sweden",
+  "Norway",
+  "Denmark",
+  "Iceland",
+];
+
+// Desestructuración del array
+let [gem, fra, , ...nordicCountries] = paisesArr;
+
+console.log(gem); // Germany
+console.log(fra); // France
+console.log(nordicCountries); // [ 'Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland' ]
+
+const evens: number[] = [0, 2, 4, 6, 8, 10];
+const evenNumbers: number[] = [...evens];
+console.log(evenNumbers);
