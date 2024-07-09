@@ -28,12 +28,20 @@ var countriesCinco = [
     "Denmark",
     "Norway",
 ];
+var fin = countriesCinco[0], est = countriesCinco[1], sw = countriesCinco[2], den = countriesCinco[3], nor = countriesCinco[4];
+console.log("".concat(fin, " => ").concat(est, " => ").concat(sw, " => ").concat(den, " => ").concat(nor));
 var rectangle = {
     width: 20,
     height: 10,
     area: 200,
     perimeter: 80,
 };
+var w = rectangle.width, h = rectangle.height, a = rectangle.area, _a = rectangle.perimeter, p = _a === void 0 ? 60 : _a;
+console.log(w, h, a, p);
+var calcularPerimeter = function (rectangle) {
+    return 2 * (rectangle.width + rectangle.height);
+};
+console.log(calcularPerimeter(rectangle));
 var users = [
     {
         name: "Brook",
@@ -78,13 +86,18 @@ var users = [
         edad: 20,
     },
 ];
-// Proporcionar un valor predeterminado para el perímetro
-var w = rectangle.width, h = rectangle.height, a = rectangle.area, _a = rectangle.perimeter, p = _a === void 0 ? 60 : _a;
-console.log(w, h, a, p);
-var calcularPerimeter = function (rectangle) {
-    return 2 * (rectangle.width + rectangle.height);
+var mostrarMenosDos = function (usuarios) {
+    var listaNames = [];
+    for (var _i = 0, usuarios_1 = usuarios; _i < usuarios_1.length; _i++) {
+        var usuario = usuarios_1[_i];
+        if (usuario.skills.length < 2) {
+            listaNames.push(usuario.name);
+        }
+    }
+    return listaNames;
 };
-console.log(calcularPerimeter(rectangle));
+console.log("Nombres de personas que tienen menos de dos habilidades: ".concat(mostrarMenosDos(users)));
+// Proporcionar un valor predeterminado para el perímetro
 var names = ["Asabeneh", "Brook", "David", "John"];
 var firstPerson = names[0], secondPerson = names[1], thirdPerson = names[2], fourthPerson = names[3];
 console.log(firstPerson, secondPerson, thirdPerson, fourthPerson);

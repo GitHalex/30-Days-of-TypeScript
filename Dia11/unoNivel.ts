@@ -11,6 +11,10 @@ const countriesCinco: string[] = [
   "Denmark",
   "Norway",
 ];
+
+const [fin, est, sw, den, nor] = countriesCinco;
+console.log(`${fin} => ${est} => ${sw} => ${den} => ${nor}`);
+
 interface Rectangle {
   width: number;
   height: number;
@@ -23,6 +27,13 @@ const rectangle: Rectangle = {
   area: 200,
   perimeter: 80,
 };
+let { width: w, height: h, area: a, perimeter: p = 60 } = rectangle;
+console.log(w, h, a, p);
+
+const calcularPerimeter = (rectangle: Rectangle): number => {
+  return 2 * (rectangle.width + rectangle.height);
+};
+console.log(calcularPerimeter(rectangle));
 
 interface UserOtro {
   name: string;
@@ -30,7 +41,6 @@ interface UserOtro {
   skills: string[];
   edad: number;
 }
-
 const users: UserOtro[] = [
   {
     name: "Brook",
@@ -76,16 +86,22 @@ const users: UserOtro[] = [
   },
 ];
 
-// Proporcionar un valor predeterminado para el perímetro
-let { width: w, height: h, area: a, perimeter: p = 60 } = rectangle;
-
-console.log(w, h, a, p);
-
-const calcularPerimeter = (rectangle: Rectangle): number => {
-  return 2 * (rectangle.width + rectangle.height);
+const mostrarMenosDos = (usuarios: UserOtro[]): string[] => {
+  const listaNames: string[] = [];
+  for (const usuario of usuarios) {
+    if (usuario.skills.length < 2) {
+      listaNames.push(usuario.name);
+    }
+  }
+  return listaNames;
 };
-console.log(calcularPerimeter(rectangle));
+console.log(
+  `Nombres de personas que tienen menos de dos habilidades: ${mostrarMenosDos(
+    users
+  )}`
+);
 
+// Proporcionar un valor predeterminado para el perímetro
 const names: string[] = ["Asabeneh", "Brook", "David", "John"];
 const [firstPerson, secondPerson, thirdPerson, fourthPerson] = names;
 
