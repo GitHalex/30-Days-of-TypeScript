@@ -19,6 +19,58 @@ const rectangle: Rectangle = {
   perimeter: 80,
 };
 
+interface UserOtro {
+  name: string;
+  scores: number;
+  skills: string[];
+  edad: number;
+}
+
+const users: UserOtro[] = [
+  {
+    name: "Brook",
+    scores: 75,
+    skills: ["HTM", "CSS", "JS"],
+    edad: 16,
+  },
+  {
+    name: "Alex",
+    scores: 80,
+    skills: ["HTM", "CSS", "JS"],
+    edad: 18,
+  },
+  {
+    name: "David",
+    scores: 75,
+    skills: ["HTM", "CSS"],
+    edad: 22,
+  },
+  {
+    name: "John",
+    scores: 85,
+    skills: ["HTML"],
+    edad: 25,
+  },
+  {
+    name: "Sara",
+    scores: 95,
+    skills: ["HTM", "CSS", "JS"],
+    edad: 26,
+  },
+  {
+    name: "Martha",
+    scores: 80,
+    skills: ["HTM", "CSS", "JS"],
+    edad: 18,
+  },
+  {
+    name: "Thomas",
+    scores: 90,
+    skills: ["HTM", "CSS", "JS"],
+    edad: 20,
+  },
+];
+
 // Proporcionar un valor predeterminado para el perímetro
 let { width: w, height: h, area: a, perimeter: p = 60 } = rectangle;
 

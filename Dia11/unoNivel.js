@@ -32,6 +32,50 @@ var rectangle = {
     area: 200,
     perimeter: 80,
 };
+var users = [
+    {
+        name: "Brook",
+        scores: 75,
+        skills: ["HTM", "CSS", "JS"],
+        edad: 16,
+    },
+    {
+        name: "Alex",
+        scores: 80,
+        skills: ["HTM", "CSS", "JS"],
+        edad: 18,
+    },
+    {
+        name: "David",
+        scores: 75,
+        skills: ["HTM", "CSS"],
+        edad: 22,
+    },
+    {
+        name: "John",
+        scores: 85,
+        skills: ["HTML"],
+        edad: 25,
+    },
+    {
+        name: "Sara",
+        scores: 95,
+        skills: ["HTM", "CSS", "JS"],
+        edad: 26,
+    },
+    {
+        name: "Martha",
+        scores: 80,
+        skills: ["HTM", "CSS", "JS"],
+        edad: 18,
+    },
+    {
+        name: "Thomas",
+        scores: 90,
+        skills: ["HTM", "CSS", "JS"],
+        edad: 20,
+    },
+];
 // Proporcionar un valor predeterminado para el perímetro
 var w = rectangle.width, h = rectangle.height, a = rectangle.area, _a = rectangle.perimeter, p = _a === void 0 ? 60 : _a;
 console.log(w, h, a, p);
