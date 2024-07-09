@@ -1,4 +1,9 @@
 const constants: number[] = [2.72, 3.14, 9.81, 37, 100];
+const [e, pi, gravedad, humanBodyTemp, waterBoilingTemp] = constants;
+console.log(
+  `e=${e} => gravedad:${gravedad} => humanBodyTemp:${humanBodyTemp} => waterBoilingTemp:${waterBoilingTemp}`
+);
+
 const countriesCinco: string[] = [
   "Finland",
   "Estonia",

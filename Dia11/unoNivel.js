@@ -19,6 +19,8 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     return to.concat(ar || Array.prototype.slice.call(from));
 };
 var constants = [2.72, 3.14, 9.81, 37, 100];
+var e = constants[0], pi = constants[1], gravedad = constants[2], humanBodyTemp = constants[3], waterBoilingTemp = constants[4];
+console.log("e=".concat(e, " => gravedad:").concat(gravedad, " => humanBodyTemp:").concat(humanBodyTemp, " => waterBoilingTemp:").concat(waterBoilingTemp));
 var countriesCinco = [
     "Finland",
     "Estonia",
