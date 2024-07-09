@@ -18,6 +18,27 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     }
     return to.concat(ar || Array.prototype.slice.call(from));
 };
+var constants = [2.72, 3.14, 9.81, 37, 100];
+var countriesCinco = [
+    "Finland",
+    "Estonia",
+    "Sweden",
+    "Denmark",
+    "Norway",
+];
+var rectangle = {
+    width: 20,
+    height: 10,
+    area: 200,
+    perimeter: 80,
+};
+// Proporcionar un valor predeterminado para el perímetro
+var w = rectangle.width, h = rectangle.height, a = rectangle.area, _a = rectangle.perimeter, p = _a === void 0 ? 60 : _a;
+console.log(w, h, a, p);
+var calcularPerimeter = function (rectangle) {
+    return 2 * (rectangle.width + rectangle.height);
+};
+console.log(calcularPerimeter(rectangle));
 var names = ["Asabeneh", "Brook", "David", "John"];
 var firstPerson = names[0], secondPerson = names[1], thirdPerson = names[2], fourthPerson = names[3];
 console.log(firstPerson, secondPerson, thirdPerson, fourthPerson);
@@ -76,7 +97,7 @@ var secondPersona = stringARR[1];
 var fourthPersona = stringARR[3];
 console.log(secondPerson, fourthPerson);
 var namesAux = [undefined, "Brook", "David"];
-var _a = names[0], firstPersonAux = _a === void 0 ? "Asabeneh" : _a, secondPersonAux = names[1], thirdPersonAux = names[2], _b = names[3], fourthPersonAux = _b === void 0 ? "John" : _b;
+var _b = names[0], firstPersonAux = _b === void 0 ? "Asabeneh" : _b, secondPersonAux = names[1], thirdPersonAux = names[2], _c = names[3], fourthPersonAux = _c === void 0 ? "John" : _c;
 console.log(firstPerson, secondPerson, thirdPerson, fourthPerson);
 var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var num1 = nums[0], num2 = nums[1], num3 = nums[2], rest = nums.slice(3);
@@ -88,26 +109,13 @@ var countriesAux = [
     ["Norway", "Oslo"],
 ];
 for (var _i = 0, countriesAux_1 = countriesAux; _i < countriesAux_1.length; _i++) {
-    var _c = countriesAux_1[_i], country = _c[0], city = _c[1];
+    var _d = countriesAux_1[_i], country = _d[0], city = _d[1];
     console.log("Country ".concat(country, " => city: ").concat(city));
 }
-for (var _d = 0, fullStack_1 = fullStack; _d < fullStack_1.length; _d++) {
-    var _e = fullStack_1[_d], first = _e[0], second = _e[1], third = _e[2];
+for (var _e = 0, fullStack_1 = fullStack; _e < fullStack_1.length; _e++) {
+    var _f = fullStack_1[_e], first = _f[0], second = _f[1], third = _f[2];
     console.log("".concat(first.toUpperCase(), " => ").concat(second, " => ").concat(third));
 }
-var rectangle = {
-    width: 20,
-    height: 10,
-    area: 200,
-    perimeter: 80,
-};
-// Proporcionar un valor predeterminado para el perímetro
-var w = rectangle.width, h = rectangle.height, a = rectangle.area, _f = rectangle.perimeter, p = _f === void 0 ? 60 : _f;
-console.log(w, h, a, p);
-var calcularPerimeter = function (rectangle) {
-    return 2 * (rectangle.width + rectangle.height);
-};
-console.log(calcularPerimeter(rectangle));
 var person = {
     firstName: "Asabeneh",
     lastName: "Yetayeh",

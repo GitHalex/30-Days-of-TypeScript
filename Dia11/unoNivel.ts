@@ -1,3 +1,34 @@
+const constants: number[] = [2.72, 3.14, 9.81, 37, 100];
+const countriesCinco: string[] = [
+  "Finland",
+  "Estonia",
+  "Sweden",
+  "Denmark",
+  "Norway",
+];
+interface Rectangle {
+  width: number;
+  height: number;
+  area: number;
+  perimeter?: number; // Hacer que el perímetro sea opcional
+}
+const rectangle: Rectangle = {
+  width: 20,
+  height: 10,
+  area: 200,
+  perimeter: 80,
+};
+
+// Proporcionar un valor predeterminado para el perímetro
+let { width: w, height: h, area: a, perimeter: p = 60 } = rectangle;
+
+console.log(w, h, a, p);
+
+const calcularPerimeter = (rectangle: Rectangle): number => {
+  return 2 * (rectangle.width + rectangle.height);
+};
+console.log(calcularPerimeter(rectangle));
+
 const names: string[] = ["Asabeneh", "Brook", "David", "John"];
 const [firstPerson, secondPerson, thirdPerson, fourthPerson] = names;
 
@@ -100,30 +131,6 @@ for (const [country, city] of countriesAux) {
 for (const [first, second, third] of fullStack) {
   console.log(`${first.toUpperCase()} => ${second} => ${third}`);
 }
-
-interface Rectangle {
-  width: number;
-  height: number;
-  area: number;
-  perimeter?: number; // Hacer que el perímetro sea opcional
-}
-
-const rectangle: Rectangle = {
-  width: 20,
-  height: 10,
-  area: 200,
-  perimeter: 80,
-};
-
-// Proporcionar un valor predeterminado para el perímetro
-let { width: w, height: h, area: a, perimeter: p = 60 } = rectangle;
-
-console.log(w, h, a, p);
-
-const calcularPerimeter = (rectangle: Rectangle): number => {
-  return 2 * (rectangle.width + rectangle.height);
-};
-console.log(calcularPerimeter(rectangle));
 
 interface Person {
   firstName: string;
