@@ -258,3 +258,25 @@ console.log(oddNumbers);
 
 const wholeNumbers: number[] = [...evens, ...odds];
 console.log(wholeNumbers);
+
+interface UserInterface {
+  name: string;
+  title: string;
+  country: string;
+  city: string;
+}
+
+const userObjeto: UserInterface = {
+  name: "Alex",
+  title: "Programmer",
+  country: "Finland",
+  city: "Helsinki",
+};
+console.log(userObjeto);
+
+// Corregir el nombre de la variable de copuaUser a copiaUser
+const copiaUser: UserInterface = { ...userObjeto };
+console.log(copiaUser);
+
+const modificarObjeto: UserInterface = { ...userObjeto, title: "Intructor" };
+console.log(modificarObjeto);
