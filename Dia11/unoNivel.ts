@@ -280,3 +280,13 @@ console.log(copiaUser);
 
 const modificarObjeto: UserInterface = { ...userObjeto, title: "Intructor" };
 console.log(modificarObjeto);
+
+const sumAllNums = (...argumentos: number[]): number => {
+  let sum = 0;
+  for (const num of argumentos) {
+    sum += num;
+  }
+  return sum;
+};
+
+console.log(sumAllNums(1, 2, 3, 4, 5));

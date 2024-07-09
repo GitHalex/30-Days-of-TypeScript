@@ -206,3 +206,16 @@ var copiaUser = __assign({}, userObjeto);
 console.log(copiaUser);
 var modificarObjeto = __assign(__assign({}, userObjeto), { title: "Intructor" });
 console.log(modificarObjeto);
+var sumAllNums = function () {
+    var argumentos = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        argumentos[_i] = arguments[_i];
+    }
+    var sum = 0;
+    for (var _a = 0, argumentos_1 = argumentos; _a < argumentos_1.length; _a++) {
+        var num = argumentos_1[_a];
+        sum += num;
+    }
+    return sum;
+};
+console.log(sumAllNums(1, 2, 3, 4, 5));
