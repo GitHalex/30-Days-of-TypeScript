@@ -56,6 +56,8 @@ var convertirArrayToObject = function (nombreA, habilidades, puntuaciones) {
 var studentObject = convertirArrayToObject(nombreA, habilidades, puntuacion);
 // Imprimimos el objeto resultante
 console.log(studentObject);
+var copia = studentObject;
+console.log(copia);
 /* interface Student {
   nombre: string;
   habilidades: string[];
