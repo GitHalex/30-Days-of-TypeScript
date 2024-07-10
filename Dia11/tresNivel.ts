@@ -67,18 +67,44 @@ const obtenerPerson = ({
 
 console.log(obtenerPerson(person));
 
-/* const student: [string, string[], number[]] = [
+const student: [string, string[], number[]] = [
   "David",
   ["HTM", "CSS", "JS", "React"],
   [98, 85, 90, 95],
 ];
+console.log(typeof student);
+console.log(student);
 
 const [nombreA, habilidades, puntuacion] = student;
 console.log(nombreA);
 console.log(habilidades);
-console.log(puntuacion); */
+console.log(puntuacion);
 
 interface Student {
+  nombre: string;
+  habilidades: string[];
+  puntuaciones: number[];
+}
+// Función que convierte la tupla en un objeto conforme a la interfaz Student
+const convertirArrayToObject = (
+  nombreA: string,
+  habilidades: string[],
+  puntuaciones: number[]
+): Student => {
+  return {
+    nombre: nombreA,
+    habilidades: habilidades,
+    puntuaciones: puntuaciones,
+  };
+};
+
+// Convertimos la tupla en un objeto
+const studentObject = convertirArrayToObject(nombreA, habilidades, puntuacion);
+
+// Imprimimos el objeto resultante
+console.log(studentObject);
+
+/* interface Student {
   nombre: string;
   habilidades: string[];
   puntuaciones: number[];
@@ -93,4 +119,4 @@ const student: Student = {
 const { nombre: n, habilidades, puntuaciones } = student;
 console.log(n);
 console.log(habilidades);
-console.log(puntuaciones);
+console.log(puntuaciones); */
