@@ -67,7 +67,7 @@ const obtenerPerson = ({
 
 console.log(obtenerPerson(person));
 
-const student: [string, string[], number[]] = [
+/* const student: [string, string[], number[]] = [
   "David",
   ["HTM", "CSS", "JS", "React"],
   [98, 85, 90, 95],
@@ -76,4 +76,21 @@ const student: [string, string[], number[]] = [
 const [nombreA, habilidades, puntuacion] = student;
 console.log(nombreA);
 console.log(habilidades);
-console.log(puntuacion);
+console.log(puntuacion); */
+
+interface Student {
+  nombre: string;
+  habilidades: string[];
+  puntuaciones: number[];
+}
+
+const student: Student = {
+  nombre: "David",
+  habilidades: ["HTM", "CSS", "JS", "React"],
+  puntuaciones: [98, 85, 90, 95],
+};
+
+const { nombre: n, habilidades, puntuaciones } = student;
+console.log(n);
+console.log(habilidades);
+console.log(puntuaciones);

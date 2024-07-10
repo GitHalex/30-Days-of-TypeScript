@@ -33,12 +33,12 @@ var obtenerPerson = function (_a) {
     return personInformacion;
 };
 console.log(obtenerPerson(person));
-var student = [
-    "David",
-    ["HTM", "CSS", "JS", "React"],
-    [98, 85, 90, 95],
-];
-var nombreA = student[0], habilidades = student[1], puntuacion = student[2];
-console.log(nombreA);
+var student = {
+    nombre: "David",
+    habilidades: ["HTM", "CSS", "JS", "React"],
+    puntuaciones: [98, 85, 90, 95],
+};
+var n = student.nombre, habilidades = student.habilidades, puntuaciones = student.puntuaciones;
+console.log(n);
 console.log(habilidades);
-console.log(puntuacion);
+console.log(puntuaciones);
