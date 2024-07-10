@@ -66,3 +66,14 @@ const obtenerPerson = ({
 };
 
 console.log(obtenerPerson(person));
+
+const student: [string, string[], number[]] = [
+  "David",
+  ["HTM", "CSS", "JS", "React"],
+  [98, 85, 90, 95],
+];
+
+const [nombreA, habilidades, puntuacion] = student;
+console.log(nombreA);
+console.log(habilidades);
+console.log(puntuacion);
