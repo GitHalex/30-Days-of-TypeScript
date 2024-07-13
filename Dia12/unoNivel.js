@@ -22,3 +22,21 @@ L%a e%n%%señ%anza m%e %p%ar%ec%e ma%s% i%n%te%r%esa%nt%e que %cu%alq%uie%r %otr
 E%s%t%o te mo%ti%v%a a s%er p%ro%fe%sor.";
 var especial = txtEspecial.replace(/%/g, "");
 console.log(especial);
+var patternA_a = /[Aa]pple|[Bb]anana/g;
+var txtString = "Apple and banana are fruits. An old cliche says an apple a day keeps the doctor away has been replaced by a banana a day keeps the doctor far far away.";
+var apples = txtString.match(patternA_a);
+if (apples) {
+    console.log(apples);
+}
+else {
+    console.log("No matches found");
+}
+var patternDig = /\d+/g; // \d es un carácter especial que significa dígitos si agregamos + saca digitos esteros
+var txtDig = "This regular expression example was made in January 12, 2020.";
+var matches = txtDig.match(patternDig);
+if (matches) {
+    console.log(matches); // ["1", "2", "2", "0", "2", "0"] // ['12','2020']
+}
+else {
+    console.log("No matches found");
+}

@@ -29,3 +29,25 @@ E%s%t%o te mo%ti%v%a a s%er p%ro%fe%sor.";
 
 let especial: string = txtEspecial.replace(/%/g, "");
 console.log(especial);
+
+const patternA_a: RegExp = /[Aa]pple|[Bb]anana/g;
+const txtString: string =
+  "Apple and banana are fruits. An old cliche says an apple a day keeps the doctor away has been replaced by a banana a day keeps the doctor far far away.";
+const apples: string[] | null = txtString.match(patternA_a);
+
+if (apples) {
+  console.log(apples);
+} else {
+  console.log("No matches found");
+}
+
+const patternDig: RegExp = /\d+/g; // \d es un carácter especial que significa dígitos si agregamos + saca digitos esteros
+const txtDig: string =
+  "This regular expression example was made in January 12, 2020.";
+const matches: string[] | null = txtDig.match(patternDig);
+
+if (matches) {
+  console.log(matches); // ["1", "2", "2", "0", "2", "0"] // ['12','2020']
+} else {
+  console.log("No matches found");
+}
