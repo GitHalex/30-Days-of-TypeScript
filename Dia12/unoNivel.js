@@ -103,3 +103,52 @@ var calcularDistanciaMasLejana = function (texto) {
 };
 var distanciaMasLejana = calcularDistanciaMasLejana(textoA);
 console.log("La distancia entre las dos partes m\u00E1s lejanas es: ".concat(distanciaMasLejana));
+var tenMostFrequentWords = function (texto) {
+    // Expresión regular para encontrar todas las palabras
+    var wordsArray = texto.match(/\b\w+\b/g);
+    console.log(wordsArray);
+    // Objeto para contar las ocurrencias de cada palabra
+    var wordCounts = {};
+    if (wordsArray) {
+        wordsArray.forEach(function (word) {
+            var lowerCaseWord = word.toLowerCase();
+            wordCounts[lowerCaseWord] = (wordCounts[lowerCaseWord] || 0) + 1;
+        });
+    }
+    // Convertimos el objeto a un array de objetos con las palabras y sus contadores
+    var sortedWordCounts = Object.keys(wordCounts)
+        .map(function (word) { return ({ word: word, count: wordCounts[word] }); })
+        .sort(function (a, b) { return b.count - a.count; })
+        .slice(0, 10);
+    return sortedWordCounts;
+};
+// Ejemplo de uso
+var textoF = "This is a test. This test is only a test. If this had been an actual emergency, the test you just saw would have been followed by official information. This is only a test.";
+var resultadoF = tenMostFrequentWords(textoF);
+console.log(resultadoF);
+// Función para limpiar el texto
+var cleanText = function (sentence) {
+    return sentence.replace(/[^a-zA-Z\s]/g, ""); // Elimina todos los caracteres que no sean letras o espacios
+};
+// Función para encontrar las tres palabras más frecuentes
+var threeMostFrequentWords = function (sentence) {
+    var wordsArray = sentence.match(/\b\w+\b/g); // Encuentra todas las palabras
+    var wordCounts = {};
+    if (wordsArray) {
+        wordsArray.forEach(function (word) {
+            var lowerCaseWord = word.toLowerCase();
+            wordCounts[lowerCaseWord] = (wordCounts[lowerCaseWord] || 0) + 1;
+        });
+    }
+    var sortedWordCounts = Object.keys(wordCounts)
+        .map(function (word) { return ({ word: word, count: wordCounts[word] }); })
+        .sort(function (a, b) { return b.count - a.count; })
+        .slice(0, 3); // Selecciona las tres palabras más frecuentes
+    return sortedWordCounts;
+};
+// Ejemplo de uso
+var sentence = "%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?";
+var cleanedSentence = cleanText(sentence);
+console.log("Cleaned Sentence:", cleanedSentence);
+var resultoEx = threeMostFrequentWords(cleanedSentence);
+console.log("Three Most Frequent Words:", resultoEx);

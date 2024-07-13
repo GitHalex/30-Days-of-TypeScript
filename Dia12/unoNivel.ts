@@ -135,3 +135,76 @@ const distanciaMasLejana = calcularDistanciaMasLejana(textoA);
 console.log(
   `La distancia entre las dos partes más lejanas es: ${distanciaMasLejana}`
 );
+
+interface WordCount {
+  word: string;
+  count: number;
+}
+
+const tenMostFrequentWords = (texto: string): WordCount[] => {
+  // Expresión regular para encontrar todas las palabras
+  const wordsArray = texto.match(/\b\w+\b/g);
+  console.log(wordsArray);
+
+  // Objeto para contar las ocurrencias de cada palabra
+  const wordCounts: { [key: string]: number } = {};
+
+  if (wordsArray) {
+    wordsArray.forEach((word) => {
+      const lowerCaseWord = word.toLowerCase();
+      wordCounts[lowerCaseWord] = (wordCounts[lowerCaseWord] || 0) + 1;
+    });
+  }
+
+  // Convertimos el objeto a un array de objetos con las palabras y sus contadores
+  const sortedWordCounts: WordCount[] = Object.keys(wordCounts)
+    .map((word) => ({ word, count: wordCounts[word] }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 10);
+
+  return sortedWordCounts;
+};
+
+// Ejemplo de uso
+const textoF =
+  "This is a test. This test is only a test. If this had been an actual emergency, the test you just saw would have been followed by official information. This is only a test.";
+const resultadoF = tenMostFrequentWords(textoF);
+
+console.log(resultadoF);
+
+interface WordCount {
+  word: string;
+  count: number;
+}
+
+// Función para limpiar el texto
+const cleanText = (sentence: string): string => {
+  return sentence.replace(/[^a-zA-Z\s]/g, ""); // Elimina todos los caracteres que no sean letras o espacios
+};
+
+// Función para encontrar las tres palabras más frecuentes
+const threeMostFrequentWords = (sentence: string): WordCount[] => {
+  const wordsArray = sentence.match(/\b\w+\b/g); // Encuentra todas las palabras
+  const wordCounts: { [key: string]: number } = {};
+
+  if (wordsArray) {
+    wordsArray.forEach((word) => {
+      const lowerCaseWord = word.toLowerCase();
+      wordCounts[lowerCaseWord] = (wordCounts[lowerCaseWord] || 0) + 1;
+    });
+  }
+
+  const sortedWordCounts: WordCount[] = Object.keys(wordCounts)
+    .map((word) => ({ word, count: wordCounts[word] }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 3); // Selecciona las tres palabras más frecuentes
+
+  return sortedWordCounts;
+};
+
+// Ejemplo de uso
+const sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`;
+const cleanedSentence = cleanText(sentence);
+console.log("Cleaned Sentence:", cleanedSentence);
+const resultoEx = threeMostFrequentWords(cleanedSentence);
+console.log("Three Most Frequent Words:", resultoEx);
