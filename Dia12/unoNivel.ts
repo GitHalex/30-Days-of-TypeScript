@@ -69,3 +69,69 @@ if (resultadoAsterisco) {
 } else {
   console.log("No hay");
 }
+
+const textoSueldo =
+  "Gana 4000 euros de sueldo al mes, 10000 euros de bonificación anual, 5500 euros de cursos online al mes";
+
+// Expresión regular para encontrar todas las cantidades de dinero en el texto
+const regex = /\b(\d+)\s*euros\b/g;
+
+// Función para calcular los ingresos anuales totales
+const calcularIngresosAnuales = (texto: string): number => {
+  let totalAnual = 0;
+  let match: RegExpExecArray | null;
+
+  // Recorremos todas las coincidencias encontradas por la expresión regular
+  while ((match = regex.exec(texto)) !== null) {
+    const cantidad = parseInt(match[1], 10);
+
+    // Determinamos si el ingreso es mensual o anual
+    if (
+      texto.includes("sueldo al mes") &&
+      match.index < texto.indexOf("sueldo al mes")
+    ) {
+      totalAnual += cantidad * 12; // Ingreso mensual multiplicado por 12
+    } else if (
+      texto.includes("cursos online al mes") &&
+      match.index < texto.indexOf("cursos online al mes")
+    ) {
+      totalAnual += cantidad * 12; // Ingreso mensual multiplicado por 12
+    } else {
+      totalAnual += cantidad; // Ingreso anual
+    }
+  }
+
+  return totalAnual;
+};
+
+const ingresosAnuales = calcularIngresosAnuales(textoSueldo);
+console.log(`Ingresos anuales totales: ${ingresosAnuales} euros`);
+
+const textoA =
+  "La posición de algunas partículas en el eje horizontal x -12, -4, -3 y -1 en la dirección negativa, 0 en el origen, 4 y 8 en la dirección positiva.";
+
+// Expresión regular para encontrar todas las posiciones de las partículas
+const regexA = /-?\d+/g;
+
+// Función para calcular la distancia entre las posiciones más lejanas
+const calcularDistanciaMasLejana = (texto: string): number => {
+  const posiciones: number[] = [];
+  let match: RegExpExecArray | null;
+
+  // Recorremos todas las coincidencias encontradas por la expresión regular
+  while ((match = regexA.exec(texto)) !== null) {
+    posiciones.push(parseInt(match[0], 10));
+  }
+
+  // Encontramos las posiciones más extremas
+  const minPosicion = Math.min(...posiciones);
+  const maxPosicion = Math.max(...posiciones);
+
+  // Calculamos la distancia entre las posiciones más lejanas
+  return maxPosicion - minPosicion;
+};
+
+const distanciaMasLejana = calcularDistanciaMasLejana(textoA);
+console.log(
+  `La distancia entre las dos partes más lejanas es: ${distanciaMasLejana}`
+);
