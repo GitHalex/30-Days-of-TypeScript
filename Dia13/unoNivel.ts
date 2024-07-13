@@ -37,3 +37,56 @@ const userTabla: UserTable = {
 };
 
 console.table(userTabla);
+
+// Define una tupla para representar un país y su capital
+type Country = [string, string];
+
+const countriesTab: Country[] = [
+  ["Finland", "Helsinki"],
+  ["Sweden", "Stockholm"],
+  ["Norway", "Oslo"],
+];
+
+console.table(countriesTab);
+
+// Definir la interfaz para el usuario
+interface UserTabla {
+  name: string;
+  title: string;
+  country: string;
+  city: string;
+  age: number;
+}
+
+const usersTabla: UserTabla[] = [
+  {
+    name: "Asabeneh",
+    title: "Programmer",
+    country: "Finland",
+    city: "Helsinki",
+    age: 250,
+  },
+  {
+    name: "Eyob",
+    title: "Teacher",
+    country: "Sweden",
+    city: "London",
+    age: 25,
+  },
+  {
+    name: "Asab",
+    title: "Instructor",
+    country: "Norway",
+    city: "Oslo",
+    age: 22,
+  },
+  {
+    name: "Matias",
+    title: "Developer",
+    country: "Denmark",
+    city: "Copenhagen",
+    age: 28,
+  },
+];
+
+console.table(usersTabla);
