@@ -40,3 +40,20 @@ if (matches) {
 else {
     console.log("No matches found");
 }
+var txtPunto = "Apple and banana are fruits";
+var patternPunto = /[a].+/g; // ["an", "an", "an", "a ", "ar"] ['and banana are fruits']
+var resultadoPutno = txtPunto.match(patternPunto);
+if (resultadoPutno) {
+    console.log(resultadoPutno);
+}
+else {
+    console.log("No hay");
+}
+var patternAsterisco = /[a].*/g; //. cualquier carácter, + cualquier carácter una o más veces
+var resultadoAsterisco = txtPunto.match(patternAsterisco);
+if (resultadoAsterisco) {
+    console.log(resultadoAsterisco);
+}
+else {
+    console.log("No hay");
+}

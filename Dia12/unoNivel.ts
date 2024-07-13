@@ -51,3 +51,21 @@ if (matches) {
 } else {
   console.log("No matches found");
 }
+
+const txtPunto: string = "Apple and banana are fruits";
+const patternPunto: RegExp = /[a].+/g; // ["an", "an", "an", "a ", "ar"] ['and banana are fruits']
+
+const resultadoPutno: string[] | null = txtPunto.match(patternPunto);
+if (resultadoPutno) {
+  console.log(resultadoPutno);
+} else {
+  console.log("No hay");
+}
+
+const patternAsterisco: RegExp = /[a].*/g; //. cualquier carácter, + cualquier carácter una o más veces
+const resultadoAsterisco: string[] | null = txtPunto.match(patternAsterisco);
+if (resultadoAsterisco) {
+  console.log(resultadoAsterisco);
+} else {
+  console.log("No hay");
+}
