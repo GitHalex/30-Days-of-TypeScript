@@ -38,7 +38,7 @@ const userTabla: UserTable = {
 
 console.table(userTabla);
 
-// Define una tupla para representar un país y su capital
+/* // Define una tupla para representar un país y su capital
 type Country = [string, string];
 
 const countriesTab: Country[] = [
@@ -47,7 +47,7 @@ const countriesTab: Country[] = [
   ["Norway", "Oslo"],
 ];
 
-console.table(countriesTab);
+console.table(countriesTab); */
 
 // Definir la interfaz para el usuario
 interface UserTabla {
@@ -90,3 +90,29 @@ const usersTabla: UserTabla[] = [
 ];
 
 console.table(usersTabla);
+
+type Country = [string, string];
+
+const countriesTab: Country[] = [
+  ["Finland", "Helsinki"],
+  ["Sweden", "Stockholm"],
+  ["Norway", "Oslo"],
+];
+
+console.time("Regular for loop");
+for (let i = 0; i < countriesTab.length; i++) {
+  console.log(countriesTab[i][0], countriesTab[i][1]);
+}
+console.timeEnd("Regular for loop");
+
+console.time("for of loop");
+for (const [name, city] of countriesTab) {
+  console.log(name, city);
+}
+console.timeEnd("for of loop");
+
+console.time("forEach loop");
+countriesTab.forEach(([name, city]) => {
+  console.log(name, city);
+});
+console.timeEnd("forEach loop");
