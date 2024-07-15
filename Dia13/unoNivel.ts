@@ -99,6 +99,8 @@ const countriesTab: Country[] = [
   ["Norway", "Oslo"],
 ];
 
+console.table(countriesTab);
+
 console.time("Regular for loop");
 for (let i = 0; i < countriesTab.length; i++) {
   console.log(countriesTab[i][0], countriesTab[i][1]);
@@ -116,3 +118,31 @@ countriesTab.forEach(([name, city]) => {
   console.log(name, city);
 });
 console.timeEnd("forEach loop");
+
+console.info("30 Days Of JavaScript challenge is trending on Github");
+console.info("30 Days Of fullStack challenge might be released");
+console.info("30 Days Of HTML and CSS challenge might be released");
+
+console.group("Names");
+console.log(namesTabla);
+console.groupEnd();
+
+console.group("Countries");
+console.log(countriesTab);
+console.groupEnd();
+
+console.group("Users");
+console.log(usersTabla);
+console.log(usersTabla);
+console.groupEnd();
+
+const func = () => {
+  console.count("Function has been called");
+};
+func();
+func();
+func();
+
+console.assert(10 > 2 * 10);
+
+console.warn("Esto es una advertencia");
