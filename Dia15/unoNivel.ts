@@ -79,3 +79,5 @@ console.log(alex);
 console.log(alex.skills);
 console.log(alex.gePersonInfo);
 console.log(`otra: ${Persona.favoriteSkill()}`);
+
+console.log(30 >= 50);
