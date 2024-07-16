@@ -1,10 +1,10 @@
 class Persona {
   nombre: string;
-  lastName: string;
+  private lastName: string;
   age: number;
   country: string;
   city: string;
-  score: number;
+  private score: number;
   skills: string[];
 
   constructor(
@@ -23,61 +23,116 @@ class Persona {
     this.skills = [];
   }
 
-  getFullName(): string {
-    const fullName: string = this.nombre + " " + this.lastName;
-    return fullName;
+  public getFullName(): string {
+    return `${this.nombre} ${this.lastName}`;
   }
 
-  get getScore(): number {
+  public get getScore(): number {
     return this.score;
   }
 
-  set setScore(score: number) {
+  public set setScore(score: number) {
     this.score += score;
   }
 
-  get getSkills() {
+  public get getSkills(): string[] {
     return this.skills;
   }
 
-  set setSkills(skills: string) {
-    this.skills.push(skills);
+  public set setSkills(skill: string) {
+    this.skills.push(skill);
   }
 
-  get gePersonInfo() {
-    let fullName = this.getFullName();
-    let skills =
-      this.skills.length > 0 &&
-      this.skills.slice(0, this.skills.length - 1).join(", ") +
-        ` and ${this.skills[this.skills.length - 1]}`;
-    let formattedSkills = skills ? `He knows ${skills}` : "";
-    let info = `${fullName} is ${this.age}. He lives: ${this.city}, ${this.country}. ${formattedSkills}`;
-    return info;
+  public getPersonInfo(): string {
+    const fullName = this.getFullName();
+    const skills =
+      this.skills.length > 0
+        ? this.skills.slice(0, this.skills.length - 1).join(", ") +
+          ` and ${this.skills[this.skills.length - 1]}`
+        : "";
+    const formattedSkills = skills ? `He knows ${skills}` : "";
+
+    return `${fullName} is ${this.age}. He lives in ${this.city}, ${this.country}. ${formattedSkills}`;
   }
-  static favoriteSkill() {
-    const skills: string[] = ["HTML", "CSS", "JS", "React", "Python", "Node"];
-    const index = Math.floor(Math.random() * skills.length);
-    return skills[index];
-  }
+
+  /* public static showDateTime(): string {
+    const now: Date = new Date();
+    const year: number = now.getFullYear();
+    const month: string = (now.getMonth() + 1).toString().padStart(2, "0");
+    const date: string = now.getDate().toString().padStart(2, "0");
+    const hours: string = now.getHours().toString().padStart(2, "0");
+    const minutes: string = now.getMinutes().toString().padStart(2, "0");
+
+    const dateMonthYear: string = `${date}-${month}-${year}`;
+    const time: string = `${hours}:${minutes}`;
+    return `${dateMonthYear} ${time}`;
+  } */
 }
 
 const alex = new Persona("Alex", "Calcina", 20, "Bolivia", "Chacocamba");
-const yandel = new Persona(undefined, undefined, 10, "USA", "Miami"); // This will use the default values for nombre and lastName
+const yandel = new Persona(undefined, undefined, 10, "USA", "Miami");
 
 console.log(alex);
-
 console.log(alex.getFullName());
 console.log(alex.getScore);
 console.log(alex.getSkills);
 
 alex.setScore = 1;
 alex.setSkills = "HTML";
-alex.setSkills = "CSS";
-alex.setSkills = "JS";
 
-console.log(alex);
-console.log(alex.skills);
-console.log(alex.gePersonInfo);
-console.log(`otra: ${Persona.favoriteSkill()}`);
+console.log(alex.getScore);
+console.log(alex.getSkills);
 
-console.log(30 >= 50);
+// console.log(Persona.showDateTime());
+
+class Student extends Persona {
+  private gender: string;
+
+  constructor(
+    nombre: string,
+    lastName: string,
+    age: number,
+    country: string,
+    city: string,
+    gender: string
+  ) {
+    super(nombre, lastName, age, country, city);
+    this.gender = gender;
+  }
+
+  public saySomething(): void {
+    console.log("I am a child of the person class");
+  }
+
+  public getPersonInfo(): string {
+    const fullName = this.getFullName();
+    const skills =
+      this.skills.length > 0
+        ? this.skills.slice(0, this.skills.length - 1).join(", ") +
+          ` and ${this.skills[this.skills.length - 1]}`
+        : "";
+    const formattedSkills = skills ? `He knows ${skills}` : "";
+    const pronoun = this.gender === "Male" ? "He" : "She";
+
+    return `${fullName} is ${this.age}. ${pronoun} lives in ${this.city}, ${this.country}. ${formattedSkills}`;
+  }
+}
+
+const s1 = new Student(
+  "Saul",
+  "Bernal",
+  10,
+  "Chile",
+  "Santiago de Chile",
+  "Male"
+);
+console.log(s1);
+
+s1.setScore = 1;
+s1.setSkills = "HTML";
+s1.setSkills = "CSS";
+s1.setSkills = "JavaScript";
+
+s1.saySomething();
+console.log(s1.getFullName());
+console.log(s1.getPersonInfo());
