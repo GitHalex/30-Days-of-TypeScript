@@ -159,3 +159,17 @@ console.log(habilidadesTxt);
 
 const edad: string = JSON.stringify(ageN);
 console.log(edad);
+
+const casado: string = JSON.stringify(isMarriedN);
+console.log(casado);
+
+const estudiante: string = JSON.stringify(studentA);
+console.log(estudiante);
+console.log(typeof estudiante);
+
+const estudiante2: string = JSON.stringify(studentA, [
+  "firstName",
+  "lastName",
+  "skills",
+]);
+console.log(estudiante2);

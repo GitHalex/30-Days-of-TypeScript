@@ -97,3 +97,14 @@ var habilidadesTxt = JSON.stringify(skillsA);
 console.log(habilidadesTxt);
 var edad = JSON.stringify(ageN);
 console.log(edad);
+var casado = JSON.stringify(isMarriedN);
+console.log(casado);
+var estudiante = JSON.stringify(studentA);
+console.log(estudiante);
+console.log(typeof estudiante);
+var estudiante2 = JSON.stringify(studentA, [
+    "firstName",
+    "lastName",
+    "skills",
+]);
+console.log(estudiante2);
