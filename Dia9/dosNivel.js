@@ -1,4 +1,5 @@
-var countriesARR = [
+"use strict";
+const countriesARR = [
     "Afghanistan",
     "Albania",
     "Algeria",
@@ -192,7 +193,7 @@ var countriesARR = [
     "Zambia",
     "Zimbabwe",
 ];
-var countriesArreglo = [
+const countriesArreglo = [
     "Finland",
     "Denmark",
     "Sweden",
@@ -200,9 +201,9 @@ var countriesArreglo = [
     "Iceland",
     "España",
 ];
-var namesArreglo = ["Alex", "Mathias", "Elias", "Brook"];
-var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-var products = [
+const namesArreglo = ["Alex", "Mathias", "Elias", "Brook"];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const products = [
     { product: "banana", price: 3 },
     { product: "mango", price: 6 },
     { product: "potato", price: " " },
@@ -211,16 +212,14 @@ var products = [
     { product: "tea", price: "" },
 ];
 // filtrar los productos con precios validos
-var validProducts = products.filter(function (product) {
-    return typeof product.price === "number" && !isNaN(product.price);
-});
+const validProducts = products.filter((product) => typeof product.price === "number" && !isNaN(product.price));
 // mapear los precios
-var prices = validProducts.map(function (product) { return product.price; });
+const prices = validProducts.map((product) => product.price);
 // reduce para sumar
-var total = prices.reduce(function (sum, price) { return sum + price; }, 0);
+const total = prices.reduce((sum, price) => sum + price, 0);
 console.log(total);
 // Usar reduce para filtrar y sumar los precios válidos
-var totalPrice = products.reduce(function (sum, product) {
+const totalPrice = products.reduce((sum, product) => {
     // Comprobar si el precio es un número válido
     if (typeof product.price === "number" && !isNaN(product.price)) {
         return sum + product.price;
@@ -229,9 +228,9 @@ var totalPrice = products.reduce(function (sum, product) {
 }, 0);
 console.log(totalPrice);
 function getStringLists(countries) {
-    var letterMap = {};
-    countries.forEach(function (country) {
-        var firstLetter = country[0].toUpperCase();
+    const letterMap = {};
+    countries.forEach((country) => {
+        const firstLetter = country[0].toUpperCase();
         if (letterMap[firstLetter]) {
             letterMap[firstLetter]++;
         }
@@ -239,25 +238,25 @@ function getStringLists(countries) {
             letterMap[firstLetter] = 1;
         }
     });
-    var result = Object.keys(letterMap).map(function (letter) { return ({
-        letter: letter,
+    const result = Object.keys(letterMap).map((letter) => ({
+        letter,
         count: letterMap[letter],
-    }); });
+    }));
     return result;
 }
 // Ejemplo de uso
-var letterCounts = getStringLists(countriesARR);
+const letterCounts = getStringLists(countriesARR);
 console.log(letterCounts);
 function getLastTenCountries(countries) {
     return countries.slice(-10);
 }
 // Ejemplo de uso
-var lastTenCountries = getLastTenCountries(countriesARR);
+const lastTenCountries = getLastTenCountries(countriesARR);
 console.log(lastTenCountries);
 function mostCommonInitial(countries) {
-    var letterMap = {};
-    countries.forEach(function (country) {
-        var firstLetter = country[0].toUpperCase();
+    const letterMap = {};
+    countries.forEach((country) => {
+        const firstLetter = country[0].toUpperCase();
         if (letterMap[firstLetter]) {
             letterMap[firstLetter]++;
         }
@@ -265,9 +264,9 @@ function mostCommonInitial(countries) {
             letterMap[firstLetter] = 1;
         }
     });
-    var maxCount = 0;
-    var mostCommonLetter = "";
-    for (var letter in letterMap) {
+    let maxCount = 0;
+    let mostCommonLetter = "";
+    for (const letter in letterMap) {
         if (letterMap[letter] > maxCount) {
             maxCount = letterMap[letter];
             mostCommonLetter = letter;
@@ -276,5 +275,5 @@ function mostCommonInitial(countries) {
     return mostCommonLetter;
 }
 // Ejemplo de uso
-var commonInitial = mostCommonInitial(countriesARR);
-console.log("La letra que se utiliza m\u00E1s veces como inicial de un nombre de pa\u00EDs es: ".concat(commonInitial));
+const commonInitial = mostCommonInitial(countriesARR);
+console.log(`La letra que se utiliza más veces como inicial de un nombre de país es: ${commonInitial}`);

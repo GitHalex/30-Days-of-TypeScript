@@ -1,4 +1,5 @@
-var person = {
+"use strict";
+const person = {
     firstName: "Asabeneh",
     lastName: "Yetayeh",
     age: 250,
@@ -17,35 +18,34 @@ var person = {
     ],
     languages: ["Amharic", "English", "Suomi(Finnish)"],
 };
-var getPersonInfo = function (obj) {
-    var skills = obj.skills;
-    var formattedSkills = skills.slice(0, -1).join(", ");
-    var languages = obj.languages;
-    var formattedLanguages = languages.slice(0, -1).join(", ");
-    var personInfo = "".concat(obj.firstName, " ").concat(obj.lastName, " lives in ").concat(obj.country, ". He is ").concat(obj.age, " years old. He is an ").concat(obj.job, ". He teaches ").concat(formattedSkills, " and ").concat(skills[skills.length - 1], ". He speaks ").concat(formattedLanguages, " and a little bit of ").concat(languages[2], ".");
+const getPersonInfo = (obj) => {
+    const skills = obj.skills;
+    const formattedSkills = skills.slice(0, -1).join(", ");
+    const languages = obj.languages;
+    const formattedLanguages = languages.slice(0, -1).join(", ");
+    const personInfo = `${obj.firstName} ${obj.lastName} lives in ${obj.country}. He is ${obj.age} years old. He is an ${obj.job}. He teaches ${formattedSkills} and ${skills[skills.length - 1]}. He speaks ${formattedLanguages} and a little bit of ${languages[2]}.`;
     return personInfo;
 };
-var obtenerPerson = function (_a) {
-    var firstName = _a.firstName, lastName = _a.lastName, age = _a.age, country = _a.country, job = _a.job, skills = _a.skills, languages = _a.languages;
-    var formattedSkills = skills.slice(0, -1).join(", ");
-    var formattedLanguages = languages.slice(0, -1).join(", ");
-    var personInformacion = "".concat(firstName, " ").concat(lastName, " lives in ").concat(country, ". He is ").concat(age, " years old. He is an ").concat(job, ". He teaches ").concat(formattedSkills, " and ").concat(skills[skills.length - 1], ". He speaks ").concat(formattedLanguages, " and a little bit of 2024 ").concat(languages[2], ".");
+const obtenerPerson = ({ firstName, lastName, age, country, job, skills, languages, }) => {
+    const formattedSkills = skills.slice(0, -1).join(", ");
+    const formattedLanguages = languages.slice(0, -1).join(", ");
+    const personInformacion = `${firstName} ${lastName} lives in ${country}. He is ${age} years old. He is an ${job}. He teaches ${formattedSkills} and ${skills[skills.length - 1]}. He speaks ${formattedLanguages} and a little bit of 2024 ${languages[2]}.`;
     return personInformacion;
 };
 console.log(obtenerPerson(person));
-var student = [
+const student = [
     "David",
     ["HTM", "CSS", "JS", "React"],
     [98, 85, 90, 95],
 ];
 console.log(typeof student);
 console.log(student);
-var nombreA = student[0], habilidades = student[1], puntuacion = student[2];
+const [nombreA, habilidades, puntuacion] = student;
 console.log(nombreA);
 console.log(habilidades);
 console.log(puntuacion);
 // Función que convierte la tupla en un objeto conforme a la interfaz Student
-var convertirArrayToObject = function (nombreA, habilidades, puntuaciones) {
+const convertirArrayToObject = (nombreA, habilidades, puntuaciones) => {
     return {
         nombre: nombreA,
         habilidades: habilidades,
@@ -53,10 +53,10 @@ var convertirArrayToObject = function (nombreA, habilidades, puntuaciones) {
     };
 };
 // Convertimos la tupla en un objeto
-var studentObject = convertirArrayToObject(nombreA, habilidades, puntuacion);
+const studentObject = convertirArrayToObject(nombreA, habilidades, puntuacion);
 // Imprimimos el objeto resultante
 console.log(studentObject);
-var copia = studentObject;
+const copia = studentObject;
 console.log(copia);
 /* interface Student {
   nombre: string;

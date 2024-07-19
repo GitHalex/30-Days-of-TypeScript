@@ -1,6 +1,6 @@
-var Animal = /** @class */ (function () {
-    function Animal(nombre, edad, color, piernas) {
-        if (nombre === void 0) { nombre = "Yandel"; }
+"use strict";
+class Animal {
+    constructor(nombre = "Yandel", edad, color, piernas) {
         this.edad = 0;
         this.caminaVuela = [];
         this.nombre = nombre;
@@ -9,19 +9,18 @@ var Animal = /** @class */ (function () {
         this.piernas = piernas;
         this.caminaVuela = ["Camina", "Vuela"];
     }
-    Animal.prototype.getFullName = function () {
-        return "Nombre: ".concat(this.nombre, " => edad: ").concat(this.edad, " => color: ").concat(this.edad, " => patas: ").concat(this.piernas);
-    };
-    Animal.prototype.getTipoAnimal = function () {
+    getFullName() {
+        return `Nombre: ${this.nombre} => edad: ${this.edad} => color: ${this.edad} => patas: ${this.piernas}`;
+    }
+    getTipoAnimal() {
         if (this.piernas == 4)
-            return "El animal tiene ".concat(this.piernas, " patas por lo tanto: ").concat(this.caminaVuela[0]);
+            return `El animal tiene ${this.piernas} patas por lo tanto: ${this.caminaVuela[0]}`;
         if (this.piernas == 2)
-            return "El animal tiene ".concat(this.piernas, " patas por lo tanto: ").concat(this.caminaVuela[0]);
+            return `El animal tiene ${this.piernas} patas por lo tanto: ${this.caminaVuela[0]}`;
         return "no existe un animal que no sea 4 o 2 patas";
-    };
-    return Animal;
-}());
-var boby = new Animal("Boby", 4, "Amarillo", 4);
+    }
+}
+const boby = new Animal("Boby", 4, "Amarillo", 4);
 console.log(boby);
 console.log(boby.getFullName());
 console.log(boby.getTipoAnimal());

@@ -1,8 +1,9 @@
-var mySet = new Set();
+"use strict";
+const mySet = new Set();
 console.log(typeof mySet);
 mySet.add(1);
 console.log(mySet);
-var stringSet = new Set();
+const stringSet = new Set();
 /* interface Person {
   name: string;
   age: number;

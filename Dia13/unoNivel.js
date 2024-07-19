@@ -1,3 +1,4 @@
+"use strict";
 console.log("%c30 Days Of JavaScript", "color:green"); // la salida del registro es verde
 console.log("%c30 Days%c %cOf%c %cJavaScript%c", "color:green", "", "color:red", "", "color:yellow"); // salida del registro texto verde rojo y amarillo
 console.warn("This is a warning");
@@ -5,9 +6,9 @@ console.warn("You are using React. Do not touch the DOM. Virtual DOM will take c
 console.warn("Warning is different from error");
 console.error("This is an error message");
 console.error("We all make mistakes");
-var namesTabla = ["Asabeneh", "Brook", "David", "John"];
+const namesTabla = ["Asabeneh", "Brook", "David", "John"];
 console.table(namesTabla);
-var userTabla = {
+const userTabla = {
     name: "Alex",
     title: "Programmer",
     country: "Bolivia",
@@ -15,7 +16,7 @@ var userTabla = {
     age: 30,
 };
 console.table(userTabla);
-var usersTabla = [
+const usersTabla = [
     {
         name: "Asabeneh",
         title: "Programmer",
@@ -46,26 +47,24 @@ var usersTabla = [
     },
 ];
 console.table(usersTabla);
-var countriesTab = [
+const countriesTab = [
     ["Finland", "Helsinki"],
     ["Sweden", "Stockholm"],
     ["Norway", "Oslo"],
 ];
 console.table(countriesTab);
 console.time("Regular for loop");
-for (var i = 0; i < countriesTab.length; i++) {
+for (let i = 0; i < countriesTab.length; i++) {
     console.log(countriesTab[i][0], countriesTab[i][1]);
 }
 console.timeEnd("Regular for loop");
 console.time("for of loop");
-for (var _i = 0, countriesTab_1 = countriesTab; _i < countriesTab_1.length; _i++) {
-    var _a = countriesTab_1[_i], name_1 = _a[0], city = _a[1];
-    console.log(name_1, city);
+for (const [name, city] of countriesTab) {
+    console.log(name, city);
 }
 console.timeEnd("for of loop");
 console.time("forEach loop");
-countriesTab.forEach(function (_a) {
-    var name = _a[0], city = _a[1];
+countriesTab.forEach(([name, city]) => {
     console.log(name, city);
 });
 console.timeEnd("forEach loop");
@@ -82,7 +81,7 @@ console.group("Users");
 console.log(usersTabla);
 console.log(usersTabla);
 console.groupEnd();
-var func = function () {
+const func = () => {
     console.count("Function has been called");
 };
 func();

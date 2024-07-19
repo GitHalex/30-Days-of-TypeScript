@@ -1,7 +1,8 @@
+"use strict";
 try {
-    var firstName = "Asabeneh"; // Proporcionando un valor inicial a firstName
-    var lastName = "Yetayeh";
-    var fullName = firstName + " " + lastName;
+    let firstName = "Asabeneh"; // Proporcionando un valor inicial a firstName
+    let lastName = "Yetayeh";
+    let fullName = firstName + " " + lastName;
     console.log(fullName);
 }
 catch (err) {
@@ -16,20 +17,20 @@ catch (err) {
 finally {
     console.log("In any case, I will be executed");
 }
-var throwErrorExampleFun = function () {
-    var message;
-    var x = prompt("Enter a number: ");
+const throwErrorExampleFun = () => {
+    let message;
+    let x = prompt("Enter a number: ");
     try {
         if (x === null || x.trim() === "")
             throw new Error("Input is empty");
         if (isNaN(Number(x)))
             throw new Error("Input is not a number");
-        var num = Number(x);
+        const num = Number(x);
         if (num < 5)
             throw new Error("Input is too low");
         if (num > 10)
             throw new Error("Input is too high");
-        message = "Valid input: ".concat(num);
+        message = `Valid input: ${num}`;
         console.log(message);
     }
     catch (err) {
