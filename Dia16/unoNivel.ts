@@ -133,3 +133,29 @@ const usersS: UsersS = {
 
 const txtS: string = JSON.stringify(usersS, undefined, 4);
 console.log(txtS);
+
+const skillsA: string[] = ["HTML", "CSS", "JS", "React", "Node", "Python"];
+let ageN: number = 250;
+let isMarriedN: boolean = true;
+
+interface StudentA {
+  firstName: string;
+  lastName: string;
+  age: number;
+  isMarried: boolean;
+  skills: string[];
+}
+
+const studentA: StudentA = {
+  firstName: "Alex",
+  lastName: "Lopez",
+  age: 250,
+  isMarried: true,
+  skills: ["HTML", "CSS", "JS", "React", "Node", "Python"],
+};
+
+const habilidadesTxt: string = JSON.stringify(skillsA);
+console.log(habilidadesTxt);
+
+const edad: string = JSON.stringify(ageN);
+console.log(edad);

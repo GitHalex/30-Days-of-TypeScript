@@ -83,3 +83,17 @@ var usersS = {
 };
 var txtS = JSON.stringify(usersS, undefined, 4);
 console.log(txtS);
+var skillsA = ["HTML", "CSS", "JS", "React", "Node", "Python"];
+var ageN = 250;
+var isMarriedN = true;
+var studentA = {
+    firstName: "Alex",
+    lastName: "Lopez",
+    age: 250,
+    isMarried: true,
+    skills: ["HTML", "CSS", "JS", "React", "Node", "Python"],
+};
+var habilidadesTxt = JSON.stringify(skillsA);
+console.log(habilidadesTxt);
+var edad = JSON.stringify(ageN);
+console.log(edad);
