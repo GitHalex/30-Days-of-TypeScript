@@ -58,3 +58,17 @@ async function fetchCountries(): Promise<void> {
 }
 
 fetchCountries();
+
+const square = async (n: number): Promise<number> => {
+  return n * n;
+};
+
+async function runSquareExample(): Promise<void> {
+  try {
+    const valor: number = await square(3);
+    console.log(valor);
+  } catch (error) {
+    console.error("Ocurrio un error", error);
+  }
+}
+runSquareExample();

@@ -95,3 +95,12 @@ function fetchCountries() {
     });
 }
 fetchCountries();
+var square = function (n) {
+    return __awaiter(this, void 0, void 0, function () {
+        return __generator(this, function (_a) {
+            return [2 /*return*/, n * n];
+        });
+    });
+};
+var valor = await square(3);
+console.log(valor);
