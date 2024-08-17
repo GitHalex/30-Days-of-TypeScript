@@ -59,7 +59,42 @@ async function fetchCountries(): Promise<void> {
 
 fetchCountries();
 
-const square = async (n: number): Promise<number> => {
+interface Language {
+  name: string;
+}
+
+interface Country2 {
+  name: string;
+  capital: string;
+  languages: Language[];
+  population: number;
+  area: number;
+}
+
+const fetchCountriesData = async (): Promise<void> => {
+  try {
+    const response: Response = await fetch(url);
+    const countries: Country2[] = await response.json();
+    console.log(countries);
+    countries.forEach((pais: Country2) => {
+      console.log("======================================");
+      console.log(`Country: ${pais.name}`);
+      console.log(`Capital: ${pais.capital}`);
+      console.log(
+        `Lanmguages: ${pais.languages.map((lang) => lang.name).join(", ")}`
+      );
+      console.log(`Population: ${pais.population}`);
+      console.log(`Area: ${pais.area} km^2`);
+      console.log("======================================");
+    });
+  } catch (error) {
+    console.error(`Error fetching the countries data: ${error}`);
+  }
+};
+
+fetchCountriesData();
+
+/* const square = async (n: number): Promise<number> => {
   return n * n;
 };
 
@@ -72,3 +107,16 @@ async function runSquareExample(): Promise<void> {
   }
 }
 runSquareExample();
+
+const fetchData = async (): Promise<void> => {
+  try {
+    const respuesta: Response = await fetch(url);
+    const countries: Country1[] = await respuesta.json();
+    console.log(countries);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+console.log("===== async end await ===========");
+fetchData(); */

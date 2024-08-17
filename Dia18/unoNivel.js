@@ -34,6 +34,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var _this = this;
 var doPromise = new Promise(function (resolve, reject) {
     setTimeout(function () {
         var skills = ["HTML", "CSS", "JavaScript"];
@@ -95,12 +96,61 @@ function fetchCountries() {
     });
 }
 fetchCountries();
-var square = function (n) {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            return [2 /*return*/, n * n];
-        });
+var fetchCountriesData = function () { return __awaiter(_this, void 0, void 0, function () {
+    var response, countries, error_2;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                _a.trys.push([0, 3, , 4]);
+                return [4 /*yield*/, fetch(url)];
+            case 1:
+                response = _a.sent();
+                return [4 /*yield*/, response.json()];
+            case 2:
+                countries = _a.sent();
+                console.log(countries);
+                countries.forEach(function (pais) {
+                    console.log("======================================");
+                    console.log("Country: ".concat(pais.name));
+                    console.log("Capital: ".concat(pais.capital));
+                    console.log("Lanmguages: ".concat(pais.languages.map(function (lang) { return lang.name; }).join(", ")));
+                    console.log("Population: ".concat(pais.population));
+                    console.log("Area: ".concat(pais.area, " km^2"));
+                    console.log("======================================");
+                });
+                return [3 /*break*/, 4];
+            case 3:
+                error_2 = _a.sent();
+                console.error("Error fetching the countries data: ".concat(error_2));
+                return [3 /*break*/, 4];
+            case 4: return [2 /*return*/];
+        }
     });
+}); };
+fetchCountriesData();
+/* const square = async (n: number): Promise<number> => {
+  return n * n;
 };
-var valor = await square(3);
-console.log(valor);
+
+async function runSquareExample(): Promise<void> {
+  try {
+    const valor: number = await square(3);
+    console.log(valor);
+  } catch (error) {
+    console.error("Ocurrio un error", error);
+  }
+}
+runSquareExample();
+
+const fetchData = async (): Promise<void> => {
+  try {
+    const respuesta: Response = await fetch(url);
+    const countries: Country1[] = await respuesta.json();
+    console.log(countries);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+console.log("===== async end await ===========");
+fetchData(); */
