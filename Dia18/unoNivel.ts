@@ -92,7 +92,28 @@ const fetchCountriesData = async (): Promise<void> => {
   }
 };
 
-fetchCountriesData();
+// fetchCountriesData();
+
+const catsAPI: string = "https://api.thecatapi.com/v1/breeds";
+
+interface Cat {
+  name: string;
+}
+const fetchCats = async (): Promise<void> => {
+  try {
+    const response: Response = await fetch(catsAPI);
+    const names: Cat[] = await response.json();
+    console.log("Esto es una prueba");
+    console.log(names);
+    names.forEach((name: any) => {
+      console.log(name.name);
+    });
+  } catch (error) {
+    console.error("Esto es un error", error);
+  }
+};
+
+fetchCats();
 
 /* const square = async (n: number): Promise<number> => {
   return n * n;

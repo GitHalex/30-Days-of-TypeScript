@@ -127,7 +127,35 @@ var fetchCountriesData = function () { return __awaiter(_this, void 0, void 0, f
         }
     });
 }); };
-fetchCountriesData();
+// fetchCountriesData();
+var catsAPI = "https://api.thecatapi.com/v1/breeds";
+var fetchCats = function () { return __awaiter(_this, void 0, void 0, function () {
+    var response, names, error_3;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                _a.trys.push([0, 3, , 4]);
+                return [4 /*yield*/, fetch(catsAPI)];
+            case 1:
+                response = _a.sent();
+                return [4 /*yield*/, response.json()];
+            case 2:
+                names = _a.sent();
+                console.log("Esto es una prueba");
+                console.log(names);
+                names.forEach(function (name) {
+                    console.log(name.name);
+                });
+                return [3 /*break*/, 4];
+            case 3:
+                error_3 = _a.sent();
+                console.error("Esto es un error", error_3);
+                return [3 /*break*/, 4];
+            case 4: return [2 /*return*/];
+        }
+    });
+}); };
+fetchCats();
 /* const square = async (n: number): Promise<number> => {
   return n * n;
 };
